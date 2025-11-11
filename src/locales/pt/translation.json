@@ -1,0 +1,73 @@
+{
+  "navbar": {
+    "home": "Início",
+    "about": "Sobre",
+    "projects": "Projetos",
+    "contact": "Contato"
+  },
+  "hero": {
+    "greeting": "Olá, meu nome é",
+    "role": "Desenvolvedor Full Stack.",
+    "description": "Especializado em construir soluções completas, desde aplicações <1>web</1> e <3>mobile</3> modernas até <5>APIs</5> robustas e escaláveis.",
+    "cta_projects": "Ver Projetos",
+    "cta_contact": "Entrar em Contato"
+  },
+  "about": {
+    "title": "Sobre Mim",
+    "p1": "Olá! Sou um desenvolvedor apaixonado por criar soluções que resolvem problemas reais. Minha jornada começou com a curiosidade de entender como as coisas funcionam na web e evoluiu para a construção de aplicações complexas.",
+    "p2": "Com experiência em desenvolvimento <1>Full Stack</1>, sinto-me confortável navegando tanto no front-end quanto no back-end. Gosto de trabalhar com tecnologias modernas e estou sempre buscando aprender novas ferramentas para melhorar meu fluxo de trabalho.",
+    "p3": "Quando não estou codando, você pode me encontrar explorando novas distribuições Linux, jogando xadrez ou pesquisando sobre design de interfaces.",
+    "skills_title": "Minhas Skills"
+  },
+  "projects": {
+    "title": "Meus Projetos",
+    "modal": {
+      "technologies": "Tecnologias",
+      "code_btn": "Ver Código",
+      "demo_btn": "Live Demo"
+    },
+    "tcc": {
+      "short": "Aplicação desenvolvida para o Trabalho de Conclusão de Curso.",
+      "full": "Projeto completo desenvolvido como parte dos requisitos para conclusão de curso. Focado em resolver um problema real utilizando tecnologias modernas e boas práticas de desenvolvimento."
+    },
+    "tcc_api": {
+      "short": "API Backend em Python para suporte ao aplicativo do TCC.",
+      "full": "API robusta desenvolvida com Flask para gerenciar os dados e regras de negócio do aplicativo TCC. Inclui autenticação, endpoints RESTful e integração com banco de dados."
+    },
+    "vendas": {
+      "short": "Sistema para gerenciamento e controle de vendas.",
+      "full": "Aplicação focada no setor comercial, permitindo o gerenciamento de vendas, produtos e possivelmente controle de estoque e clientes."
+    },
+    "dile": {
+      "short": "Aplicação Full Stack completa.",
+      "full": "Desenvolvimento abrangendo frontend e backend, demonstrando a integração completa entre as camadas da aplicação e fluxo de dados."
+    },
+    "juros": {
+      "short": "Aplicação para cálculos financeiros.",
+      "full": "Ferramenta desenvolvida para auxiliar em cálculos de juros e projeções financeiras de forma rápida e intuitiva."
+    },
+    "portfolio": {
+      "short": "Meu site pessoal de portfólio.",
+      "full": "Uma vitrine das minhas habilidades, projetos e experiência como Desenvolvedor Full Stack, construído utilizando tecnologias web modernas."
+    }
+  },
+  "contact": {
+    "title": "Vamos Conversar?",
+    "description": "Estou sempre aberto a novas oportunidades, projetos interessantes ou apenas para trocar uma ideia sobre tecnologia. Minha caixa de entrada está sempre aberta!",
+    "form_title": "Entre em Contato",
+    "form_subtitle": "Preencha o formulário e entrarei em contato o mais breve possível. Você também pode me encontrar nas redes sociais abaixo.",
+    "form_name": "Seu Nome",
+    "form_name_placeholder": "João Silva",
+    "form_email": "Seu Email",
+    "form_email_placeholder": "joao@exemplo.com",
+    "form_message": "Mensagem",
+    "form_message_placeholder": "Sua mensagem aqui...",
+    "form_send_btn": "Enviar Mensagem",
+    "form_sending_btn": "Enviando...",
+    "form_success": "Mensagem enviada com sucesso!",
+    "form_error": "Erro ao enviar. Tente novamente mais tarde."
+  },
+  "footer": {
+    "rights": "Todos os direitos reservados."
+  }
+}

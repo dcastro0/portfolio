@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+@variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-gray-950: #030712;
+}
+
+html, body {
+  @apply bg-gray-50 text-gray-900 transition-colors duration-300;
+}
+
+html.dark, .dark body {
+  @apply bg-gray-950 text-white;
+}
