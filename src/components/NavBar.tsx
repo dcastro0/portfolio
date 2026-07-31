@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { FiSun, FiMoon, FiMenu, FiX, FiGlobe } from "react-icons/fi";
+import { FiSun, FiMoon, FiMenu, FiX } from "react-icons/fi";
 import { useTranslation } from 'react-i18next';
+import LanguageSelector from "./LanguageSelector";
 
 const Navbar = () => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [theme, setTheme] = useState(() => {
@@ -13,12 +14,6 @@ const Navbar = () => {
     }
     return "dark";
   });
-
-  const toggleLanguage = () => {
-    const newLang = i18n.language === 'pt' ? 'en' : 'pt';
-    i18n.changeLanguage(newLang);
-    localStorage.setItem('language', newLang);
-  };
 
   const navLinks = [
     { name: t('navbar.home'), href: "#home" },
@@ -117,27 +112,13 @@ const Navbar = () => {
                 </AnimatePresence>
               </motion.button>
 
-              <motion.button
-                onClick={toggleLanguage}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="flex items-center gap-1.5 text-xs font-semibold px-3 py-2 bg-slate-100 dark:bg-slate-800/80 text-slate-700 dark:text-slate-200 border border-slate-200/60 dark:border-slate-700/60 rounded-full hover:border-blue-500 transition-all"
-              >
-                <FiGlobe size={14} className="text-blue-600 dark:text-blue-400" />
-                <span>{i18n.language === 'pt' ? 'PT' : 'EN'}</span>
-              </motion.button>
+              <LanguageSelector />
             </div>
           </div>
 
           {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center gap-3">
-            <button
-              onClick={toggleLanguage}
-              className="flex items-center gap-1 text-xs font-semibold px-2.5 py-1.5 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 rounded-md border border-slate-200 dark:border-slate-700"
-            >
-              <FiGlobe size={12} />
-              {i18n.language === 'pt' ? 'PT' : 'EN'}
-            </button>
+            <LanguageSelector />
 
             <button
               onClick={toggleTheme}

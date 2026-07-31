@@ -1,0 +1,101 @@
+{
+  "navbar": {
+    "home": "Inicio",
+    "about": "Sobre mí",
+    "projects": "Proyectos",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "badge": "Disponible para nuevos proyectos y oportunidades",
+    "greeting": "Hola, mi nombre es",
+    "role": "Ingeniero de Software & Desarrollador Full Stack",
+    "description": "Especializado en la concepción y desarrollo de soluciones tecnológicas completas, integrando aplicaciones <1>Web</1> y <3>Mobile</3> modernas a <5>APIs</5> escalables y de alto rendimiento.",
+    "cta_projects": "Explorar Proyectos",
+    "cta_contact": "Ponerse en Contacto",
+    "stats": {
+      "experience": "Años de Aprendizaje y Práctica",
+      "projects": "Proyectos Desarrollados",
+      "stack": "Stack Tecnológico Moderno"
+    }
+  },
+  "about": {
+    "badge": "Ingeniería & Soluciones",
+    "title": "Sobre Mí",
+    "p1": "Soy un Ingeniero de Software enfocado en el desarrollo de sistemas eficientes y escalables. Mi trayectoria se guía por la entrega de código limpio, arquitecturas sólidas e interfaces enfocadas en una excelente experiencia de usuario.",
+    "p2": "Como desarrollador <1>Full Stack</1>, domino el ecosistema completo de desarrollo, desde la concepción del front-end intuitivo hasta el diseño e implementación de rutas y bases de datos en el back-end.",
+    "p3": "Busco constantemente el perfeccionamiento en buenas prácticas de ingeniería de software, integración continua y patrones de arquitectura modernos.",
+    "skills_title": "Tecnologías & Herramientas",
+    "highlights": {
+      "frontend": "Desarrollo de interfaces reactivas, responsivas y accesibles con React y TypeScript.",
+      "backend": "Construcción de APIs RESTful robustas y microservicios de alto rendimiento en Node.js y Go (Golang).",
+      "database": "Modelado y gestión de bases de datos relacionales avanzadas con PostgreSQL y MySQL."
+    }
+  },
+  "projects": {
+    "badge": "Portafolio de Código",
+    "title": "Proyectos Destacados",
+    "subtitle": "Una selección de aplicaciones y sistemas desarrollados con enfoque en calidad, arquitectura y usabilidad.",
+    "modal": {
+      "technologies": "Tecnologías Utilizadas",
+      "code_btn": "Ver Repositorio",
+      "demo_btn": "Acceder a Demostración"
+    },
+    "tcc": {
+      "short": "Aplicación móvil completa desarrollada para el Trabajo de Fin de Grado.",
+      "full": "Proyecto completo desarrollado como requisito académico, aplicando patrones modernos de desarrollo móvil, persistencia local con SQLite y gestión de estado refinada."
+    },
+    "tcc_api": {
+      "short": "API RESTful backend en Go para soporte a la aplicación TCC.",
+      "full": "Servicio de backend construido con Go (Golang) y MySQL para gestión centralizada de datos, autenticación y reglas de negocio del ecosistema TCC."
+    },
+    "vendas": {
+      "short": "Sistema de gestión y control operacional comercial.",
+      "full": "Aplicación desarrollada para optimizar procesos comerciales, ofreciendo control de ventas, seguimiento de registros e interfaz analítica para la toma de decisiones."
+    },
+    "dile": {
+      "short": "Plataforma Full Stack integrando servicios frontend y backend.",
+      "full": "Arquitectura integrada que cubre todas las capas de una aplicación moderna, demostrando flujo continuo de datos, validaciones y alta interoperabilidad entre servicios."
+    },
+    "juros": {
+      "short": "Herramienta de análisis y simulación de cálculos financieros.",
+      "full": "Aplicación enfocada en la precisión financiera, permitiendo simulaciones de intereses, proyecciones de rendimiento y reportes dinámicos con interfaz intuitiva."
+    },
+    "portfolio": {
+      "short": "Plataforma web de portafolio profesional.",
+      "full": "Ingeniería frontend moderna utilizando React 19, TypeScript, Tailwind CSS y soporte completo de internacionalización (i18n) y cambio de temas."
+    },
+    "aether": {
+      "short": "Sistema ERP moderno para la gestión empresarial corporativa.",
+      "full": "Plataforma de planificación de recursos empresariales (ERP) desarrollada para centralizar flujos de trabajo, gestión financiera, control de inventario y reportes estratégicos de alto rendimiento."
+    },
+    "goshortner": {
+      "short": "API de alto rendimiento para acortamiento y redirección de URLs.",
+      "full": "Microservicio desarrollado en Go enfocado en altísimo rendimiento, baja latencia y empaquetado en contenedores Docker para acortamiento y análisis de tráfico de enlaces."
+    },
+    "netpulse": {
+      "short": "Herramienta de monitoreo en tiempo real de métricas y estado de red.",
+      "full": "Solución de observabilidad de red construida con Node.js y React para monitorear disponibilidad, latencia y diagnóstico de infraestructura en tiempo real."
+    }
+  },
+  "contact": {
+    "badge": "Comunicación Directa",
+    "title": "Ponte en Contacto",
+    "description": "Estoy disponible para colaboraciones en proyectos, oportunidades profesionales y discusiones sobre arquitectura de software y tecnología.",
+    "form_title": "Envía un Mensaje",
+    "form_subtitle": "Completa los campos a continuación con la información de tu proyecto o contacto. Responderé lo antes posible.",
+    "form_name": "Nombre Completo",
+    "form_name_placeholder": "Ej: Juan Pérez",
+    "form_email": "Correo Electrónico",
+    "form_email_placeholder": "Ej: juan.perez@empresa.com",
+    "form_message": "Mensaje",
+    "form_message_placeholder": "Describe tu proyecto o la razón de tu contacto...",
+    "form_send_btn": "Enviar Mensaje",
+    "form_sending_btn": "Procesando Envío...",
+    "form_success": "¡Mensaje enviado con éxito! Me pondré en contacto muy pronto.",
+    "form_error": "No se pudo enviar el mensaje. Por favor, inténtalo de nuevo."
+  },
+  "footer": {
+    "rights": "Todos los derechos reservados.",
+    "built_with": "Desarrollado con React, TypeScript & Tailwind CSS"
+  }
+}
