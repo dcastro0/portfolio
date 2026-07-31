@@ -27,7 +27,7 @@
     "skills_title": "Technologies & Tools",
     "highlights": {
       "frontend": "Building responsive, reactive, accessible user interfaces with React and TypeScript.",
-      "backend": "Engineering robust RESTful APIs and high-performance microservices using Node.js, Go, and Python.",
+      "backend": "Engineering robust RESTful APIs and high-performance microservices using Node.js and Go (Golang).",
       "database": "Designing and managing advanced relational databases with PostgreSQL and MySQL."
     }
   },
@@ -45,8 +45,8 @@
       "full": "Comprehensive application developed to fulfill academic requirements, featuring modern mobile architecture, SQLite local persistence, and state management."
     },
     "tcc_api": {
-      "short": "Python RESTful backend API supporting the capstone app.",
-      "full": "Robust backend service crafted with Flask and MySQL for centralized data management, user authentication, and business domain logic."
+      "short": "Go (Golang) RESTful backend API supporting the capstone app.",
+      "full": "Robust backend service crafted with Go (Golang) and MySQL for centralized data management, user authentication, and business domain logic."
     },
     "vendas": {
       "short": "Commercial management and sales operations platform.",

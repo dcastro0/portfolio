@@ -3,7 +3,7 @@ import { useTranslation, Trans } from 'react-i18next';
 import { FiSmartphone, FiServer, FiDatabase } from "react-icons/fi";
 import { 
   SiReact, SiTypescript, SiNodedotjs, SiTailwindcss, 
-  SiDocker, SiLinux, SiGit, SiPython, SiGo, SiPostgresql
+  SiDocker, SiLinux, SiGit, SiGo, SiPostgresql, SiGin
 } from "react-icons/si";
 
 const skills = [
@@ -11,7 +11,7 @@ const skills = [
   { name: "TypeScript", category: "Language", icon: SiTypescript, color: "#3178C6" },
   { name: "Node.js", category: "Backend", icon: SiNodedotjs, color: "#339933" },
   { name: "Go", category: "Backend", icon: SiGo, color: "#00ADD8" },
-  { name: "Python", category: "Language", icon: SiPython, color: "#3776AB" },
+  { name: "Gin", category: "Framework", icon: SiGin, color: "#00A6D6" },
   { name: "Tailwind CSS", category: "Frontend", icon: SiTailwindcss, color: "#06B6D4" },
   { name: "PostgreSQL", category: "Database", icon: SiPostgresql, color: "#4169E1" },
   { name: "Docker", category: "DevOps", icon: SiDocker, color: "#2496ED" },
@@ -75,7 +75,7 @@ const About = () => {
                   <FiServer size={20} />
                 </div>
                 <h4 className="font-bold text-sm text-slate-800 dark:text-slate-200 mb-1">Backend & APIs</h4>
-                <p className="text-xs text-slate-500 dark:text-slate-400 leading-normal">Node.js, Go & Python</p>
+                <p className="text-xs text-slate-500 dark:text-slate-400 leading-normal">Node.js & Go (Golang)</p>
               </div>
 
               <div className="p-4 rounded-xl glass-panel border border-slate-200/80 dark:border-slate-800/80">

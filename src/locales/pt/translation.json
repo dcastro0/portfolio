@@ -27,7 +27,7 @@
     "skills_title": "Tecnologias & Ferramentas",
     "highlights": {
       "frontend": "Desenvolvimento de interfaces reativas, responsivas e acessíveis com React e TypeScript.",
-      "backend": "Construção de APIs RESTful robustas e microsserviços de alta performance em Node.js, Go e Python.",
+      "backend": "Construção de APIs RESTful robustas e microsserviços de alta performance em Node.js e Go (Golang).",
       "database": "Modelagem e gerenciamento de bancos de dados relacionais avançados com PostgreSQL e MySQL."
     }
   },
@@ -45,8 +45,8 @@
       "full": "Projeto completo desenvolvido como requisito acadêmico, aplicando padrões modernos de desenvolvimento mobile, persistência de dados local com SQLite e gerenciamento de estado refinado."
     },
     "tcc_api": {
-      "short": "API RESTful backend em Python para suporte à aplicação TCC.",
-      "full": "Serviço de backend construído com Flask e MySQL para gerenciamento centralizado de dados, autenticação e regras de negócio do ecossistema TCC."
+      "short": "API RESTful backend em Go para suporte à aplicação TCC.",
+      "full": "Serviço de backend construído com Go (Golang) e MySQL para gerenciamento centralizado de dados, autenticação e regras de negócio do ecossistema TCC."
     },
     "vendas": {
       "short": "Sistema de gestão e controle operacional comercial.",

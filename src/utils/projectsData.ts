@@ -28,7 +28,7 @@ export const projects: Project[] = [
     shortDescriptionKey: "projects.tcc_api.short",
     fullDescriptionKey: "projects.tcc_api.full",
     imageUrl: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80", 
-    technologies: ["Python", "Flask", "MySQL", "REST API"], 
+    technologies: ["Go", "Gin", "MySQL", "REST API"], 
     githubUrl: "https://github.com/dcastro0/tcc-api", 
   },
   {

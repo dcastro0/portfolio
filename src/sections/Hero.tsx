@@ -1,7 +1,7 @@
 import { motion } from "motion/react";
 import { useTranslation, Trans } from 'react-i18next';
 import { FiArrowRight, FiMail, FiCode, FiLayers, FiCpu } from "react-icons/fi";
-import { SiReact, SiTypescript, SiPython } from "react-icons/si";
+import { SiReact, SiTypescript, SiGo } from "react-icons/si";
 import minhaFoto from "../assets/minhaFoto.jpg";
 
 const Hero = () => {
@@ -120,7 +120,7 @@ const Hero = () => {
                 <FiLayers size={16} />
                 <span>REST APIs</span>
               </div>
-              <span className="text-xs text-slate-500 dark:text-slate-400">Node.js & Python</span>
+              <span className="text-xs text-slate-500 dark:text-slate-400">Node.js & Go</span>
             </div>
 
             <div className="flex flex-col">
@@ -195,8 +195,8 @@ const Hero = () => {
               transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
               className="absolute top-1/2 -right-8 px-3 py-2 rounded-xl glass-panel shadow-lg flex items-center gap-2 text-xs font-medium text-slate-800 dark:text-slate-200 border border-slate-200/80 dark:border-slate-700/80"
             >
-              <SiPython size={16} className="text-[#3776AB]" />
-              <span>Python & Flask</span>
+              <SiGo size={18} className="text-[#00ADD8]" />
+              <span>Go (Golang)</span>
             </motion.div>
 
           </motion.div>
