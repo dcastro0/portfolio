@@ -2,18 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { useTranslation } from "react-i18next";
 import { FiGlobe, FiChevronDown, FiCheck } from "react-icons/fi";
-
-export interface Language {
-  code: string;
-  name: string;
-  flag: string;
-}
-
-export const LANGUAGES: Language[] = [
-  { code: "pt", name: "Português", flag: "🇧🇷" },
-  { code: "en", name: "English", flag: "🇺🇸" },
-  { code: "es", name: "Español", flag: "🇪🇸" },
-];
+import { LANGUAGES } from "../utils/constants";
 
 const LanguageSelector = () => {
   const { i18n } = useTranslation();
