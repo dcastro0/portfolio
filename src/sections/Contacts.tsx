@@ -1,149 +1,164 @@
-import { useState, useRef, type FormEvent } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { FiMail, FiUser, FiMessageSquare, FiSend, FiCheckCircle, FiAlertCircle, FiGithub, FiLinkedin } from "react-icons/fi";
+import { FiMail, FiUser, FiMessageSquare, FiSend, FiCheckCircle, FiAlertCircle, FiGithub, FiLinkedin, FiClock } from "react-icons/fi";
 import { useTranslation } from 'react-i18next';
-import emailjs from '@emailjs/browser';
+import { useContactForm } from "../hooks/useContactForm";
 
 const Contact = () => {
   const { t } = useTranslation();
-  const formRef = useRef<HTMLFormElement>(null);
-  const [isSending, setIsSending] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-
-  const handleSubmit = async (e: FormEvent) => {
-    e.preventDefault();
-    if (!formRef.current) return;
-
-    setIsSending(true);
-    setSubmitStatus('idle');
-
-    const formData = new FormData(formRef.current);
-    const data = {
-      user_name: formData.get('user_name'),
-      user_email: formData.get('user_email'),
-      message: formData.get('message'),
-    };
-
-    try {
-      await emailjs.send(
-        import.meta.env.VITE_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-        data,
-        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
-      );
-      setSubmitStatus('success');
-      formRef.current.reset();
-    } catch (error) {
-      console.error("Erro ao enviar email:", error);
-      setSubmitStatus('error');
-    } finally {
-      setIsSending(false);
-      setTimeout(() => setSubmitStatus('idle'), 5000);
-    }
-  };
+  const { formRef, isSending, submitStatus, handleSubmit } = useContactForm();
 
   return (
-    <section id="contact" className="min-h-screen py-20 flex items-center justify-center bg-gray-50 dark:bg-gray-950/50 relative overflow-hidden">
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-blue-500/5 rounded-full blur-3xl -z-10" />
+    <section id="contact" className="py-24 flex items-center justify-center relative overflow-hidden bg-slate-100/50 dark:bg-slate-900/30">
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-blue-500/10 rounded-full blur-[140px] pointer-events-none -z-10" />
 
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-        
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-center mb-12"
+          className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">{t('contact.title')}</h2>
-          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+          <span className="text-xs font-semibold uppercase tracking-widest text-blue-600 dark:text-blue-400 font-mono mb-2 block">
+            {t('contact.badge')}
+          </span>
+          <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight mb-4">{t('contact.title')}</h2>
+          <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto mb-6">
             {t('contact.description')}
           </p>
+          <div className="w-16 h-1 bg-gradient-to-r from-blue-600 to-indigo-600 mx-auto rounded-full"></div>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
+            className="lg:col-span-5 space-y-8"
           >
-            <h3 className="text-2xl font-semibold mb-6">{t('contact.form_title')}</h3>
-            <p className="text-gray-600 dark:text-gray-400 mb-8">
-              {t('contact.form_subtitle')}
-            </p>
-            
-            <div className="flex gap-6">
-              <a href="https://github.com/dcastro0" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-black dark:hover:text-white transition-colors">
-                <FiGithub size={28} />
-              </a>
-              <a href="https://linkedin.com/in/caio-de-castro-a74a81188/" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-[#0A66C2] transition-colors">
-                <FiLinkedin size={28} />
-              </a>
+            <div>
+              <h3 className="text-2xl font-bold mb-3">{t('contact.form_title')}</h3>
+              <p className="text-slate-600 dark:text-slate-300 leading-relaxed text-sm sm:text-base">
+                {t('contact.form_subtitle')}
+              </p>
             </div>
+
+            <div className="space-y-4">
+              <div className="flex items-center gap-4 p-4 rounded-xl glass-panel border border-slate-200/80 dark:border-slate-800/80">
+                <div className="p-3 rounded-lg bg-blue-500/10 text-blue-600 dark:text-blue-400 shrink-0">
+                  <FiMail size={22} />
+                </div>
+                <div>
+                  <span className="text-xs font-mono text-slate-400 block">E-mail Profissional</span>
+                  <a href="mailto:caio.dcastrodev@gmail.com" className="text-sm font-semibold text-slate-800 dark:text-slate-200 hover:text-blue-600 transition-colors">
+                    caio.dcastrodev@gmail.com
+                  </a>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-4 p-4 rounded-xl glass-panel border border-slate-200/80 dark:border-slate-800/80">
+                <div className="p-3 rounded-lg bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 shrink-0">
+                  <FiClock size={22} />
+                </div>
+                <div>
+                  <span className="text-xs font-mono text-slate-400 block">Tempo de Resposta</span>
+                  <span className="text-sm font-semibold text-slate-800 dark:text-slate-200">
+                    Geralmente em até 24h
+                  </span>
+                </div>
+              </div>
+            </div>
+            
+            <div>
+              <span className="text-xs font-bold text-slate-400 uppercase tracking-widest font-mono mb-4 block">
+                Redes & Perfil Técnico
+              </span>
+              <div className="flex gap-4">
+                <a 
+                  href="https://github.com/dcastro0" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="flex items-center gap-2 px-4 py-3 rounded-xl glass-panel border border-slate-200/80 dark:border-slate-800/80 text-slate-700 dark:text-slate-200 hover:border-blue-500 dark:hover:border-blue-500 transition-all hover:-translate-y-0.5 text-sm font-semibold"
+                >
+                  <FiGithub size={20} />
+                  <span>GitHub</span>
+                </a>
+                <a 
+                  href="https://linkedin.com/in/caio-de-castro-a74a81188/" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="flex items-center gap-2 px-4 py-3 rounded-xl glass-panel border border-slate-200/80 dark:border-slate-800/80 text-slate-700 dark:text-slate-200 hover:border-blue-500 dark:hover:border-blue-500 transition-all hover:-translate-y-0.5 text-sm font-semibold"
+                >
+                  <FiLinkedin size={20} className="text-[#0A66C2]" />
+                  <span>LinkedIn</span>
+                </a>
+              </div>
+            </div>
+
           </motion.div>
 
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.4 }}
-            className="bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-800"
+            transition={{ delay: 0.3 }}
+            className="lg:col-span-7 glass-panel p-6 sm:p-8 rounded-2xl border border-slate-200/80 dark:border-slate-800/80 shadow-xl"
           >
-            <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
+            <form ref={formRef} onSubmit={handleSubmit} className="space-y-5">
+              
               <div>
-                <label htmlFor="user_name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                <label htmlFor="user_name" className="block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300 mb-2 font-mono">
                   {t('contact.form_name')}
                 </label>
                 <div className="relative">
-                  <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-gray-400">
-                    <FiUser />
+                  <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
+                    <FiUser size={18} />
                   </div>
                   <input 
                     type="text" 
                     name="user_name" 
                     id="user_name" 
                     required
-                    className="w-full pl-10 pr-4 py-3 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors outline-none"
+                    className="w-full pl-10 pr-4 py-3 bg-white/80 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all outline-none text-slate-900 dark:text-slate-100 text-sm"
                     placeholder={t('contact.form_name_placeholder')}
                   />
                 </div>
               </div>
 
               <div>
-                <label htmlFor="user_email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                <label htmlFor="user_email" className="block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300 mb-2 font-mono">
                   {t('contact.form_email')}
                 </label>
                 <div className="relative">
-                  <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-gray-400">
-                    <FiMail />
+                  <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
+                    <FiMail size={18} />
                   </div>
                   <input 
                     type="email" 
                     name="user_email" 
                     id="user_email" 
                     required
-                    className="w-full pl-10 pr-4 py-3 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors outline-none"
+                    className="w-full pl-10 pr-4 py-3 bg-white/80 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all outline-none text-slate-900 dark:text-slate-100 text-sm"
                     placeholder={t('contact.form_email_placeholder')}
                   />
                 </div>
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                <label htmlFor="message" className="block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300 mb-2 font-mono">
                   {t('contact.form_message')}
                 </label>
                 <div className="relative">
-                  <div className="absolute top-3 left-3 pointer-events-none text-gray-400">
-                    <FiMessageSquare />
+                  <div className="absolute top-3.5 left-3.5 pointer-events-none text-slate-400">
+                    <FiMessageSquare size={18} />
                   </div>
                   <textarea 
                     name="message" 
                     id="message" 
                     rows={4} 
                     required
-                    className="w-full pl-10 pr-4 py-3 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors outline-none resize-none"
+                    className="w-full pl-10 pr-4 py-3 bg-white/80 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all outline-none resize-none text-slate-900 dark:text-slate-100 text-sm"
                     placeholder={t('contact.form_message_placeholder')}
                   />
                 </div>
@@ -152,29 +167,42 @@ const Contact = () => {
               <button 
                 type="submit" 
                 disabled={isSending}
-                className={`w-full flex items-center justify-center gap-2 py-3 px-6 rounded-lg font-semibold text-white transition-all ${
-                  isSending ? 'bg-gray-400 cursor-not-allowed' : 'bg-blue-600 hover:bg-blue-700 hover:-translate-y-1 shadow-md hover:shadow-lg'
+                className={`w-full flex items-center justify-center gap-2 py-3.5 px-6 rounded-xl font-semibold text-white transition-all text-sm shadow-lg ${
+                  isSending 
+                    ? 'bg-slate-400 cursor-not-allowed' 
+                    : 'bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 shadow-blue-500/20 hover:shadow-blue-500/35 hover:-translate-y-0.5 active:translate-y-0'
                 }`}
               >
                 {isSending ? (
-                  <>{t('contact.form_sending_btn')}</>
+                  <span>{t('contact.form_sending_btn')}</span>
                 ) : (
                   <>
-                    <FiSend /> {t('contact.form_send_btn')}
+                    <FiSend size={16} /> 
+                    <span>{t('contact.form_send_btn')}</span>
                   </>
                 )}
               </button>
 
               <AnimatePresence>
                 {submitStatus === 'success' && (
-                  <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }} className="flex items-center gap-2 text-green-600 dark:text-green-400 bg-green-100 dark:bg-green-900/30 p-3 rounded-lg">
-                    <FiCheckCircle className="shrink-0" />
+                  <motion.div 
+                    initial={{ opacity: 0, y: 10 }} 
+                    animate={{ opacity: 1, y: 0 }} 
+                    exit={{ opacity: 0 }} 
+                    className="flex items-center gap-3 text-emerald-700 dark:text-emerald-300 bg-emerald-50 dark:bg-emerald-950/50 border border-emerald-200 dark:border-emerald-800 p-4 rounded-xl text-xs font-medium"
+                  >
+                    <FiCheckCircle size={18} className="shrink-0 text-emerald-500" />
                     <span>{t('contact.form_success')}</span>
                   </motion.div>
                 )}
                 {submitStatus === 'error' && (
-                  <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }} className="flex items-center gap-2 text-red-600 dark:text-red-400 bg-red-100 dark:bg-red-900/30 p-3 rounded-lg">
-                    <FiAlertCircle className="shrink-0" />
+                  <motion.div 
+                    initial={{ opacity: 0, y: 10 }} 
+                    animate={{ opacity: 1, y: 0 }} 
+                    exit={{ opacity: 0 }} 
+                    className="flex items-center gap-3 text-rose-700 dark:text-rose-300 bg-rose-50 dark:bg-rose-950/50 border border-rose-200 dark:border-rose-800 p-4 rounded-xl text-xs font-medium"
+                  >
+                    <FiAlertCircle size={18} className="shrink-0 text-rose-500" />
                     <span>{t('contact.form_error')}</span>
                   </motion.div>
                 )}
