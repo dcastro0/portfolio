@@ -1,0 +1,108 @@
+{
+  "navbar": {
+    "home": "Accueil",
+    "about": "À propos",
+    "projects": "Projets",
+    "contact": "Contact"
+  },
+  "hero": {
+    "badge": "Disponible pour de nouveaux projets et opportunités",
+    "greeting": "Bonjour, je m'appelle",
+    "role": "Ingénieur Logiciel & Développeur Full Stack",
+    "description": "Spécialisé dans la conception et le développement de solutions technologiques complètes, intégrant des applications <1>Web</1> et <3>Mobiles</3> modernes à des <5>APIs</5> évolutives et performantes.",
+    "cta_projects": "Explorer les Projets",
+    "cta_contact": "Me Contacter",
+    "stats": {
+      "experience": "Années d'Apprentissage & Pratique",
+      "projects": "Projets Réalisés",
+      "stack": "Stack Technologique Moderne"
+    }
+  },
+  "about": {
+    "badge": "Ingénierie & Solutions",
+    "title": "À Propos de Moi",
+    "p1": "Je suis un Ingénieur Logiciel axé sur la création de systèmes efficaces et évolutifs. Mon parcours est guidé par la livraison d'un code propre, d'architectures solides et d'interfaces centrées sur l'expérience utilisateur.",
+    "p2": "En tant que développeur <1>Full Stack</1>, je maîtrise l'ensemble de l'écosystème de développement, de la création d'interfaces front-end intuitives jusqu'à la conception d'APIs backend et de bases de données.",
+    "p3": "Je recherche continuellement l'excellence dans les meilleures pratiques d'ingénierie logicielle, l'intégration continue et les modèles d'architecture modernes.",
+    "skills_title": "Technologies & Outils",
+    "highlights": {
+      "frontend": "Développement d'interfaces réactives, adaptatives et accessibles avec React et TypeScript.",
+      "backend": "Conception d'APIs RESTful robustes et de microservices haute performance en Node.js et Go (Golang).",
+      "database": "Modélisation et gestion de bases de données relationnelles avancées avec PostgreSQL et MySQL."
+    }
+  },
+  "projects": {
+    "badge": "Portfolio de Code",
+    "title": "Projets en Vedette",
+    "subtitle": "Une sélection d'applications et de systèmes développés en mettant l'accent sur la qualité du code, l'architecture et la convivialité.",
+    "modal": {
+      "technologies": "Technologies Utilisées",
+      "code_btn": "Voir le Dépôt",
+      "demo_btn": "Voir la Démo"
+    },
+    "tcc": {
+      "short": "Application mobile complète développée pour le projet de fin d'études.",
+      "full": "Projet complet réalisé comme exigence académique, appliquant des modèles modernes de développement mobile, la persistance locale SQLite et la gestion d'état."
+    },
+    "tcc_api": {
+      "short": "API RESTful backend en Go supportant l'application mobile.",
+      "full": "Service backend construit avec Go (Golang) et MySQL pour la gestion centralisée des données, l'authentification et la logique métier."
+    },
+    "vendas": {
+      "short": "Système de gestion et de contrôle des opérations commerciales.",
+      "full": "Application conçue pour optimiser les processus commerciaux, offrant un suivi des ventes, la gestion des dossiers et des métriques décisionnelles."
+    },
+    "dile": {
+      "short": "Plateforme Full Stack intégrant les services frontend et backend.",
+      "full": "Architecture intégrée couvrant toutes les couches d'une application moderne, démontrant un flux de données fluide et une interopérabilité élevée entre les services."
+    },
+    "juros": {
+      "short": "Outil d'analyse et de simulation de calculs financiers.",
+      "full": "Outil axé sur la précision financière, permettant des simulations d'intérêts, des projections de rendement et des rapports dynamiques via une interface intuitive."
+    },
+    "portfolio": {
+      "short": "Plateforme web de portfolio professionnel.",
+      "full": "Ingénierie frontend moderne construite avec React 19, TypeScript, Tailwind CSS, prise en charge complète de l'internationalisation (i18n) et changement de thème."
+    },
+    "aether": {
+      "short": "Système ERP moderne pour la gestion d'entreprise.",
+      "full": "Plateforme de planification des ressources d'entreprise (ERP) développée pour centraliser les flux de travail, la gestion financière, le contrôle des stocks et les rapports stratégiques."
+    },
+    "goshortner": {
+      "short": "API haute performance pour le raccourcissement et la réécriture d'URLs.",
+      "full": "Microservice développé en Go axé sur une très faible latence, un haut débit et une conteneurisation Docker pour le raccourcissement et le suivi des liens."
+    },
+    "netpulse": {
+      "short": "Système de surveillance du réseau et des métriques en temps réel.",
+      "full": "Solution d'observabilité réseau construite avec Node.js et React pour surveiller la disponibilité des infrastructures, la latence et les diagnostics en temps réel."
+    }
+  },
+  "contact": {
+    "badge": "Communication Directe",
+    "title": "Contactez-moi",
+    "description": "Je suis disponible pour des collaborations techniques, des opportunités professionnelles et des discussions sur l'architecture logicielle et la technologie.",
+    "form_title": "Envoyer un Message",
+    "form_subtitle": "Remplissez les champs ci-dessous avec les informations de votre projet ou contact. Je vous répondrai dès que possible.",
+    "form_name": "Nom Complet",
+    "form_name_placeholder": "Ex: Jean Dupont",
+    "form_email": "Adresse E-mail",
+    "form_email_placeholder": "Ex: jean.dupont@entreprise.com",
+    "form_message": "Message",
+    "form_message_placeholder": "Décrivez votre projet ou la raison de votre prise de contact...",
+    "form_send_btn": "Envoyer le Message",
+    "form_sending_btn": "Envoi en cours...",
+    "form_success": "Message envoyé avec succès ! Je vous recontacterai sous peu.",
+    "form_error": "Impossible d'envoyer le message. Veuillez réessayer.",
+    "errors": {
+      "name_required": "Le nom est obligatoire.",
+      "email_required": "L'adresse e-mail est obligatoire.",
+      "email_invalid": "Veuillez saisir une adresse e-mail valide.",
+      "message_required": "Le message est obligatoire.",
+      "message_min": "Le message doit comporter au moins 10 caractères."
+    }
+  },
+  "footer": {
+    "rights": "Tous droits réservés.",
+    "built_with": "Développé avec React, TypeScript & Tailwind CSS"
+  }
+}
