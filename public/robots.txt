@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://portfolio-five-ruddy-71.vercel.app/sitemap.xml
