@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { FiSun, FiMoon, FiMenu, FiX } from "react-icons/fi";
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from "react-i18next";
 import LanguageSelector from "./LanguageSelector";
 
 const Navbar = () => {
@@ -16,10 +16,10 @@ const Navbar = () => {
   });
 
   const navLinks = [
-    { name: t('navbar.home'), href: "#home" },
-    { name: t('navbar.about'), href: "#about" },
-    { name: t('navbar.projects'), href: "#projects" },
-    { name: t('navbar.contact'), href: "#contact" },
+    { name: t("navbar.home"), href: "#home" },
+    { name: t("navbar.about"), href: "#about" },
+    { name: t("navbar.projects"), href: "#projects" },
+    { name: t("navbar.contact"), href: "#contact" },
   ];
 
   useEffect(() => {
@@ -58,22 +58,26 @@ const Navbar = () => {
     >
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          
-          {/* Brand Logo */}
           <motion.div
             className="shrink-0 cursor-pointer"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >
-            <a href="#home" className="font-bold text-xl tracking-tight flex items-center gap-1 group">
-              <span className="text-blue-600 dark:text-blue-400 font-mono group-hover:-translate-x-0.5 transition-transform">&lt;</span>
+            <a
+              href="#home"
+              className="font-bold text-xl tracking-tight flex items-center gap-1 group"
+            >
+              <span className="text-blue-600 dark:text-blue-400 font-mono group-hover:-translate-x-0.5 transition-transform">
+                &lt;
+              </span>
               <span className="gradient-text font-extrabold">Caio</span>
               <span className="text-slate-700 dark:text-slate-300 font-medium">.Castro</span>
-              <span className="text-blue-600 dark:text-blue-400 font-mono group-hover:translate-x-0.5 transition-transform">/&gt;</span>
+              <span className="text-blue-600 dark:text-blue-400 font-mono group-hover:translate-x-0.5 transition-transform">
+                /&gt;
+              </span>
             </a>
           </motion.div>
 
-          {/* Desktop Navigation Links */}
           <div className="hidden md:flex items-center space-x-8">
             {navLinks.map((link, index) => (
               <motion.a
@@ -89,9 +93,7 @@ const Navbar = () => {
               </motion.a>
             ))}
 
-            {/* Actions: Theme & Language Toggles */}
             <div className="flex items-center gap-3 pl-6 border-l border-slate-200 dark:border-slate-800">
-              
               <motion.button
                 onClick={toggleTheme}
                 whileTap={{ scale: 0.9 }}
@@ -116,7 +118,6 @@ const Navbar = () => {
             </div>
           </div>
 
-          {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center gap-3">
             <LanguageSelector />
 
@@ -134,11 +135,9 @@ const Navbar = () => {
               {mobileMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
             </button>
           </div>
-
         </div>
       </nav>
 
-      {/* Mobile Menu Drawer */}
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div

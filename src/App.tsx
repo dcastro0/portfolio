@@ -1,10 +1,9 @@
-import Footer from "./components/Footer"
-import Navbar from "./components/NavBar"
-import About from "./sections/About"
-import Contact from "./sections/Contacts"
-import Hero from "./sections/Hero"
-import Projects from "./sections/Projects"
-
+import Footer from "./components/Footer";
+import Navbar from "./components/NavBar";
+import About from "./sections/About";
+import Contact from "./sections/Contacts";
+import Hero from "./sections/Hero";
+import Projects from "./sections/Projects";
 
 function App() {
   return (
@@ -18,7 +17,7 @@ function App() {
       </main>
       <Footer />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

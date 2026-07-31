@@ -92,7 +92,14 @@
     "form_send_btn": "Enviar Mensagem",
     "form_sending_btn": "Processando Envio...",
     "form_success": "Mensagem enviada com sucesso! Entrarei em contato em breve.",
-    "form_error": "Não foi possível enviar a mensagem. Por favor, tente novamente."
+    "form_error": "Não foi possível enviar a mensagem. Por favor, tente novamente.",
+    "errors": {
+      "name_required": "O nome é obrigatório.",
+      "email_required": "O e-mail é obrigatório.",
+      "email_invalid": "Informe um endereço de e-mail válido.",
+      "message_required": "A mensagem é obrigatória.",
+      "message_min": "A mensagem deve ter no mínimo 10 caracteres."
+    }
   },
   "footer": {
     "rights": "Todos os direitos reservados.",

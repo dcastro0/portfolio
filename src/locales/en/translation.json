@@ -92,7 +92,14 @@
     "form_send_btn": "Send Message",
     "form_sending_btn": "Sending...",
     "form_success": "Message sent successfully! I will be in touch shortly.",
-    "form_error": "Unable to send message. Please try again."
+    "form_error": "Unable to send message. Please try again.",
+    "errors": {
+      "name_required": "Name is required.",
+      "email_required": "Email is required.",
+      "email_invalid": "Please enter a valid email address.",
+      "message_required": "Message is required.",
+      "message_min": "Message must be at least 10 characters."
+    }
   },
   "footer": {
     "rights": "All rights reserved.",

@@ -65,10 +65,7 @@ const LanguageSelector = () => {
           <span>{currentLang.flag}</span>
           <span className="uppercase tracking-wider font-bold">{currentLang.code}</span>
         </span>
-        <motion.div
-          animate={{ rotate: isOpen ? 180 : 0 }}
-          transition={{ duration: 0.2 }}
-        >
+        <motion.div animate={{ rotate: isOpen ? 180 : 0 }} transition={{ duration: 0.2 }}>
           <FiChevronDown size={14} className="text-slate-400" />
         </motion.div>
       </motion.button>
