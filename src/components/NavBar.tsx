@@ -99,6 +99,7 @@ const Navbar = () => {
                 whileTap={{ scale: 0.9 }}
                 whileHover={{ scale: 1.05 }}
                 title={theme === "dark" ? "Mudar para modo claro" : "Mudar para modo escuro"}
+                aria-label={theme === "dark" ? "Mudar para modo claro" : "Mudar para modo escuro"}
                 className="p-2.5 rounded-full bg-slate-100 dark:bg-slate-800/80 text-slate-700 dark:text-amber-400 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors border border-slate-200/50 dark:border-slate-700/50"
               >
                 <AnimatePresence mode="wait" initial={false}>
@@ -123,6 +124,7 @@ const Navbar = () => {
 
             <button
               onClick={toggleTheme}
+              aria-label={theme === "dark" ? "Mudar para modo claro" : "Mudar para modo escuro"}
               className="p-2 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-amber-400"
             >
               {theme === "dark" ? <FiSun size={18} /> : <FiMoon size={18} />}
@@ -130,6 +132,7 @@ const Navbar = () => {
 
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label={mobileMenuOpen ? "Fechar menu" : "Abrir menu"}
               className="p-2 rounded-md text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
             >
               {mobileMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}

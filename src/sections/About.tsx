@@ -80,9 +80,9 @@ const About = () => {
                 <div className="p-2.5 w-fit rounded-lg bg-blue-500/10 text-blue-600 dark:text-blue-400 mb-3">
                   <FiSmartphone size={20} />
                 </div>
-                <h4 className="font-bold text-sm text-slate-800 dark:text-slate-200 mb-1">
+                <h3 className="font-bold text-sm text-slate-800 dark:text-slate-200 mb-1">
                   Frontend & Mobile
-                </h4>
+                </h3>
                 <p className="text-xs text-slate-500 dark:text-slate-400 leading-normal">
                   React, React Native & TypeScript
                 </p>
@@ -92,9 +92,9 @@ const About = () => {
                 <div className="p-2.5 w-fit rounded-lg bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 mb-3">
                   <FiServer size={20} />
                 </div>
-                <h4 className="font-bold text-sm text-slate-800 dark:text-slate-200 mb-1">
+                <h3 className="font-bold text-sm text-slate-800 dark:text-slate-200 mb-1">
                   Backend & APIs
-                </h4>
+                </h3>
                 <p className="text-xs text-slate-500 dark:text-slate-400 leading-normal">
                   Node.js & Go (Golang)
                 </p>
@@ -104,9 +104,9 @@ const About = () => {
                 <div className="p-2.5 w-fit rounded-lg bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 mb-3">
                   <FiDatabase size={20} />
                 </div>
-                <h4 className="font-bold text-sm text-slate-800 dark:text-slate-200 mb-1">
+                <h3 className="font-bold text-sm text-slate-800 dark:text-slate-200 mb-1">
                   Bancos de Dados
-                </h4>
+                </h3>
                 <p className="text-xs text-slate-500 dark:text-slate-400 leading-normal">
                   PostgreSQL, MySQL & Docker
                 </p>

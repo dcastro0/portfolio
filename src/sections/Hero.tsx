@@ -154,6 +154,8 @@ const Hero = () => {
                 <img
                   src={minhaFoto}
                   alt="Caio de Castro - Foto de Perfil"
+                  fetchPriority="high"
+                  loading="eager"
                   className="w-full h-full object-cover grayscale group-hover:grayscale-0 transform group-hover:scale-105 transition-all duration-700 ease-out"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
