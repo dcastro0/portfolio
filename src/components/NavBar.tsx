@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { FiSun, FiMoon, FiZap, FiMenu, FiX } from "react-icons/fi";
+import { FiSun, FiMoon, FiTerminal, FiMenu, FiX } from "react-icons/fi";
 import { useTranslation } from "react-i18next";
 import LanguageSelector from "./LanguageSelector";
 
@@ -33,33 +33,39 @@ const Navbar = () => {
 
   useEffect(() => {
     const root = document.documentElement;
-    if (theme === "cyberpunk") {
-      root.classList.add("dark", "cyberpunk");
-      localStorage.setItem("theme", "cyberpunk");
+    if (theme === "emerald") {
+      root.classList.add("dark", "emerald");
+      localStorage.setItem("theme", "emerald");
     } else if (theme === "dark") {
       root.classList.add("dark");
-      root.classList.remove("cyberpunk");
+      root.classList.remove("emerald");
       localStorage.setItem("theme", "dark");
     } else {
-      root.classList.remove("dark", "cyberpunk");
+      root.classList.remove("dark", "emerald");
       localStorage.setItem("theme", "light");
     }
   }, [theme]);
 
   const toggleTheme = () => {
-    if (theme === "dark") {
-      setTheme("light");
-    } else if (theme === "light") {
-      setTheme("cyberpunk");
-    } else {
+    if (theme === "light") {
       setTheme("dark");
+    } else if (theme === "dark") {
+      setTheme("emerald");
+    } else {
+      setTheme("light");
     }
   };
 
   const getThemeLabel = () => {
-    if (theme === "dark") return "Mudar para modo claro";
-    if (theme === "light") return "Mudar para modo cyberpunk";
-    return "Mudar para modo escuro";
+    if (theme === "light") return "Modo Claro (Clique para mudar para Modo Escuro)";
+    if (theme === "dark") return "Modo Escuro (Clique para mudar para Modo Emerald)";
+    return "Modo Emerald (Clique para mudar para Modo Claro)";
+  };
+
+  const renderThemeIcon = () => {
+    if (theme === "light") return <FiSun size={18} className="text-amber-500" />;
+    if (theme === "dark") return <FiMoon size={18} className="text-indigo-400" />;
+    return <FiTerminal size={18} className="text-emerald-400" />;
   };
 
   return (
@@ -117,7 +123,7 @@ const Navbar = () => {
                 whileHover={{ scale: 1.05 }}
                 title={getThemeLabel()}
                 aria-label={getThemeLabel()}
-                className="p-2.5 rounded-full bg-slate-100 dark:bg-slate-800/80 text-slate-700 dark:text-amber-400 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors border border-slate-200/50 dark:border-slate-700/50"
+                className="p-2.5 rounded-full bg-slate-100 dark:bg-slate-800/80 text-slate-700 dark:text-slate-200 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors border border-slate-200/50 dark:border-slate-700/50"
               >
                 <AnimatePresence mode="wait" initial={false}>
                   <motion.div
@@ -127,13 +133,7 @@ const Navbar = () => {
                     exit={{ scale: 0.5, rotate: 90, opacity: 0 }}
                     transition={{ duration: 0.2 }}
                   >
-                    {theme === "cyberpunk" ? (
-                      <FiZap size={18} className="text-pink-500" />
-                    ) : theme === "dark" ? (
-                      <FiSun size={18} />
-                    ) : (
-                      <FiMoon size={18} />
-                    )}
+                    {renderThemeIcon()}
                   </motion.div>
                 </AnimatePresence>
               </motion.button>
@@ -149,15 +149,9 @@ const Navbar = () => {
               onClick={toggleTheme}
               aria-label={getThemeLabel()}
               title={getThemeLabel()}
-              className="p-2 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-amber-400"
+              className="p-2 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200"
             >
-              {theme === "cyberpunk" ? (
-                <FiZap size={18} className="text-pink-500" />
-              ) : theme === "dark" ? (
-                <FiSun size={18} />
-              ) : (
-                <FiMoon size={18} />
-              )}
+              {renderThemeIcon()}
             </button>
 
             <button

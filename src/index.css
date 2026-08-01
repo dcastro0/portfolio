@@ -29,9 +29,9 @@
     background-size: 32px 32px;
   }
 
-  html.cyberpunk body {
-    @apply bg-[#0b071a] text-purple-100 selection:bg-pink-500 selection:text-white;
-    background-image: radial-gradient(rgba(168, 85, 247, 0.18) 1px, transparent 1px);
+  html.emerald body {
+    @apply bg-[#031716] text-emerald-100 selection:bg-emerald-500 selection:text-slate-950;
+    background-image: radial-gradient(rgba(52, 211, 153, 0.18) 1px, transparent 1px);
     background-size: 32px 32px;
   }
 }
@@ -50,11 +50,11 @@
   border: 1px solid rgba(30, 41, 59, 0.8);
 }
 
-.cyberpunk .glass-panel {
-  background: rgba(18, 12, 38, 0.75);
+.emerald .glass-panel {
+  background: rgba(6, 38, 34, 0.75);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(168, 85, 247, 0.3);
+  border: 1px solid rgba(52, 211, 153, 0.3);
 }
 
 .glass-panel-hover {
@@ -66,9 +66,9 @@
   box-shadow: 0 10px 30px -10px rgba(59, 130, 246, 0.15);
 }
 
-.cyberpunk .glass-panel-hover:hover {
-  border-color: rgba(236, 72, 153, 0.6);
-  box-shadow: 0 10px 30px -10px rgba(236, 72, 153, 0.3);
+.emerald .glass-panel-hover:hover {
+  border-color: rgba(52, 211, 153, 0.6);
+  box-shadow: 0 10px 30px -10px rgba(52, 211, 153, 0.35);
 }
 
 .gradient-text {
@@ -83,8 +83,8 @@
   -webkit-text-fill-color: transparent;
 }
 
-.cyberpunk .gradient-text {
-  background: linear-gradient(135deg, #c084fc 0%, #f472b6 50%, #22d3ee 100%);
+.emerald .gradient-text {
+  background: linear-gradient(135deg, #34d399 0%, #a3e635 50%, #2dd4bf 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -107,8 +107,8 @@
   border-radius: 4px;
 }
 
-.cyberpunk ::-webkit-scrollbar-thumb {
-  background: rgba(168, 85, 247, 0.6);
+.emerald ::-webkit-scrollbar-thumb {
+  background: rgba(52, 211, 153, 0.5);
   border-radius: 4px;
 }
 
@@ -116,6 +116,6 @@
   background: rgba(59, 130, 246, 0.6);
 }
 
-.cyberpunk ::-webkit-scrollbar-thumb:hover {
-  background: rgba(236, 72, 153, 0.8);
+.emerald ::-webkit-scrollbar-thumb:hover {
+  background: rgba(163, 230, 53, 0.8);
 }
