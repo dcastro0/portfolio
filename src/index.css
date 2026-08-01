@@ -28,6 +28,12 @@
     background-image: radial-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px);
     background-size: 32px 32px;
   }
+
+  html.cyberpunk body {
+    @apply bg-[#0b071a] text-purple-100 selection:bg-pink-500 selection:text-white;
+    background-image: radial-gradient(rgba(168, 85, 247, 0.18) 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
 }
 
 .glass-panel {
@@ -44,6 +50,13 @@
   border: 1px solid rgba(30, 41, 59, 0.8);
 }
 
+.cyberpunk .glass-panel {
+  background: rgba(18, 12, 38, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(168, 85, 247, 0.3);
+}
+
 .glass-panel-hover {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -51,6 +64,11 @@
 .glass-panel-hover:hover {
   border-color: rgba(59, 130, 246, 0.4);
   box-shadow: 0 10px 30px -10px rgba(59, 130, 246, 0.15);
+}
+
+.cyberpunk .glass-panel-hover:hover {
+  border-color: rgba(236, 72, 153, 0.6);
+  box-shadow: 0 10px 30px -10px rgba(236, 72, 153, 0.3);
 }
 
 .gradient-text {
@@ -61,6 +79,12 @@
 
 .dark .gradient-text {
   background: linear-gradient(135deg, #60a5fa 0%, #818cf8 50%, #38bdf8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.cyberpunk .gradient-text {
+  background: linear-gradient(135deg, #c084fc 0%, #f472b6 50%, #22d3ee 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -83,6 +107,15 @@
   border-radius: 4px;
 }
 
+.cyberpunk ::-webkit-scrollbar-thumb {
+  background: rgba(168, 85, 247, 0.6);
+  border-radius: 4px;
+}
+
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(59, 130, 246, 0.6);
+}
+
+.cyberpunk ::-webkit-scrollbar-thumb:hover {
+  background: rgba(236, 72, 153, 0.8);
 }

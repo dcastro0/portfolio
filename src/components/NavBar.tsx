@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { FiSun, FiMoon, FiMenu, FiX } from "react-icons/fi";
+import { FiSun, FiMoon, FiZap, FiMenu, FiX } from "react-icons/fi";
 import { useTranslation } from "react-i18next";
 import LanguageSelector from "./LanguageSelector";
 
@@ -32,17 +32,34 @@ const Navbar = () => {
   }, []);
 
   useEffect(() => {
-    if (theme === "dark") {
-      document.documentElement.classList.add("dark");
+    const root = document.documentElement;
+    if (theme === "cyberpunk") {
+      root.classList.add("dark", "cyberpunk");
+      localStorage.setItem("theme", "cyberpunk");
+    } else if (theme === "dark") {
+      root.classList.add("dark");
+      root.classList.remove("cyberpunk");
       localStorage.setItem("theme", "dark");
     } else {
-      document.documentElement.classList.remove("dark");
+      root.classList.remove("dark", "cyberpunk");
       localStorage.setItem("theme", "light");
     }
   }, [theme]);
 
   const toggleTheme = () => {
-    setTheme(theme === "dark" ? "light" : "dark");
+    if (theme === "dark") {
+      setTheme("light");
+    } else if (theme === "light") {
+      setTheme("cyberpunk");
+    } else {
+      setTheme("dark");
+    }
+  };
+
+  const getThemeLabel = () => {
+    if (theme === "dark") return "Mudar para modo claro";
+    if (theme === "light") return "Mudar para modo cyberpunk";
+    return "Mudar para modo escuro";
   };
 
   return (
@@ -98,8 +115,8 @@ const Navbar = () => {
                 onClick={toggleTheme}
                 whileTap={{ scale: 0.9 }}
                 whileHover={{ scale: 1.05 }}
-                title={theme === "dark" ? "Mudar para modo claro" : "Mudar para modo escuro"}
-                aria-label={theme === "dark" ? "Mudar para modo claro" : "Mudar para modo escuro"}
+                title={getThemeLabel()}
+                aria-label={getThemeLabel()}
                 className="p-2.5 rounded-full bg-slate-100 dark:bg-slate-800/80 text-slate-700 dark:text-amber-400 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors border border-slate-200/50 dark:border-slate-700/50"
               >
                 <AnimatePresence mode="wait" initial={false}>
@@ -110,7 +127,13 @@ const Navbar = () => {
                     exit={{ scale: 0.5, rotate: 90, opacity: 0 }}
                     transition={{ duration: 0.2 }}
                   >
-                    {theme === "dark" ? <FiSun size={18} /> : <FiMoon size={18} />}
+                    {theme === "cyberpunk" ? (
+                      <FiZap size={18} className="text-pink-500" />
+                    ) : theme === "dark" ? (
+                      <FiSun size={18} />
+                    ) : (
+                      <FiMoon size={18} />
+                    )}
                   </motion.div>
                 </AnimatePresence>
               </motion.button>
@@ -124,10 +147,17 @@ const Navbar = () => {
 
             <button
               onClick={toggleTheme}
-              aria-label={theme === "dark" ? "Mudar para modo claro" : "Mudar para modo escuro"}
+              aria-label={getThemeLabel()}
+              title={getThemeLabel()}
               className="p-2 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-amber-400"
             >
-              {theme === "dark" ? <FiSun size={18} /> : <FiMoon size={18} />}
+              {theme === "cyberpunk" ? (
+                <FiZap size={18} className="text-pink-500" />
+              ) : theme === "dark" ? (
+                <FiSun size={18} />
+              ) : (
+                <FiMoon size={18} />
+              )}
             </button>
 
             <button
