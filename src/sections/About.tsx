@@ -78,7 +78,12 @@ const About = () => {
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4">
               <div className="p-4 rounded-xl glass-panel border border-slate-200/80 dark:border-slate-800/80">
                 <div className="p-2.5 w-fit rounded-lg bg-blue-500/10 text-blue-600 dark:text-blue-400 mb-3">
-                  <FiSmartphone size={20} />
+                  <FiSmartphone
+                    size={20}
+                    aria-label="Frontend & Mobile"
+                    role="img"
+                    title="Frontend & Mobile"
+                  />
                 </div>
                 <h3 className="font-bold text-sm text-slate-800 dark:text-slate-200 mb-1">
                   Frontend & Mobile
@@ -90,7 +95,12 @@ const About = () => {
 
               <div className="p-4 rounded-xl glass-panel border border-slate-200/80 dark:border-slate-800/80">
                 <div className="p-2.5 w-fit rounded-lg bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 mb-3">
-                  <FiServer size={20} />
+                  <FiServer
+                    size={20}
+                    aria-label="Backend & APIs"
+                    role="img"
+                    title="Backend & APIs"
+                  />
                 </div>
                 <h3 className="font-bold text-sm text-slate-800 dark:text-slate-200 mb-1">
                   Backend & APIs
@@ -102,7 +112,12 @@ const About = () => {
 
               <div className="p-4 rounded-xl glass-panel border border-slate-200/80 dark:border-slate-800/80">
                 <div className="p-2.5 w-fit rounded-lg bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 mb-3">
-                  <FiDatabase size={20} />
+                  <FiDatabase
+                    size={20}
+                    aria-label="Bancos de Dados"
+                    role="img"
+                    title="Bancos de Dados"
+                  />
                 </div>
                 <h3 className="font-bold text-sm text-slate-800 dark:text-slate-200 mb-1">
                   Bancos de Dados
@@ -141,6 +156,9 @@ const About = () => {
                     <skill.icon
                       size={28}
                       style={{ color: skill.color }}
+                      aria-label={skill.name}
+                      role="img"
+                      title={skill.name}
                       className="transition-colors"
                     />
                   </div>

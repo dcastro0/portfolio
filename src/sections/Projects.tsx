@@ -99,7 +99,7 @@ const Projects = () => {
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project) => (
+          {projects.map((project, index) => (
             <motion.div
               key={project.id}
               layoutId={`card-container-${project.id}`}
@@ -117,7 +117,10 @@ const Projects = () => {
                 <img
                   src={project.imageUrl}
                   alt={project.title}
-                  loading="lazy"
+                  width={600}
+                  height={337}
+                  loading={index === 0 ? "eager" : "lazy"}
+                  {...(index === 0 ? { fetchPriority: "high" } : {})}
                   className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 ease-out"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
@@ -195,6 +198,9 @@ const Projects = () => {
                     <img
                       src={selectedProject.imageUrl}
                       alt={selectedProject.title}
+                      width={768}
+                      height={320}
+                      loading="eager"
                       className="w-full h-full object-cover"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent opacity-80" />

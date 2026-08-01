@@ -154,6 +154,8 @@ const Hero = () => {
                 <img
                   src={minhaFoto}
                   alt="Caio de Castro - Foto de Perfil"
+                  width={320}
+                  height={320}
                   fetchPriority="high"
                   loading="eager"
                   className="w-full h-full object-cover grayscale group-hover:grayscale-0 transform group-hover:scale-105 transition-all duration-700 ease-out"
