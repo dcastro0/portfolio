@@ -2,6 +2,7 @@
   "navbar": {
     "home": "Início",
     "about": "Sobre",
+    "experience": "Trajetória",
     "projects": "Projetos",
     "contact": "Contato"
   },
@@ -12,6 +13,7 @@
     "description": "Especializado na concepção e desenvolvimento de soluções tecnológicas completas, integrando aplicações <1>Web</1> e <3>Mobile</3> modernas a <5>APIs</5> escaláveis e de alta performance.",
     "cta_projects": "Explorar Projetos",
     "cta_contact": "Entrar em Contato",
+    "cta_cv": "Baixar CV (PDF)",
     "stats": {
       "experience": "Anos de Aprendizado & Prática",
       "projects": "Projetos Desenvolvidos",
@@ -35,10 +37,20 @@
     "badge": "Portfólio de Código",
     "title": "Projetos em Destaque",
     "subtitle": "Uma seleção de aplicações e sistemas desenvolvidos com foco em qualidade, arquitetura e usabilidade.",
+    "filters": {
+      "all": "Todos os Projetos",
+      "web": "Web Applications",
+      "mobile": "Mobile Apps",
+      "backend": "Backend & APIs",
+      "fullstack": "Full Stack",
+      "financial": "Ferramentas Financeiras"
+    },
     "modal": {
       "technologies": "Tecnologias Utilizadas",
       "code_btn": "Ver Repositório",
-      "demo_btn": "Acessar Demonstração"
+      "live_btn": "Acessar Aplicação",
+      "screenshots_title": "Galeria de Interfaces & Prints do Sistema",
+      "click_to_enlarge": "Clique em qualquer imagem para ampliar em tela cheia"
     },
     "tcc": {
       "short": "Aplicação mobile completa desenvolvida para o Trabalho de Conclusão de Curso.",
@@ -75,6 +87,31 @@
     "netpulse": {
       "short": "Ferramenta de monitoramento em tempo real de métricas e status de rede.",
       "full": "Solução de observabilidade de rede construída com Node.js e React para acompanhar a disponibilidade, latência e diagnóstico de infraestrutura em tempo real."
+    }
+  },
+  "experience": {
+    "badge": "Trajetória & Marcos",
+    "title": "Experiência & Formação",
+    "subtitle": "Um resumo da minha jornada acadêmica em Sistemas de Informação e projetos de engenharia de software.",
+    "items": {
+      "aether": {
+        "title": "Arquitetura & ERP Aether",
+        "org": "Full Stack Developer • Sistema de Gestão Empresarial",
+        "desc": "Concepção, arquitetura de banco de dados e desenvolvimento completo do sistema Aether ERP, contemplando módulos de PDV, BI, Estoque, Financeiro e CRM.",
+        "highlights": "Construção de ecossistema modular escalável com React, TypeScript e PostgreSQL."
+      },
+      "tcc": {
+        "title": "Trabalho de Conclusão de Curso (TCC)",
+        "org": "Engenheiro de Software & Autor do TCC",
+        "desc": "Desenvolvimento do aplicativo mobile nativo e API de alta performance em Go (Golang) com persistência de dados local e remota.",
+        "highlights": "Arquitetura REST performática e experiência fluida de usuário mobile."
+      },
+      "academic": {
+        "title": "Bacharelado em Sistemas de Informação",
+        "org": "UniAtenas • Paracatu-MG",
+        "desc": "Graduação com foco em Engenharia de Software, Ciência da Computação, Arquitetura de Sistemas, Banco de Dados e Gestão de Tecnologia.",
+        "highlights": "Conclusão da graduação com desenvolvimento e aprovação do projeto prático de TCC."
+      }
     }
   },
   "contact": {

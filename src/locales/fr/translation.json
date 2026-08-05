@@ -2,6 +2,7 @@
   "navbar": {
     "home": "Accueil",
     "about": "À propos",
+    "experience": "Parcours",
     "projects": "Projets",
     "contact": "Contact"
   },
@@ -12,6 +13,7 @@
     "description": "Spécialisé dans la conception et le développement de solutions technologiques complètes, intégrant des applications <1>Web</1> et <3>Mobiles</3> modernes à des <5>APIs</5> évolutives et performantes.",
     "cta_projects": "Explorer les Projets",
     "cta_contact": "Me Contacter",
+    "cta_cv": "Télécharger CV (PDF)",
     "stats": {
       "experience": "Années d'Apprentissage & Pratique",
       "projects": "Projets Réalisés",
@@ -35,10 +37,20 @@
     "badge": "Portfolio de Code",
     "title": "Projets en Vedette",
     "subtitle": "Une sélection d'applications et de systèmes développés en mettant l'accent sur la qualité du code, l'architecture et la convivialité.",
+    "filters": {
+      "all": "Tous les Projets",
+      "web": "Applications Web",
+      "mobile": "Applications Mobiles",
+      "backend": "Backend & APIs",
+      "fullstack": "Full Stack",
+      "financial": "Outils Financiers"
+    },
     "modal": {
       "technologies": "Technologies Utilisées",
       "code_btn": "Voir le Dépôt",
-      "demo_btn": "Voir la Démo"
+      "demo_btn": "Voir la Démo",
+      "screenshots_title": "Captures d'Écran de l'Interface",
+      "click_to_enlarge": "Cliquer pour afficher en plein écran"
     },
     "tcc": {
       "short": "Application mobile complète développée pour le projet de fin d'études.",
@@ -73,8 +85,33 @@
       "full": "Microservice développé en Go axé sur une très faible latence, un haut débit et une conteneurisation Docker pour le raccourcissement et le suivi des liens."
     },
     "netpulse": {
-      "short": "Système de surveillance du réseau et des métriques en temps réel.",
-      "full": "Solution d'observabilité réseau construite avec Node.js et React pour surveiller la disponibilité des infrastructures, la latence et les diagnostics en temps réel."
+      "short": "Outil de surveillance des métriques et du statut du réseau en temps réel.",
+      "full": "Solution d'observabilité réseau construite avec Node.js et React pour surveiller la disponibilité, la latence et les diagnostics d'infrastructure en temps réel."
+    }
+  },
+  "experience": {
+    "badge": "Parcours & Jalons",
+    "title": "Expérience & Formation",
+    "subtitle": "Un résumé de mon parcours académique en Systèmes d'Information et projets d'ingénierie logicielle.",
+    "items": {
+      "aether": {
+        "title": "Architecture & ERP Aether",
+        "org": "Développeur Full Stack • Système de Gestion d'Entreprise",
+        "desc": "Conception, architecture de base de données et développement complet du système Aether ERP, couvrant les modules POS, BI Analytics, Inventaire, Finance et CRM.",
+        "highlights": "Construction d'un écosystème modulaire évolutif avec React, TypeScript et PostgreSQL."
+      },
+      "tcc": {
+        "title": "Projet de Thèse de Fin d'Études (TCC)",
+        "org": "Ingénieur Logiciel & Auteur de Thèse",
+        "desc": "Développement d'une application mobile native et d'une API backend haute performance en Go (Golang) avec persistance local et distante.",
+        "highlights": "Conception d'une architecture REST performante et d'une expérience utilisateur mobile fluide."
+      },
+      "academic": {
+        "title": "Licence en Systèmes d'Information",
+        "org": "UniAtenas • Paracatu, Brésil",
+        "desc": "Diplôme axé sur l'Ingénierie Logicielle, l'Informatique, l'Architecture Système, les Bases de Données et la Gestion de la Technologie.",
+        "highlights": "Obtention du diplôme avec le développement et la soutenance du projet pratique de thèse."
+      }
     }
   },
   "contact": {

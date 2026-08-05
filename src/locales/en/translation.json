@@ -1,7 +1,8 @@
 {
   "navbar": {
     "home": "Home",
-    "about": "About",
+    "about": "About Me",
+    "experience": "Experience",
     "projects": "Projects",
     "contact": "Contact"
   },
@@ -12,6 +13,7 @@
     "description": "Specialized in designing and building complete technological solutions, integrating modern <1>Web</1> and <3>Mobile</3> applications with scalable, high-performance <5>APIs</5>.",
     "cta_projects": "Explore Projects",
     "cta_contact": "Get in Touch",
+    "cta_cv": "Download CV (PDF)",
     "stats": {
       "experience": "Years of Continuous Learning",
       "projects": "Delivered Projects",
@@ -35,10 +37,20 @@
     "badge": "Code Showcase",
     "title": "Featured Projects",
     "subtitle": "A curated selection of applications built with a focus on code quality, architecture, and usability.",
+    "filters": {
+      "all": "All Projects",
+      "web": "Web Applications",
+      "mobile": "Mobile Apps",
+      "backend": "Backend & APIs",
+      "fullstack": "Full Stack",
+      "financial": "Financial Tools"
+    },
     "modal": {
       "technologies": "Technologies Used",
       "code_btn": "View Repository",
-      "demo_btn": "Live Demo"
+      "demo_btn": "Live Demo",
+      "screenshots_title": "Interface Screenshots",
+      "click_to_enlarge": "Click to view full screen"
     },
     "tcc": {
       "short": "Complete mobile application built for Capstone Graduation Thesis.",
@@ -75,6 +87,31 @@
     "netpulse": {
       "short": "Real-time network metrics and health monitoring system.",
       "full": "Network observability solution built with Node.js and React to monitor infrastructure availability, latency metrics, and real-time network diagnostics."
+    }
+  },
+  "experience": {
+    "badge": "Career & Milestones",
+    "title": "Experience & Education",
+    "subtitle": "A summary of my academic journey in Information Systems and software engineering projects.",
+    "items": {
+      "aether": {
+        "title": "Aether ERP System & Architecture",
+        "org": "Full Stack Developer • Enterprise Management System",
+        "desc": "Conception, database architecture, and full-stack development of the Aether ERP system, covering POS, BI Analytics, Inventory, Financial, and CRM modules.",
+        "highlights": "Built a scalable modular ecosystem with React, TypeScript, and PostgreSQL."
+      },
+      "tcc": {
+        "title": "Bachelor Thesis Project (TCC)",
+        "org": "Software Engineer & Thesis Author",
+        "desc": "Developed a native mobile application and high-performance Go (Golang) backend API with local and remote data persistence.",
+        "highlights": "Designed a performant REST architecture and smooth mobile user experience."
+      },
+      "academic": {
+        "title": "Bachelor's in Information Systems",
+        "org": "UniAtenas • Paracatu, Brazil",
+        "desc": "Degree focused on Software Engineering, Computer Science, System Architecture, Databases, and Technology Management.",
+        "highlights": "Graduated with the development and defense of the practical Mobile & Go backend thesis project."
+      }
     }
   },
   "contact": {
