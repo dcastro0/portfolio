@@ -9,11 +9,11 @@
   "hero": {
     "badge": "Disponible pour de nouveaux projets et opportunités",
     "greeting": "Bonjour, je m'appelle",
-    "role": "Ingénieur Logiciel & Développeur Full Stack",
-    "description": "Spécialisé dans la conception et le développement de solutions technologiques complètes, intégrant des applications <1>Web</1> et <3>Mobiles</3> modernes à des <5>APIs</5> évolutives et performantes.",
+    "role": "Développeur Full Stack",
+    "description": "Spécialisé dans la conception et le développement de solutions technologiques complètes, intégrant des applications <1>Web</1> et <3>Mobile</3> modernes à des <5>APIs</5> évolutives et performantes.",
     "cta_projects": "Explorer les Projets",
-    "cta_contact": "Me Contacter",
-    "cta_cv": "Télécharger CV (PDF)",
+    "cta_contact": "Prendre Contact",
+    "cta_cv": "Télécharger le CV (PDF)",
     "stats": {
       "experience": "Années d'Apprentissage & Pratique",
       "projects": "Projets Réalisés",
@@ -21,11 +21,11 @@
     }
   },
   "about": {
-    "badge": "Ingénierie & Solutions",
+    "badge": "Développement & Solutions",
     "title": "À Propos de Moi",
-    "p1": "Je suis un Ingénieur Logiciel axé sur la création de systèmes efficaces et évolutifs. Mon parcours est guidé par la livraison d'un code propre, d'architectures solides et d'interfaces centrées sur l'expérience utilisateur.",
-    "p2": "En tant que développeur <1>Full Stack</1>, je maîtrise l'ensemble de l'écosystème de développement, de la création d'interfaces front-end intuitives jusqu'à la conception d'APIs backend et de bases de données.",
-    "p3": "Je recherche continuellement l'excellence dans les meilleures pratiques d'ingénierie logicielle, l'intégration continue et les modèles d'architecture modernes.",
+    "p1": "Je suis un Développeur Full Stack axé sur la création de systèmes efficaces et évolutifs. Mon parcours en Systèmes d'Information est guidé par la livraison d'un code propre, d'architectures solides et d'interfaces centrées sur l'expérience utilisateur.",
+    "p2": "En tant que développeur <1>Full Stack</1>, je maîtrise l'ensemble du cycle de développement, de la conception de l'interface front-end à la mise en place d'APIs et de bases de données back-end.",
+    "p3": "Je recherche continuellement l'excellence dans les meilleures pratiques de développement logiciel, l'intégration continue et les modèles d'architecture modernes.",
     "skills_title": "Technologies & Outils",
     "highlights": {
       "frontend": "Développement d'interfaces réactives, adaptatives et accessibles avec React et TypeScript.",
@@ -92,17 +92,17 @@
   "experience": {
     "badge": "Parcours & Jalons",
     "title": "Expérience & Formation",
-    "subtitle": "Un résumé de mon parcours académique en Systèmes d'Information et projets d'ingénierie logicielle.",
+    "subtitle": "Un résumé de mon parcours académique en Systèmes d'Information et projets de développement logiciel.",
     "items": {
       "aether": {
         "title": "Architecture & ERP Aether",
-        "org": "Développeur Full Stack • Système de Gestion d'Entreprise",
-        "desc": "Conception, architecture de base de données et développement complet du système Aether ERP, couvrant les modules POS, BI Analytics, Inventaire, Finance et CRM.",
+        "org": "Full Stack Developer • Système de Gestion d'Entreprise",
+        "desc": "Conception, architecture de base de données et développement complet du système Aether ERP, couvrant les modules POS, BI, Stocks, Finance et CRM.",
         "highlights": "Construction d'un écosystème modulaire évolutif avec React, TypeScript et PostgreSQL."
       },
       "tcc": {
-        "title": "Projet de Thèse de Fin d'Études (TCC)",
-        "org": "Ingénieur Logiciel & Auteur de Thèse",
+        "title": "Projet de Fin d'Études (TCC)",
+        "org": "Développeur Full Stack & Auteur de Thèse",
         "desc": "Développement d'une application mobile native et d'une API backend haute performance en Go (Golang) avec persistance local et distante.",
         "highlights": "Conception d'une architecture REST performante et d'une expérience utilisateur mobile fluide."
       },

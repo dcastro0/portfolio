@@ -179,7 +179,7 @@ const Hero = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
                   <span className="text-xs font-semibold text-white font-mono">
-                    Caio de Castro — Software Engineer
+                    Caio de Castro — Desenvolvedor Full Stack
                   </span>
                 </div>
               </div>

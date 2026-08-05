@@ -9,23 +9,23 @@
   "hero": {
     "badge": "Disponible para nuevos proyectos y oportunidades",
     "greeting": "Hola, mi nombre es",
-    "role": "Ingeniero de Software & Desarrollador Full Stack",
+    "role": "Desarrollador Full Stack",
     "description": "Especializado en la concepción y desarrollo de soluciones tecnológicas completas, integrando aplicaciones <1>Web</1> y <3>Mobile</3> modernas a <5>APIs</5> escalables y de alto rendimiento.",
     "cta_projects": "Explorar Proyectos",
     "cta_contact": "Ponerse en Contacto",
     "cta_cv": "Descargar CV (PDF)",
     "stats": {
-      "experience": "Años de Aprendizaje y Práctica",
+      "experience": "Años de Aprendizaje & Práctica",
       "projects": "Proyectos Desarrollados",
       "stack": "Stack Tecnológico Moderno"
     }
   },
   "about": {
-    "badge": "Ingeniería & Soluciones",
+    "badge": "Desarrollo & Soluciones",
     "title": "Sobre Mí",
-    "p1": "Soy un Ingeniero de Software enfocado en el desarrollo de sistemas eficientes y escalables. Mi trayectoria se guía por la entrega de código limpio, arquitecturas sólidas e interfaces enfocadas en una excelente experiencia de usuario.",
+    "p1": "Soy un Desarrollador Full Stack enfocado en el desarrollo de sistemas eficientes y escalables. Mi trayectoria en Sistemas de Información se guía por la entrega de código limpio, arquitecturas sólidas e interfaces enfocadas en una excelente experiencia de usuario.",
     "p2": "Como desarrollador <1>Full Stack</1>, domino el ecosistema completo de desarrollo, desde la concepción del front-end intuitivo hasta el diseño e implementación de rutas y bases de datos en el back-end.",
-    "p3": "Busco constantemente el perfeccionamiento en buenas prácticas de ingeniería de software, integración continua y patrones de arquitectura modernos.",
+    "p3": "Busco constantemente el perfeccionamiento en buenas prácticas de desarrollo de software, integración continua y patrones de arquitectura modernos.",
     "skills_title": "Tecnologías & Herramientas",
     "highlights": {
       "frontend": "Desarrollo de interfaces reactivas, responsivas y accesibles con React y TypeScript.",
@@ -92,17 +92,17 @@
   "experience": {
     "badge": "Trayectoria y Hitos",
     "title": "Experiencia y Formación",
-    "subtitle": "Un resumen de mi trayectoria académica en Sistemas de Información y proyectos de ingeniería de software.",
+    "subtitle": "Un resumen de mi trayectoria académica en Sistemas de Información y proyectos de desarrollo de software.",
     "items": {
       "aether": {
-        "title": "Arquitectura y ERP Aether",
+        "title": "Arquitectura & ERP Aether",
         "org": "Full Stack Developer • Sistema de Gestión Empresarial",
-        "desc": "Concepción, arquitectura de base de datos y desarrollo completo del sistema Aether ERP, abarcando módulos de TPV, BI, Inventario, Financiero y CRM.",
+        "desc": "Concepción, arquitectura de bases de datos y desarrollo completo del sistema Aether ERP, abarcando módulos de TPV, BI, Inventario, Finanzas y CRM.",
         "highlights": "Construcción de un ecosistema modular escalable con React, TypeScript y PostgreSQL."
       },
       "tcc": {
-        "title": "Proyecto de Tesis de Grado (TCC)",
-        "org": "Ingeniero de Software y Autor de Tesis",
+        "title": "Trabajo de Fin de Grado (TCC)",
+        "org": "Desarrollador Full Stack y Autor de Tesis",
         "desc": "Desarrollo de aplicación móvil nativa y API de alto rendimiento en Go (Golang) con persistencia de datos local y remota.",
         "highlights": "Arquitectura REST de alto rendimiento y experiencia de usuario móvil fluida."
       },

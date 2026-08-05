@@ -9,23 +9,23 @@
   "hero": {
     "badge": "Available for new projects & opportunities",
     "greeting": "Hello, my name is",
-    "role": "Software Engineer & Full Stack Developer",
-    "description": "Specialized in designing and building complete technological solutions, integrating modern <1>Web</1> and <3>Mobile</3> applications with scalable, high-performance <5>APIs</5>.",
+    "role": "Full Stack Developer",
+    "description": "Specialized in designing and developing end-to-end tech solutions, integrating modern <1>Web</1> and <3>Mobile</3> applications with scalable, high-performance <5>APIs</5>.",
     "cta_projects": "Explore Projects",
     "cta_contact": "Get in Touch",
-    "cta_cv": "Download CV (PDF)",
+    "cta_cv": "Download Resume (PDF)",
     "stats": {
-      "experience": "Years of Continuous Learning",
-      "projects": "Delivered Projects",
+      "experience": "Years of Learning & Practice",
+      "projects": "Projects Built",
       "stack": "Modern Tech Stack"
     }
   },
   "about": {
-    "badge": "Engineering & Solutions",
+    "badge": "Development & Solutions",
     "title": "About Me",
-    "p1": "I am a Software Engineer focused on building efficient, scalable systems. My career is driven by delivering clean code, solid architectural patterns, and user-centric interfaces.",
-    "p2": "Operating as a <1>Full Stack</1> developer, I navigate the complete development ecosystem—from crafting intuitive front-end interfaces to architecting backend endpoints and data persistence.",
-    "p3": "I continuously strive for excellence in software engineering best practices, continuous integration, and modern design patterns.",
+    "p1": "I am a Full Stack Developer focused on building efficient, scalable systems. My journey in Information Systems is driven by delivering clean code, solid architectural patterns, and user-centric interfaces.",
+    "p2": "As a <1>Full Stack</1> developer, I command the entire development lifecycle, from designing intuitive frontends to implementing APIs and database architectures on the backend.",
+    "p3": "I continuously strive for excellence in software development best practices, continuous integration, and modern design patterns.",
     "skills_title": "Technologies & Tools",
     "highlights": {
       "frontend": "Building responsive, reactive, accessible user interfaces with React and TypeScript.",
@@ -92,17 +92,17 @@
   "experience": {
     "badge": "Career & Milestones",
     "title": "Experience & Education",
-    "subtitle": "A summary of my academic journey in Information Systems and software engineering projects.",
+    "subtitle": "A summary of my academic journey in Information Systems and software development projects.",
     "items": {
       "aether": {
-        "title": "Aether ERP System & Architecture",
+        "title": "Architecture & Aether ERP",
         "org": "Full Stack Developer • Enterprise Management System",
-        "desc": "Conception, database architecture, and full-stack development of the Aether ERP system, covering POS, BI Analytics, Inventory, Financial, and CRM modules.",
-        "highlights": "Built a scalable modular ecosystem with React, TypeScript, and PostgreSQL."
+        "desc": "Conception, database architecture, and end-to-end development of the Aether ERP system, covering POS, BI, Inventory, Financials, and CRM modules.",
+        "highlights": "Built a scalable modular ecosystem using React, TypeScript, and PostgreSQL."
       },
       "tcc": {
-        "title": "Bachelor Thesis Project (TCC)",
-        "org": "Software Engineer & Thesis Author",
+        "title": "Bachelor Thesis (TCC)",
+        "org": "Full Stack Developer & Thesis Author",
         "desc": "Developed a native mobile application and high-performance Go (Golang) backend API with local and remote data persistence.",
         "highlights": "Designed a performant REST architecture and smooth mobile user experience."
       },

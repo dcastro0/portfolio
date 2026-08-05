@@ -9,7 +9,7 @@
   "hero": {
     "badge": "Disponível para novos projetos e oportunidades",
     "greeting": "Olá, meu nome é",
-    "role": "Engenheiro de Software & Desenvolvedor Full Stack",
+    "role": "Desenvolvedor Full Stack",
     "description": "Especializado na concepção e desenvolvimento de soluções tecnológicas completas, integrando aplicações <1>Web</1> e <3>Mobile</3> modernas a <5>APIs</5> escaláveis e de alta performance.",
     "cta_projects": "Explorar Projetos",
     "cta_contact": "Entrar em Contato",
@@ -21,11 +21,11 @@
     }
   },
   "about": {
-    "badge": "Engenharia & Soluções",
+    "badge": "Desenvolvimento & Soluções",
     "title": "Sobre Mim",
-    "p1": "Sou um Engenheiro de Software focado no desenvolvimento de sistemas eficientes e escaláveis. Minha trajetória é pautada pela entrega de código limpo, arquiteturas sólidas e interfaces focadas em uma excelente experiência do usuário.",
+    "p1": "Sou um Desenvolvedor Full Stack focado na construção de sistemas eficientes e escaláveis. Minha trajetória em Sistemas de Informação é pautada pela entrega de código limpo, arquiteturas sólidas e interfaces focadas em uma excelente experiência do usuário.",
     "p2": "Atuando como desenvolvedor <1>Full Stack</1>, domino o ecossistema completo de desenvolvimento, da concepção do front-end intuitivo até o design e implementação de rotas e banco de dados no back-end.",
-    "p3": "Busco constantemente o aprimoramento em boas práticas de engenharia de software, integração contínua e padrões de arquitetura modernos.",
+    "p3": "Busco constantemente o aprimoramento em boas práticas de desenvolvimento de software, integração contínua e padrões de arquitetura modernos.",
     "skills_title": "Tecnologias & Ferramentas",
     "highlights": {
       "frontend": "Desenvolvimento de interfaces reativas, responsivas e acessíveis com React e TypeScript.",
@@ -92,7 +92,7 @@
   "experience": {
     "badge": "Trajetória & Marcos",
     "title": "Experiência & Formação",
-    "subtitle": "Um resumo da minha jornada acadêmica em Sistemas de Informação e projetos de engenharia de software.",
+    "subtitle": "Um resumo da minha jornada acadêmica em Sistemas de Informação e projetos de desenvolvimento de software.",
     "items": {
       "aether": {
         "title": "Arquitetura & ERP Aether",
@@ -102,7 +102,7 @@
       },
       "tcc": {
         "title": "Trabalho de Conclusão de Curso (TCC)",
-        "org": "Engenheiro de Software & Autor do TCC",
+        "org": "Desenvolvedor Full Stack & Autor do TCC",
         "desc": "Desenvolvimento do aplicativo mobile nativo e API de alta performance em Go (Golang) com persistência de dados local e remota.",
         "highlights": "Arquitetura REST performática e experiência fluida de usuário mobile."
       },
