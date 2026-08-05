@@ -1,13 +1,22 @@
+export interface ProjectScreenshot {
+  title: string;
+  url: string;
+}
+
+export type FilterCategory = "all" | "web" | "mobile" | "backend" | "fullstack" | "financial";
+
 export interface Project {
   id: number;
   title: string;
   category: string;
+  filterCategory: FilterCategory;
   shortDescriptionKey: string;
   fullDescriptionKey: string;
   imageUrl: string;
   technologies: string[];
   githubUrl?: string;
   liveUrl?: string;
+  screenshots?: ProjectScreenshot[];
 }
 
 export const projects: Project[] = [
@@ -15,6 +24,7 @@ export const projects: Project[] = [
     id: 1,
     title: "TCC Mobile App",
     category: "Mobile Application",
+    filterCategory: "mobile",
     shortDescriptionKey: "projects.tcc.short",
     fullDescriptionKey: "projects.tcc.full",
     imageUrl:
@@ -26,6 +36,7 @@ export const projects: Project[] = [
     id: 2,
     title: "TCC Backend API",
     category: "Backend & Microservice",
+    filterCategory: "backend",
     shortDescriptionKey: "projects.tcc_api.short",
     fullDescriptionKey: "projects.tcc_api.full",
     imageUrl:
@@ -37,6 +48,7 @@ export const projects: Project[] = [
     id: 3,
     title: "Commercial Sales System",
     category: "Web Application",
+    filterCategory: "web",
     shortDescriptionKey: "projects.vendas.short",
     fullDescriptionKey: "projects.vendas.full",
     imageUrl:
@@ -48,6 +60,7 @@ export const projects: Project[] = [
     id: 4,
     title: "Dile Full Stack Platform",
     category: "Full Stack Platform",
+    filterCategory: "fullstack",
     shortDescriptionKey: "projects.dile.short",
     fullDescriptionKey: "projects.dile.full",
     imageUrl:
@@ -59,6 +72,7 @@ export const projects: Project[] = [
     id: 5,
     title: "Financial Interest Calculator",
     category: "Financial Tool",
+    filterCategory: "financial",
     shortDescriptionKey: "projects.juros.short",
     fullDescriptionKey: "projects.juros.full",
     imageUrl:
@@ -70,6 +84,7 @@ export const projects: Project[] = [
     id: 6,
     title: "Executive Developer Portfolio",
     category: "Web Platform",
+    filterCategory: "web",
     shortDescriptionKey: "projects.portfolio.short",
     fullDescriptionKey: "projects.portfolio.full",
     imageUrl:
@@ -82,17 +97,52 @@ export const projects: Project[] = [
     id: 7,
     title: "Aether ERP",
     category: "Web Application",
+    filterCategory: "web",
     shortDescriptionKey: "projects.aether.short",
     fullDescriptionKey: "projects.aether.full",
-    imageUrl:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
+    imageUrl: "/portfolio-screenshots/aether/01-dashboard.png",
     technologies: ["React", "TypeScript", "Node.js", "PostgreSQL"],
     githubUrl: "https://github.com/dcastro0/aether-erp",
+    screenshots: [
+      {
+        title: "Dashboard & Visão Geral",
+        url: "/portfolio-screenshots/aether/01-dashboard.png",
+      },
+      {
+        title: "Ponto de Venda (PDV) & Vendas",
+        url: "/portfolio-screenshots/aether/02-pdv-sales.png",
+      },
+      {
+        title: "Gestão Financeira & Fluxo de Caixa",
+        url: "/portfolio-screenshots/aether/03-financial-management.png",
+      },
+      {
+        title: "Relatórios & Business Intelligence",
+        url: "/portfolio-screenshots/aether/04-reports-bi.png",
+      },
+      {
+        title: "Estoque & Catálogo de Produtos",
+        url: "/portfolio-screenshots/aether/05-inventory-products.png",
+      },
+      {
+        title: "Compras & Pedidos de Fornecedores",
+        url: "/portfolio-screenshots/aether/06-purchases-orders.png",
+      },
+      {
+        title: "Gestão de Clientes & CRM",
+        url: "/portfolio-screenshots/aether/07-customers.png",
+      },
+      {
+        title: "Configurações & Temas do Sistema",
+        url: "/portfolio-screenshots/aether/08-settings.png",
+      },
+    ],
   },
   {
     id: 8,
     title: "GoShortner",
     category: "Backend & API",
+    filterCategory: "backend",
     shortDescriptionKey: "projects.goshortner.short",
     fullDescriptionKey: "projects.goshortner.full",
     imageUrl:
@@ -104,6 +154,7 @@ export const projects: Project[] = [
     id: 9,
     title: "NetPulse",
     category: "System & Monitoring",
+    filterCategory: "backend",
     shortDescriptionKey: "projects.netpulse.short",
     fullDescriptionKey: "projects.netpulse.full",
     imageUrl:
