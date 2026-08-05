@@ -1,11 +1,19 @@
 import { motion } from "motion/react";
 import { useTranslation, Trans } from "react-i18next";
-import { FiArrowRight, FiMail, FiCode, FiLayers, FiCpu } from "react-icons/fi";
+import { FiArrowRight, FiMail, FiCode, FiLayers, FiCpu, FiDownload } from "react-icons/fi";
 import { SiReact, SiTypescript, SiGo } from "react-icons/si";
 import minhaFoto from "../assets/minhaFoto.jpg";
 
 const Hero = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+
+  const isPt = i18n.language?.startsWith("pt");
+  const cvPath = isPt
+    ? "/documents/Curr%C3%ADculo%20-%20Caio%20Correa%20de%20Castro.pdf"
+    : "/documents/Resume%20-%20Caio%20Correa%20de%20Castro.pdf";
+  const cvFileName = isPt
+    ? "Currículo - Caio Correa de Castro.pdf"
+    : "Resume - Caio Correa de Castro.pdf";
 
   return (
     <section
@@ -86,6 +94,15 @@ const Hero = () => {
             >
               <span>{t("hero.cta_projects")}</span>
               <FiArrowRight size={18} />
+            </a>
+
+            <a
+              href={cvPath}
+              download={cvFileName}
+              className="inline-flex items-center gap-2 px-7 py-3.5 bg-slate-900 dark:bg-white text-white dark:text-slate-900 rounded-xl font-semibold hover:bg-slate-800 dark:hover:bg-slate-100 transition-all hover:-translate-y-0.5 active:translate-y-0 text-sm shadow-md"
+            >
+              <FiDownload size={18} />
+              <span>{t("hero.cta_cv")}</span>
             </a>
 
             <a
