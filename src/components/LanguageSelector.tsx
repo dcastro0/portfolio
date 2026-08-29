@@ -9,7 +9,11 @@ const LanguageSelector = () => {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
-  const currentLang = LANGUAGES.find((lang) => lang.code === i18n.language) || LANGUAGES[0];
+  const currentLanguage = i18n.resolvedLanguage || i18n.language;
+  const currentLang =
+    LANGUAGES.find((lang) => lang.code === currentLanguage) ||
+    LANGUAGES.find((lang) => currentLanguage.startsWith(lang.code)) ||
+    LANGUAGES[0];
 
   const handleSelectLanguage = (code: string) => {
     i18n.changeLanguage(code);
@@ -66,12 +70,12 @@ const LanguageSelector = () => {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 8, scale: 0.95 }}
             transition={{ duration: 0.15, ease: "easeOut" }}
-            className="absolute right-0 mt-2 w-44 rounded-2xl bg-white/90 dark:bg-slate-900/90 backdrop-blur-xl border border-slate-200/80 dark:border-slate-800/80 shadow-xl shadow-slate-900/10 dark:shadow-black/40 p-1.5 z-50 overflow-hidden"
+            className="absolute right-0 mt-2 w-52 rounded-2xl bg-white/90 dark:bg-slate-900/90 backdrop-blur-xl border border-slate-200/80 dark:border-slate-800/80 shadow-xl shadow-slate-900/10 dark:shadow-black/40 p-1.5 z-50 overflow-hidden"
           >
             <div className="px-2.5 py-1.5 text-[10px] font-mono font-semibold uppercase tracking-wider text-slate-400 dark:text-slate-500 border-b border-slate-100 dark:border-slate-800/60 mb-1">
               Idioma / Language
             </div>
-            <div className="space-y-0.5">
+            <div className="max-h-72 space-y-0.5 overflow-y-auto">
               {LANGUAGES.map((lang) => {
                 const isActive = lang.code === currentLang.code;
                 return (
