@@ -11,18 +11,34 @@ const browserLanguage = navigator.language.split("-")[0];
 const defaultLanguage =
   savedLanguage || (["pt", "en", "es", "fr"].includes(browserLanguage) ? browserLanguage : "pt");
 
-i18n.use(initReactI18next).init({
-  resources: {
-    pt: { translation: ptTranslation },
-    en: { translation: enTranslation },
-    es: { translation: esTranslation },
-    fr: { translation: frTranslation },
-  },
-  lng: defaultLanguage,
-  fallbackLng: "pt",
-  interpolation: {
-    escapeValue: false,
-  },
-});
+const syncDocumentLanguage = (language: string) => {
+  const languageMap: Record<string, string> = {
+    pt: "pt-BR",
+    en: "en",
+    es: "es",
+    fr: "fr",
+  };
+
+  document.documentElement.lang = languageMap[language.split("-")[0]] || "pt-BR";
+};
+
+i18n.on("languageChanged", syncDocumentLanguage);
+
+void i18n
+  .use(initReactI18next)
+  .init({
+    resources: {
+      pt: { translation: ptTranslation },
+      en: { translation: enTranslation },
+      es: { translation: esTranslation },
+      fr: { translation: frTranslation },
+    },
+    lng: defaultLanguage,
+    fallbackLng: "pt",
+    interpolation: {
+      escapeValue: false,
+    },
+  })
+  .then(() => syncDocumentLanguage(i18n.language));
 
 export default i18n;
