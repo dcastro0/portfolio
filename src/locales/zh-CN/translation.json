@@ -1,0 +1,152 @@
+{
+  "navbar": {
+    "home": "首页",
+    "about": "关于我",
+    "experience": "经历",
+    "projects": "项目",
+    "contact": "联系"
+  },
+  "hero": {
+    "badge": "欢迎新的项目合作与职业机会",
+    "greeting": "你好，我是",
+    "role": "全栈开发者",
+    "description": "专注于设计和开发完整的技术解决方案，将现代<1>网页</1>与<3>移动端</3>应用和可扩展、高性能的<5>API</5>相结合。",
+    "cta_projects": "查看项目",
+    "cta_contact": "联系我",
+    "cta_cv": "下载简历（PDF）",
+    "stats": {
+      "experience": "学习与实践年数",
+      "projects": "已开发项目",
+      "stack": "现代技术栈"
+    }
+  },
+  "about": {
+    "badge": "开发 & 解决方案",
+    "title": "关于我",
+    "p1": "我是一名专注于构建高效、可扩展系统的全栈开发者。在信息系统领域的学习和实践中，我始终重视整洁的代码、稳健的架构以及以良好用户体验为核心的界面。",
+    "p2": "作为一名<strong>全栈</strong>开发者，我参与完整的开发周期，从界面设计到API和数据库实现。",
+    "p3": "我持续学习软件开发最佳实践、持续集成和现代架构模式。",
+    "skills_title": "技术 & 工具",
+    "highlights": {
+      "frontend": "使用React和TypeScript开发响应迅速、自适应且无障碍的用户界面。",
+      "backend": "使用Node.js和Go（Golang）构建稳健的RESTful API与高性能微服务。",
+      "database": "使用PostgreSQL和MySQL设计与管理高级关系型数据库。"
+    }
+  },
+  "projects": {
+    "badge": "代码作品集",
+    "title": "精选项目",
+    "subtitle": "精选注重质量、架构和易用性的应用与系统。",
+    "filters": {
+      "all": "全部项目",
+      "web": "网页应用",
+      "mobile": "移动应用",
+      "backend": "后端 & API",
+      "fullstack": "全栈",
+      "financial": "金融工具"
+    },
+    "modal": {
+      "technologies": "使用的技术",
+      "code_btn": "查看仓库",
+      "live_btn": "打开应用",
+      "screenshots_title": "界面与系统截图",
+      "click_to_enlarge": "点击图片以全屏查看",
+      "demo_btn": "打开应用",
+      "private_repo": "私有源代码",
+      "open_details": "查看详情"
+    },
+    "tcc": {
+      "short": "用于记录血糖、习惯和成就的移动平台。",
+      "full": "该项目由最初使用Flask开发的毕业项目演进而来，现已整理为单体仓库，包含React Native与Expo应用、使用Chi的Go API、PostgreSQL以及SQLite本地持久化。"
+    },
+    "tcc_api": {
+      "short": "为毕业项目应用提供支持的Go RESTful后端API。",
+      "full": "使用Go（Golang）和MySQL构建的后端服务，负责集中式数据管理、身份验证以及毕业项目生态的业务逻辑。"
+    },
+    "vendas": {
+      "short": "商业运营管理与控制系统。",
+      "full": "用于优化商业流程的应用，提供销售管理、记录跟踪以及支持决策的分析界面。"
+    },
+    "dile": {
+      "short": "集成前端与后端服务的全栈平台。",
+      "full": "覆盖现代应用全部层级的集成架构，展示连续的数据流、输入验证以及服务之间的高度互操作性。"
+    },
+    "juros": {
+      "short": "金融计算分析与模拟工具。",
+      "full": "注重金融计算准确性的应用，通过直观界面提供利息模拟、收益预测和动态报表。"
+    },
+    "portfolio": {
+      "short": "聚焦项目与技术经验的多语言专业作品集。",
+      "full": "使用React 19、TypeScript和Tailwind CSS开发，具备国际化、主题切换、项目筛选、图库和联系表单。"
+    },
+    "aether": {
+      "short": "面向企业管理的现代ERP系统。",
+      "full": "用于集中管理工作流程、财务、库存和战略报表的高性能企业资源计划（ERP）平台。"
+    },
+    "goshortner": {
+      "short": "用于短链接生成、管理和分析的全栈平台。",
+      "full": "采用Go与Echo后端、PostgreSQL持久化和React界面，包含身份验证、数据分析、二维码和个人链接页面。"
+    },
+    "netpulse": {
+      "short": "实时监控网络指标与状态的工具。",
+      "full": "使用Node.js和React构建的网络可观测性解决方案，可实时跟踪可用性、延迟和基础设施诊断信息。"
+    }
+  },
+  "experience": {
+    "badge": "经历 & 里程碑",
+    "title": "技术经历 & 教育背景",
+    "subtitle": "这些项目体现了我的技术成长以及信息系统专业背景。",
+    "items": {
+      "aether": {
+        "title": "Aether ERP架构与开发",
+        "org": "全栈开发者 • 企业管理系统",
+        "desc": "负责Aether ERP的方案设计、数据库架构和完整开发，涵盖POS、商业智能、库存、财务和CRM模块。",
+        "highlights": "使用React、TypeScript和PostgreSQL构建可扩展的模块化生态系统。"
+      },
+      "tcc": {
+        "title": "Diabetes Care",
+        "org": "演进为全栈平台的学术项目",
+        "desc": "继续开发毕业项目中的应用，整合使用Expo的React Native应用和采用PostgreSQL的Go API。",
+        "highlights": "从Flask API迁移至Go单体仓库，并实现本地与远程持久化以及游戏化功能。"
+      },
+      "academic": {
+        "title": "信息系统学士",
+        "org": "UniAtenas • 巴西米纳斯吉拉斯州帕拉卡图",
+        "desc": "课程重点包括软件工程、计算机科学、系统架构、数据库和技术管理。",
+        "highlights": "完成并通过实践型毕业项目，取得学士学位。"
+      }
+    }
+  },
+  "contact": {
+    "badge": "直接联系",
+    "title": "联系我",
+    "description": "欢迎就项目合作、职业机会、软件架构和技术话题与我联系。",
+    "form_title": "发送消息",
+    "form_subtitle": "请填写您的项目或联系信息，我会尽快回复。",
+    "form_name": "姓名",
+    "form_name_placeholder": "例如：张伟",
+    "form_email": "电子邮箱",
+    "form_email_placeholder": "例如：zhang.wei@example.com",
+    "form_message": "消息",
+    "form_message_placeholder": "请描述您的项目或联系原因...",
+    "form_send_btn": "发送消息",
+    "form_sending_btn": "正在发送...",
+    "form_success": "消息发送成功！我会尽快与您联系。",
+    "form_error": "消息发送失败，请重试。",
+    "errors": {
+      "name_required": "请输入姓名。",
+      "email_required": "请输入电子邮箱。",
+      "email_invalid": "请输入有效的电子邮箱地址。",
+      "message_required": "请输入消息内容。",
+      "message_min": "消息内容至少需要10个字符。"
+    },
+    "email_label": "工作邮箱",
+    "response_label": "回复时间",
+    "response_value": "通常在24小时内",
+    "social_label": "社交网络 & 技术主页"
+  },
+  "footer": {
+    "rights": "保留所有权利。",
+    "built_with": "使用React、TypeScript和Tailwind CSS开发"
+  }
+}
