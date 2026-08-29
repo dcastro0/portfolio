@@ -66,7 +66,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <span className="text-xs font-mono text-slate-400 block">
-                    E-mail Profissional
+                    {t("contact.email_label")}
                   </span>
                   <a
                     href="mailto:caio.dcastrodev@gmail.com"
@@ -82,9 +82,11 @@ const Contact = () => {
                   <FiClock size={22} />
                 </div>
                 <div>
-                  <span className="text-xs font-mono text-slate-400 block">Tempo de Resposta</span>
+                  <span className="text-xs font-mono text-slate-400 block">
+                    {t("contact.response_label")}
+                  </span>
                   <span className="text-sm font-semibold text-slate-800 dark:text-slate-200">
-                    Geralmente em até 24h
+                    {t("contact.response_value")}
                   </span>
                 </div>
               </div>
@@ -92,7 +94,7 @@ const Contact = () => {
 
             <div>
               <span className="text-xs font-bold text-slate-400 uppercase tracking-widest font-mono mb-4 block">
-                Redes & Perfil Técnico
+                {t("contact.social_label")}
               </span>
               <div className="flex gap-4">
                 <a
@@ -140,6 +142,8 @@ const Contact = () => {
                     type="text"
                     id="user_name"
                     {...register("user_name")}
+                    aria-invalid={Boolean(errors.user_name)}
+                    aria-describedby={errors.user_name ? "user_name_error" : undefined}
                     className={`w-full pl-10 pr-4 py-3 bg-white/80 dark:bg-slate-800/80 border ${
                       errors.user_name
                         ? "border-rose-500"
@@ -149,7 +153,11 @@ const Contact = () => {
                   />
                 </div>
                 {errors.user_name && (
-                  <span className="text-xs text-rose-500 font-medium mt-1.5 block">
+                  <span
+                    id="user_name_error"
+                    role="alert"
+                    className="text-xs text-rose-500 font-medium mt-1.5 block"
+                  >
                     {t(errors.user_name.message as string)}
                   </span>
                 )}
@@ -170,6 +178,8 @@ const Contact = () => {
                     type="email"
                     id="user_email"
                     {...register("user_email")}
+                    aria-invalid={Boolean(errors.user_email)}
+                    aria-describedby={errors.user_email ? "user_email_error" : undefined}
                     className={`w-full pl-10 pr-4 py-3 bg-white/80 dark:bg-slate-800/80 border ${
                       errors.user_email
                         ? "border-rose-500"
@@ -179,7 +189,11 @@ const Contact = () => {
                   />
                 </div>
                 {errors.user_email && (
-                  <span className="text-xs text-rose-500 font-medium mt-1.5 block">
+                  <span
+                    id="user_email_error"
+                    role="alert"
+                    className="text-xs text-rose-500 font-medium mt-1.5 block"
+                  >
                     {t(errors.user_email.message as string)}
                   </span>
                 )}
@@ -200,6 +214,8 @@ const Contact = () => {
                     id="message"
                     rows={4}
                     {...register("message")}
+                    aria-invalid={Boolean(errors.message)}
+                    aria-describedby={errors.message ? "message_error" : undefined}
                     className={`w-full pl-10 pr-4 py-3 bg-white/80 dark:bg-slate-800/80 border ${
                       errors.message ? "border-rose-500" : "border-slate-200 dark:border-slate-700"
                     } rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all outline-none resize-none text-slate-900 dark:text-slate-100 text-sm`}
@@ -207,7 +223,11 @@ const Contact = () => {
                   />
                 </div>
                 {errors.message && (
-                  <span className="text-xs text-rose-500 font-medium mt-1.5 block">
+                  <span
+                    id="message_error"
+                    role="alert"
+                    className="text-xs text-rose-500 font-medium mt-1.5 block"
+                  >
                     {t(errors.message.message as string)}
                   </span>
                 )}
@@ -238,6 +258,8 @@ const Contact = () => {
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0 }}
+                    role="status"
+                    aria-live="polite"
                     className="flex items-center gap-3 text-emerald-700 dark:text-emerald-300 bg-emerald-50 dark:bg-emerald-950/50 border border-emerald-200 dark:border-emerald-800 p-4 rounded-xl text-xs font-medium"
                   >
                     <FiCheckCircle size={18} className="shrink-0 text-emerald-500" />
@@ -249,6 +271,8 @@ const Contact = () => {
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0 }}
+                    role="alert"
+                    aria-live="assertive"
                     className="flex items-center gap-3 text-rose-700 dark:text-rose-300 bg-rose-50 dark:bg-rose-950/50 border border-rose-200 dark:border-rose-800 p-4 rounded-xl text-xs font-medium"
                   >
                     <FiAlertCircle size={18} className="shrink-0 text-rose-500" />
