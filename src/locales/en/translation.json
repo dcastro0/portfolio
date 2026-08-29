@@ -24,7 +24,7 @@
     "badge": "Development & Solutions",
     "title": "About Me",
     "p1": "I am a Full Stack Developer focused on building efficient, scalable systems. My journey in Information Systems is driven by delivering clean code, solid architectural patterns, and user-centric interfaces.",
-    "p2": "As a <1>Full Stack</1> developer, I command the entire development lifecycle, from designing intuitive frontends to implementing APIs and database architectures on the backend.",
+    "p2": "As a <strong>Full Stack</strong> developer, I work across the development lifecycle, from building interfaces to implementing APIs and databases.",
     "p3": "I continuously strive for excellence in software development best practices, continuous integration, and modern design patterns.",
     "skills_title": "Technologies & Tools",
     "highlights": {
@@ -50,11 +50,13 @@
       "code_btn": "View Repository",
       "demo_btn": "Live Demo",
       "screenshots_title": "Interface Screenshots",
-      "click_to_enlarge": "Click to view full screen"
+      "click_to_enlarge": "Click to view full screen",
+      "private_repo": "Private source code",
+      "open_details": "Open details"
     },
     "tcc": {
-      "short": "Complete mobile application built for Capstone Graduation Thesis.",
-      "full": "Comprehensive application developed to fulfill academic requirements, featuring modern mobile architecture, SQLite local persistence, and state management."
+      "short": "Mobile platform for tracking glucose readings, habits, and achievements.",
+      "full": "An evolution of the original Flask-based capstone project, now organized as a monorepo with a React Native and Expo app, a Go and Chi API, PostgreSQL, and local SQLite persistence."
     },
     "tcc_api": {
       "short": "Go (Golang) RESTful backend API supporting the capstone app.",
@@ -73,16 +75,16 @@
       "full": "Tool focused on financial accuracy, enabling interest calculations, yield projections, and dynamic reports via an intuitive interface."
     },
     "portfolio": {
-      "short": "Professional web portfolio platform.",
-      "full": "Modern frontend engineering built with React 19, TypeScript, Tailwind CSS, full internationalization (i18n), and theme switching."
+      "short": "Multilingual professional portfolio focused on projects and technical experience.",
+      "full": "Application built with React 19, TypeScript, and Tailwind CSS, featuring internationalization, themes, project filters, a gallery, and a contact form."
     },
     "aether": {
       "short": "Modern ERP system for corporate enterprise management.",
       "full": "Enterprise Resource Planning (ERP) platform built to centralize workflows, financial management, inventory control, and strategic reporting with high performance."
     },
     "goshortner": {
-      "short": "High-performance URL shortening and redirection API service.",
-      "full": "Microservice engineered in Go focusing on ultra-low latency, high throughput, and Docker containerization for link shortening and analytics tracking."
+      "short": "Full stack platform for shortening, managing, and analyzing links.",
+      "full": "Application with a Go and Echo backend, PostgreSQL persistence, and a React interface. It includes authentication, analytics, QR codes, and bio link pages."
     },
     "netpulse": {
       "short": "Real-time network metrics and health monitoring system.",
@@ -91,8 +93,8 @@
   },
   "experience": {
     "badge": "Career & Milestones",
-    "title": "Experience & Education",
-    "subtitle": "A summary of my academic journey in Information Systems and software development projects.",
+    "title": "Technical Journey & Education",
+    "subtitle": "Projects that represent my technical growth and Information Systems education.",
     "items": {
       "aether": {
         "title": "Architecture & Aether ERP",
@@ -101,10 +103,10 @@
         "highlights": "Built a scalable modular ecosystem using React, TypeScript, and PostgreSQL."
       },
       "tcc": {
-        "title": "Bachelor Thesis (TCC)",
-        "org": "Full Stack Developer & Thesis Author",
-        "desc": "Developed a native mobile application and high-performance Go (Golang) backend API with local and remote data persistence.",
-        "highlights": "Designed a performant REST architecture and smooth mobile user experience."
+        "title": "Diabetes Care",
+        "org": "Academic project evolved into a Full Stack platform",
+        "desc": "Continuation of the capstone application, combining a React Native and Expo app with a Go API backed by PostgreSQL.",
+        "highlights": "Evolved from a Flask API into a Go monorepo with local and remote persistence and gamification features."
       },
       "academic": {
         "title": "Bachelor's in Information Systems",
@@ -136,7 +138,11 @@
       "email_invalid": "Please enter a valid email address.",
       "message_required": "Message is required.",
       "message_min": "Message must be at least 10 characters."
-    }
+    },
+    "email_label": "Professional email",
+    "response_label": "Response time",
+    "response_value": "Usually within 24 hours",
+    "social_label": "Technical profiles"
   },
   "footer": {
     "rights": "All rights reserved.",
