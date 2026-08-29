@@ -24,7 +24,7 @@
     "badge": "Desarrollo & Soluciones",
     "title": "Sobre Mí",
     "p1": "Soy un Desarrollador Full Stack enfocado en el desarrollo de sistemas eficientes y escalables. Mi trayectoria en Sistemas de Información se guía por la entrega de código limpio, arquitecturas sólidas e interfaces enfocadas en una excelente experiencia de usuario.",
-    "p2": "Como desarrollador <1>Full Stack</1>, domino el ecosistema completo de desarrollo, desde la concepción del front-end intuitivo hasta el diseño e implementación de rutas y bases de datos en el back-end.",
+    "p2": "Como desarrollador <strong>Full Stack</strong>, trabajo en todo el ciclo de desarrollo, desde las interfaces hasta la implementación de APIs y bases de datos.",
     "p3": "Busco constantemente el perfeccionamiento en buenas prácticas de desarrollo de software, integración continua y patrones de arquitectura modernos.",
     "skills_title": "Tecnologías & Herramientas",
     "highlights": {
@@ -50,11 +50,13 @@
       "code_btn": "Ver Repositorio",
       "demo_btn": "Acceder a Demostración",
       "screenshots_title": "Capturas de Pantalla de la Interfaz",
-      "click_to_enlarge": "Haz clic para ver en pantalla completa"
+      "click_to_enlarge": "Haz clic para ver en pantalla completa",
+      "private_repo": "Código privado",
+      "open_details": "Abrir detalles"
     },
     "tcc": {
-      "short": "Aplicación móvil completa desarrollada para el Trabajo de Fin de Grado.",
-      "full": "Proyecto completo desarrollado como requisito académico, aplicando patrones modernos de desarrollo móvil, persistencia local con SQLite y gestión de estado refinada."
+      "short": "Plataforma móvil para registrar glucosa, hábitos y logros.",
+      "full": "Evolución del proyecto académico original en Flask, ahora organizado como monorepo con React Native y Expo, API en Go con Chi, PostgreSQL y persistencia local con SQLite."
     },
     "tcc_api": {
       "short": "API RESTful backend en Go para soporte a la aplicación TCC.",
@@ -73,16 +75,16 @@
       "full": "Aplicación enfocada en la precisión financiera, permitiendo simulaciones de intereses, proyecciones de rendimiento y reportes dinámicos con interfaz intuitiva."
     },
     "portfolio": {
-      "short": "Plataforma web de portafolio profesional.",
-      "full": "Ingeniería frontend moderna utilizando React 19, TypeScript, Tailwind CSS y soporte completo de internacionalización (i18n) y cambio de temas."
+      "short": "Portafolio profesional multilingüe centrado en proyectos y experiencia técnica.",
+      "full": "Aplicación desarrollada con React 19, TypeScript y Tailwind CSS, con internacionalización, temas, filtros, galería y formulario de contacto."
     },
     "aether": {
       "short": "Sistema ERP moderno para la gestión empresarial corporativa.",
       "full": "Plataforma de planificación de recursos empresariales (ERP) desarrollada para centralizar flujos de trabajo, gestión financiera, control de inventario y reportes estratégicos de alto rendimiento."
     },
     "goshortner": {
-      "short": "API de alto rendimiento para acortamiento y redirección de URLs.",
-      "full": "Microservicio desarrollado en Go enfocado en altísimo rendimiento, baja latencia y empaquetado en contenedores Docker para acortamiento y análisis de tráfico de enlaces."
+      "short": "Plataforma full stack para acortar, gestionar y analizar enlaces.",
+      "full": "Aplicación con backend en Go y Echo, PostgreSQL e interfaz React. Incluye autenticación, analítica, códigos QR y páginas de bio enlaces."
     },
     "netpulse": {
       "short": "Herramienta de monitoreo en tiempo real de métricas y estado de red.",
@@ -91,8 +93,8 @@
   },
   "experience": {
     "badge": "Trayectoria y Hitos",
-    "title": "Experiencia y Formación",
-    "subtitle": "Un resumen de mi trayectoria académica en Sistemas de Información y proyectos de desarrollo de software.",
+    "title": "Trayectoria Técnica y Formación",
+    "subtitle": "Proyectos que representan mi evolución técnica y mi formación en Sistemas de Información.",
     "items": {
       "aether": {
         "title": "Arquitectura & ERP Aether",
@@ -101,10 +103,10 @@
         "highlights": "Construcción de un ecosistema modular escalable con React, TypeScript y PostgreSQL."
       },
       "tcc": {
-        "title": "Trabajo de Fin de Grado (TCC)",
-        "org": "Desarrollador Full Stack y Autor de Tesis",
-        "desc": "Desarrollo de aplicación móvil nativa y API de alto rendimiento en Go (Golang) con persistencia de datos local y remota.",
-        "highlights": "Arquitectura REST de alto rendimiento y experiencia de usuario móvil fluida."
+        "title": "Diabetes Care",
+        "org": "Proyecto académico evolucionado a plataforma Full Stack",
+        "desc": "Continuación de la aplicación del trabajo final, combinando React Native y Expo con una API en Go y PostgreSQL.",
+        "highlights": "Evolución de una API Flask a un monorepo en Go con persistencia local y remota y gamificación."
       },
       "academic": {
         "title": "Licenciatura en Sistemas de Información",
@@ -136,7 +138,11 @@
       "email_invalid": "Ingrese un correo electrónico válido.",
       "message_required": "El mensaje es obligatorio.",
       "message_min": "El mensaje debe tener al menos 10 caracteres."
-    }
+    },
+    "email_label": "Correo profesional",
+    "response_label": "Tiempo de respuesta",
+    "response_value": "Generalmente en hasta 24 horas",
+    "social_label": "Perfiles técnicos"
   },
   "footer": {
     "rights": "Todos los derechos reservados.",
