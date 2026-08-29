@@ -63,14 +63,14 @@ const About = () => {
             <div className="prose prose-slate dark:prose-invert max-w-none text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed space-y-4">
               <p className="font-medium text-slate-800 dark:text-slate-100">{t("about.p1")}</p>
               <p>
-                <Trans i18nKey="about.p2">
-                  Atuando como desenvolvedor{" "}
-                  <strong className="text-blue-600 dark:text-blue-400 font-semibold">
-                    Full Stack
-                  </strong>
-                  , domino o ecossistema completo de desenvolvimento, da concepção do front-end
-                  intuitivo até o design e implementação de rotas e banco de dados no back-end.
-                </Trans>
+                <Trans
+                  i18nKey="about.p2"
+                  components={{
+                    strong: (
+                      <strong className="text-blue-600 dark:text-blue-400 font-semibold" />
+                    ),
+                  }}
+                />
               </p>
               <p>{t("about.p3")}</p>
             </div>

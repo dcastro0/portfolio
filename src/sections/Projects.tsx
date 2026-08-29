@@ -9,18 +9,12 @@ import {
   FiChevronRight,
   FiMaximize2,
   FiImage,
+  FiLock,
 } from "react-icons/fi";
 import { useTranslation } from "react-i18next";
 import { projects, type ProjectScreenshot, type FilterCategory } from "../utils/projectsData";
 
-const filterCategories: FilterCategory[] = [
-  "all",
-  "web",
-  "mobile",
-  "backend",
-  "fullstack",
-  "financial",
-];
+const filterCategories: FilterCategory[] = ["all", "fullstack", "backend", "web"];
 
 const Projects = () => {
   const { t } = useTranslation();
@@ -156,6 +150,7 @@ const Projects = () => {
               <button
                 key={cat}
                 onClick={() => setActiveFilter(cat)}
+                aria-pressed={isActive}
                 className={`relative px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all flex items-center gap-2 outline-none ${
                   isActive
                     ? "text-white shadow-md shadow-blue-500/25"
@@ -184,7 +179,7 @@ const Projects = () => {
           })}
         </div>
 
-        <motion.div layout className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <motion.div layout className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <AnimatePresence mode="popLayout">
             {filteredProjects.map((project, index) => (
               <motion.div
@@ -192,12 +187,21 @@ const Projects = () => {
                 key={project.id}
                 layoutId={`card-container-${project.id}`}
                 onClick={() => setSelectedId(project.id)}
+                onKeyDown={(event) => {
+                  if (event.key === "Enter" || event.key === " ") {
+                    event.preventDefault();
+                    setSelectedId(project.id);
+                  }
+                }}
+                role="button"
+                tabIndex={0}
+                aria-label={`${t("projects.modal.open_details")}: ${project.title}`}
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.95 }}
                 transition={{ duration: 0.3 }}
                 whileHover={{ y: -8 }}
-                className="glass-panel glass-panel-hover rounded-2xl overflow-hidden cursor-pointer group flex flex-col h-full border border-slate-200/80 dark:border-slate-800/80"
+                className="glass-panel glass-panel-hover rounded-2xl overflow-hidden cursor-pointer group flex flex-col h-full border border-slate-200/80 dark:border-slate-800/80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-slate-950"
               >
                 <motion.div
                   layoutId={`image-container-${project.id}`}
@@ -283,7 +287,7 @@ const Projects = () => {
                 ref={modalRef}
                 role="dialog"
                 aria-modal="true"
-                aria-labelledby={`title-${selectedProject.id}`}
+                aria-labelledby={`project-dialog-title-${selectedProject.id}`}
                 layoutId={`card-container-${selectedProject.id}`}
                 className="w-full max-w-4xl bg-white dark:bg-slate-900 rounded-2xl overflow-hidden shadow-2xl pointer-events-auto max-h-[90vh] flex flex-col border border-slate-200 dark:border-slate-800 outline-none"
               >
@@ -316,7 +320,7 @@ const Projects = () => {
                       {selectedProject.category}
                     </span>
                     <motion.h3
-                      id={`title-${selectedProject.id}`}
+                      id={`project-dialog-title-${selectedProject.id}`}
                       layoutId={`title-${selectedProject.id}`}
                       className="text-2xl sm:text-3xl font-extrabold text-white mt-2"
                     >
@@ -450,6 +454,12 @@ const Projects = () => {
                         <FiGithub size={18} />
                         <span>{t("projects.modal.code_btn")}</span>
                       </a>
+                    )}
+                    {selectedProject.repositoryPrivate && (
+                      <span className="flex items-center gap-2 px-6 py-3 border border-slate-300 dark:border-slate-700 text-slate-600 dark:text-slate-300 rounded-xl font-semibold text-sm">
+                        <FiLock size={18} />
+                        <span>{t("projects.modal.private_repo")}</span>
+                      </span>
                     )}
                     {selectedProject.liveUrl && (
                       <a
