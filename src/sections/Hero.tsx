@@ -4,6 +4,56 @@ import { SiReact, SiTypescript, SiGo } from "react-icons/si";
 import { motion } from "motion/react";
 import minhaFoto from "../assets/minhaFoto.jpg";
 
+const ProfileCard = () => (
+  <div className="tech-panel rounded-lg p-3">
+    <div className="flex items-center justify-between pb-2.5 mb-2.5 border-b border-[#ff6b00]/20 font-mono text-[11px] text-[#fffff4]/80">
+      <span>SYS_PROFILE // CAIO.CASTRO</span>
+      <span className="flex items-center gap-1.5 text-[#ff6b00]">
+        <span className="inline-block h-1.5 w-1.5 rounded-full bg-[#ff6b00] animate-pulse" />
+        ONLINE
+      </span>
+    </div>
+
+    <div className="aspect-square w-full rounded-md overflow-hidden border border-[#ff6b00]/30 bg-[#0f0f0f] mb-3">
+      <img
+        src={minhaFoto}
+        alt="Caio de Castro - Foto de Perfil"
+        width={320}
+        height={320}
+        fetchPriority="high"
+        loading="eager"
+        className="w-full h-full object-cover transition-all duration-200"
+      />
+    </div>
+
+    <div className="space-y-1.5 font-mono text-xs">
+      <div className="flex items-center justify-between px-2.5 py-1.5 rounded-md bg-[#0f0f0f] border border-[#ff6b00]/20 text-[#fffff4]">
+        <span className="flex items-center gap-2">
+          <SiReact size={13} className="text-[#ff6b00]" />
+          <span>React & React Native</span>
+        </span>
+        <span className="text-[10px] text-[#ff6b00] font-semibold">UI/CLIENT</span>
+      </div>
+
+      <div className="flex items-center justify-between px-2.5 py-1.5 rounded-md bg-[#0f0f0f] border border-[#ff6b00]/20 text-[#fffff4]">
+        <span className="flex items-center gap-2">
+          <SiTypescript size={13} className="text-[#ff6b00]" />
+          <span>TypeScript</span>
+        </span>
+        <span className="text-[10px] text-[#ff6b00] font-semibold">STRICT</span>
+      </div>
+
+      <div className="flex items-center justify-between px-2.5 py-1.5 rounded-md bg-[#0f0f0f] border border-[#ff6b00]/20 text-[#fffff4]">
+        <span className="flex items-center gap-2">
+          <SiGo size={14} className="text-[#ff6b00]" />
+          <span>Go (Golang)</span>
+        </span>
+        <span className="text-[10px] text-[#ff6b00] font-semibold">BACKEND</span>
+      </div>
+    </div>
+  </div>
+);
+
 const Hero = () => {
   const { t, i18n } = useTranslation();
 
@@ -64,6 +114,11 @@ const Hero = () => {
                 RESTful de baixa latência em Node.js e Go.
               </Trans>
             </p>
+
+            {/* Profile photo in mobile placed directly below the summary */}
+            <div className="lg:hidden mb-7 max-w-xs sm:max-w-sm mx-auto">
+              <ProfileCard />
+            </div>
 
             <div className="flex flex-wrap gap-3">
               <motion.a
@@ -131,58 +186,12 @@ const Hero = () => {
           </motion.div>
 
           <motion.div
-            className="lg:col-span-4"
+            className="hidden lg:block lg:col-span-4"
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.15 }}
           >
-            <div className="tech-panel rounded-lg p-3">
-              <div className="flex items-center justify-between pb-2.5 mb-2.5 border-b border-[#ff6b00]/20 font-mono text-[11px] text-[#fffff4]/80">
-                <span>SYS_PROFILE // CAIO.CASTRO</span>
-                <span className="flex items-center gap-1.5 text-[#ff6b00]">
-                  <span className="inline-block h-1.5 w-1.5 rounded-full bg-[#ff6b00] animate-pulse" />
-                  ONLINE
-                </span>
-              </div>
-
-              <div className="aspect-square w-full rounded-md overflow-hidden border border-[#ff6b00]/30 bg-[#0f0f0f] mb-3">
-                <img
-                  src={minhaFoto}
-                  alt="Caio de Castro - Foto de Perfil"
-                  width={320}
-                  height={320}
-                  fetchPriority="high"
-                  loading="eager"
-                  className="w-full h-full object-cover transition-all duration-200"
-                />
-              </div>
-
-              <div className="space-y-1.5 font-mono text-xs">
-                <div className="flex items-center justify-between px-2.5 py-1.5 rounded-md bg-[#0f0f0f] border border-[#ff6b00]/20 text-[#fffff4]">
-                  <span className="flex items-center gap-2">
-                    <SiReact size={13} className="text-[#ff6b00]" />
-                    <span>React & React Native</span>
-                  </span>
-                  <span className="text-[10px] text-[#ff6b00] font-semibold">UI/CLIENT</span>
-                </div>
-
-                <div className="flex items-center justify-between px-2.5 py-1.5 rounded-md bg-[#0f0f0f] border border-[#ff6b00]/20 text-[#fffff4]">
-                  <span className="flex items-center gap-2">
-                    <SiTypescript size={13} className="text-[#ff6b00]" />
-                    <span>TypeScript</span>
-                  </span>
-                  <span className="text-[10px] text-[#ff6b00] font-semibold">STRICT</span>
-                </div>
-
-                <div className="flex items-center justify-between px-2.5 py-1.5 rounded-md bg-[#0f0f0f] border border-[#ff6b00]/20 text-[#fffff4]">
-                  <span className="flex items-center gap-2">
-                    <SiGo size={14} className="text-[#ff6b00]" />
-                    <span>Go (Golang)</span>
-                  </span>
-                  <span className="text-[10px] text-[#ff6b00] font-semibold">BACKEND</span>
-                </div>
-              </div>
-            </div>
+            <ProfileCard />
           </motion.div>
         </div>
       </div>

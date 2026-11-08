@@ -47,19 +47,22 @@ const Navbar = () => {
             : "bg-[#ff6b00] border-black/10"
         }`}
       >
-        <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <nav className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-14">
             <div className="shrink-0">
               <a
                 href="#home"
-                className="font-mono text-sm font-bold tracking-tight flex items-center gap-2 text-[#0f0f0f] hover:opacity-85 transition-opacity duration-150"
+                className="font-mono tracking-tight flex items-center gap-2 text-[#0f0f0f] hover:opacity-85 transition-opacity duration-150"
               >
-                <span className="inline-flex items-center justify-center w-6 h-6 rounded-md bg-[#0f0f0f] text-[#ff6b00] border border-black/20 shadow-xs">
+                <span className="inline-flex items-center justify-center w-7 h-7 rounded-md bg-[#0f0f0f] text-[#ff6b00] border border-black/20 shadow-xs shrink-0">
                   <FiTerminal size={13} />
                 </span>
-                <span>caio_castro</span>
-                <span className="text-[#0f0f0f]/50">::</span>
-                <span className="text-[#0f0f0f]/80 text-xs font-semibold">fullstack</span>
+                <div className="flex flex-col leading-none">
+                  <span className="text-xs sm:text-sm font-bold tracking-tight">caio_castro</span>
+                  <span className="text-[10px] text-[#0f0f0f]/80 font-semibold tracking-wider font-mono mt-0.5">
+                    fullstack
+                  </span>
+                </div>
               </a>
             </div>
 
@@ -94,14 +97,14 @@ const Navbar = () => {
               </div>
             </div>
 
-            <div className="md:hidden flex items-center gap-2">
+            <div className="md:hidden flex items-center gap-1.5 shrink-0">
               <button
                 type="button"
                 onClick={() => setIsCommandMenuOpen(true)}
                 aria-label="Buscar"
-                className="p-2 rounded-md bg-[#0f0f0f] border border-black/30 text-[#ff6b00] hover:bg-[#1a1a1a] transition-colors duration-150 shadow-xs"
+                className="p-2 rounded-md bg-[#0f0f0f] border border-black/30 text-[#ff6b00] hover:bg-[#1a1a1a] transition-colors duration-150 shadow-xs shrink-0"
               >
-                <FiSearch size={16} />
+                <FiSearch size={15} />
               </button>
 
               <LanguageSelector />
@@ -110,9 +113,9 @@ const Navbar = () => {
                 type="button"
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 aria-label={mobileMenuOpen ? "Fechar menu" : "Abrir menu"}
-                className="p-2 rounded-md bg-[#0f0f0f] border border-black/30 text-[#fffff4] hover:bg-[#1a1a1a] transition-colors duration-150 shadow-xs"
+                className="p-2 rounded-md bg-[#0f0f0f] border border-black/30 text-[#fffff4] hover:bg-[#1a1a1a] transition-colors duration-150 shadow-xs shrink-0"
               >
-                {mobileMenuOpen ? <FiX size={18} /> : <FiMenu size={18} />}
+                {mobileMenuOpen ? <FiX size={17} /> : <FiMenu size={17} />}
               </button>
             </div>
           </div>
