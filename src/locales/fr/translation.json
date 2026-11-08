@@ -7,129 +7,156 @@
     "contact": "Contact"
   },
   "hero": {
-    "badge": "Disponible pour de nouveaux projets et opportunités",
-    "greeting": "Bonjour, je m'appelle",
+    "badge": "STATUT : DISPONIBLE POUR PROJETS & INGÉNIERIE",
+    "greeting": "INGÉNIERIE LOGICIELLE // FULL STACK",
     "role": "Développeur Full Stack",
-    "description": "Spécialisé dans la conception et le développement de solutions technologiques complètes, intégrant des applications <1>Web</1> et <3>Mobile</3> modernes à des <5>APIs</5> évolutives et performantes.",
-    "cta_projects": "Explorer les Projets",
-    "cta_contact": "Prendre Contact",
+    "description": "Conception de systèmes distribués, d'applications <1>Web</1> et <3>Mobile</3> typées de bout en bout et d'<5>APIs</5> RESTful à faible latence en Node.js et Go.",
+    "cta_projects": "Inspecter les Projets",
+    "cta_contact": "Contact Direct",
     "cta_cv": "Télécharger le CV (PDF)",
     "stats": {
-      "experience": "Années d'Apprentissage & Pratique",
-      "projects": "Projets Réalisés",
-      "stack": "Stack Technologique Moderne"
+      "experience": "Années de Pratique Technique",
+      "projects": "Systèmes Développés",
+      "stack": "Stack Typée & Évolutive"
     }
   },
   "about": {
-    "badge": "Développement & Solutions",
-    "title": "À Propos de Moi",
-    "p1": "Je suis un Développeur Full Stack axé sur la création de systèmes efficaces et évolutifs. Mon parcours en Systèmes d'Information est guidé par la livraison d'un code propre, d'architectures solides et d'interfaces centrées sur l'expérience utilisateur.",
-    "p2": "En tant que développeur <1>Full Stack</1>, je maîtrise l'ensemble du cycle de développement, de la conception de l'interface front-end à la mise en place d'APIs et de bases de données back-end.",
-    "p3": "Je recherche continuellement l'excellence dans les meilleures pratiques de développement logiciel, l'intégration continue et les modèles d'architecture modernes.",
-    "skills_title": "Technologies & Outils",
+    "badge": "SPÉCIFICATION TECHNIQUE",
+    "title": "Ingénierie & Compétences Clés",
+    "p1": "Développeur Full Stack diplômé en Systèmes d'Information, spécialisé dans le développement de logiciels déterministes, la modélisation relationnelle normalisée et les interfaces à haute densité opérationnelle.",
+    "p2": "Intervenant sur l'ensemble du cycle <1>Full Stack</1>, j'architecture des clients réactifs avec persistance offline-first ainsi que des services backend concurrents en Go et Node.js.",
+    "p3": "Je privilégie un code maintenable, l'isolation de la logique métier, la conteneurisation Docker et les tests automatisés.",
+    "skills_title": "Stack & Outils",
     "highlights": {
-      "frontend": "Développement d'interfaces réactives, adaptatives et accessibles avec React et TypeScript.",
-      "backend": "Conception d'APIs RESTful robustes et de microservices haute performance en Node.js et Go (Golang).",
-      "database": "Modélisation et gestion de bases de données relationnelles avancées avec PostgreSQL et MySQL."
+      "frontend": "Interfaces réactives et accessibles construites avec React 19, React Native et un typage TypeScript strict.",
+      "backend": "APIs RESTful à faible latence et microservices concurrents développés en Go (Gin) et Node.js.",
+      "database": "Schémas relationnels normalisés, indexation et transactions ACID sous PostgreSQL, MySQL et SQLite."
     }
   },
   "projects": {
-    "badge": "Portfolio de Code",
-    "title": "Projets en Vedette",
-    "subtitle": "Une sélection d'applications et de systèmes développés en mettant l'accent sur la qualité du code, l'architecture et la convivialité.",
+    "badge": "CATALOGUE D'INGÉNIERIE",
+    "title": "Projets & Architecture Système",
+    "subtitle": "Spécifications techniques, problèmes d'ingénierie résolus et choix architecturaux pour chaque système.",
+    "card": {
+      "problem_label": "PROBLÈME TECHNIQUE",
+      "arch_label": "ARCHITECTURE",
+      "stack_label": "STACK",
+      "repo_btn": "Dépôt",
+      "demo_btn": "Live Demo",
+      "inspect_btn": "Spécification"
+    },
     "filters": {
-      "all": "Tous les Projets",
-      "web": "Applications Web",
-      "mobile": "Applications Mobiles",
-      "backend": "Backend & APIs",
+      "all": "Tous",
+      "web": "Web Systems",
+      "mobile": "Mobile",
+      "backend": "Backend / APIs",
       "fullstack": "Full Stack",
-      "financial": "Outils Financiers"
+      "financial": "Financial"
     },
     "modal": {
-      "technologies": "Technologies Utilisées",
-      "code_btn": "Voir le Dépôt",
-      "demo_btn": "Voir la Démo",
-      "screenshots_title": "Captures d'Écran de l'Interface",
-      "click_to_enlarge": "Cliquer pour afficher en plein écran"
-    },
-    "tcc": {
-      "short": "Application mobile complète développée pour le projet de fin d'études.",
-      "full": "Projet complet réalisé comme exigence académique, appliquant des modèles modernes de développement mobile, la persistance locale SQLite et la gestion d'état."
-    },
-    "tcc_api": {
-      "short": "API RESTful backend en Go supportant l'application mobile.",
-      "full": "Service backend construit avec Go (Golang) et MySQL pour la gestion centralisée des données, l'authentification et la logique métier."
-    },
-    "vendas": {
-      "short": "Système de gestion et de contrôle des opérations commerciales.",
-      "full": "Application conçue pour optimiser les processus commerciaux, offrant un suivi des ventes, la gestion des dossiers et des métriques décisionnelles."
-    },
-    "dile": {
-      "short": "Plateforme Full Stack intégrant les services frontend et backend.",
-      "full": "Architecture intégrée couvrant toutes les couches d'une application moderne, démontrant un flux de données fluide et une interopérabilité élevée entre les services."
-    },
-    "juros": {
-      "short": "Outil d'analyse et de simulation de calculs financiers.",
-      "full": "Outil axé sur la précision financière, permettant des simulations d'intérêts, des projections de rendement et des rapports dynamiques via une interface intuitive."
-    },
-    "portfolio": {
-      "short": "Plateforme web de portfolio professionnel.",
-      "full": "Ingénierie frontend moderne construite avec React 19, TypeScript, Tailwind CSS, prise en charge complète de l'internationalisation (i18n) et changement de thème."
+      "technologies": "Stack Technologique",
+      "code_btn": "Voir le Dépôt (GitHub)",
+      "demo_btn": "Ouvrir la Démo",
+      "live_btn": "Ouvrir la Démo",
+      "screenshots_title": "Inspection des Interfaces du Système",
+      "click_to_enlarge": "Cliquer sur l'image pour agrandir"
     },
     "aether": {
-      "short": "Système ERP moderne pour la gestion d'entreprise.",
-      "full": "Plateforme de planification des ressources d'entreprise (ERP) développée pour centraliser les flux de travail, la gestion financière, le contrôle des stocks et les rapports stratégiques."
+      "short": "ERP d'entreprise modulaire unifiant point de vente (POS), gestion des stocks transactionnelle, finance et BI.",
+      "problem": "Fragmentation des données entre les opérations de caisse (POS), la déduction des stocks et le rapprochement financier.",
+      "architecture": "Monolithe modulaire sous Node.js + PostgreSQL transactionnel (ACID) avec client SPA React + TypeScript et rapports BI.",
+      "full": "Système ERP complet conçu pour éliminer les incohérences entre point de vente, inventaire physique, comptabilité et CRM, garantissant l'intégrité transactionnelle sous PostgreSQL."
+    },
+    "tcc": {
+      "short": "Client mobile natif avec fonctionnement offline-first et synchronisation transactionnelle.",
+      "problem": "Perte de données et blocage opérationnel sur terminaux mobiles en cas de connectivité réseau instable ou absente.",
+      "architecture": "React Native (Expo) + persistance locale SQLite embarquée + file de synchronisation REST asynchrone.",
+      "full": "Application mobile garantissant une disponibilité continue sur le terrain via stockage SQLite local, gestion d'état déterministe en TypeScript et réconciliation des données."
+    },
+    "tcc_api": {
+      "short": "Service backend RESTful en Go pour le traitement concurrent et la persistance relationnelle.",
+      "problem": "Goulots d'étranglement de sérialisation, d'authentification et de concurrence lors de la synchronisation simultanée des clients mobiles.",
+      "architecture": "API REST en Go + framework Gin + architecture en couches (Handler/Service/Repository) + pool de connexions MySQL.",
+      "full": "Backend à haut débit écrit en Go (Golang) utilisant le routage Gin, des middlewares d'authentification, une validation stricte et des requêtes MySQL paramétrées."
     },
     "goshortner": {
-      "short": "API haute performance pour le raccourcissement et la réécriture d'URLs.",
-      "full": "Microservice développé en Go axé sur une très faible latence, un haut débit et une conteneurisation Docker pour le raccourcissement et le suivi des liens."
+      "short": "Microservice de raccourcissement et de redirection HTTP d'URLs à faible latence en Go.",
+      "problem": "Latence de résolution des hachages d'URLs courtes et besoin de déploiements conteneurisés légers et reproductibles.",
+      "architecture": "Service HTTP en Go + génération de slugs sans collision + redirections 301/302 + conteneur Docker multi-stage.",
+      "full": "Microservice léger en Go conçu pour la redirection HTTP rapide, la télémétrie des clics et une empreinte d'image minimale via Docker multi-stage."
     },
     "netpulse": {
-      "short": "Outil de surveillance des métriques et du statut du réseau en temps réel.",
-      "full": "Solution d'observabilité réseau construite avec Node.js et React pour surveiller la disponibilité, la latence et les diagnostics d'infrastructure en temps réel."
+      "short": "Système de télémétrie et de surveillance en temps réel de la disponibilité et de la latence réseau.",
+      "problem": "Manque de visibilité en temps réel sur la dégradation des routes, la perte de paquets et l'indisponibilité des endpoints critiques.",
+      "architecture": "Collecteur asynchrone Node.js + moteur de vérification périodique + tableau de bord réactif React + TypeScript.",
+      "full": "Solution d'observabilité exécutant des sondes actives sur les services et hôtes, agrégeant les séries de temps de réponse et le statut opérationnel."
+    },
+    "dile": {
+      "short": "Plateforme Full Stack avec contrats typés de bout en bout entre client React et serveur Node.js.",
+      "problem": "Divergence des schémas de données entre client web et API backend lors de l'évolution rapide de la logique métier.",
+      "architecture": "Client React SPA + API REST Node.js en TypeScript avec validation de schémas et couches de services découplées.",
+      "full": "Architecture Full Stack intégrant frontend réactif et backend RESTful sous TypeScript, assurant une validation stricte des entrées et une gestion normalisée des erreurs HTTP."
+    },
+    "vendas": {
+      "short": "Interface web opérationnelle pour la gestion des commandes, du catalogue et des indicateurs commerciaux.",
+      "problem": "Lenteur de la saisie manuelle des commandes et absence d'agrégation immédiate des indicateurs de chiffre d'affaires.",
+      "architecture": "SPA React + TypeScript + gestion d'état local optimisée + interface haute densité sous Tailwind CSS.",
+      "full": "Système web optimisé pour la saisie rapide des commandes et les opérations commerciales, avec filtrage instantané en mémoire et calcul automatique des totaux."
+    },
+    "juros": {
+      "short": "Moteur de simulation d'intérêts composés, d'amortissement et de séries financières.",
+      "problem": "Imprécisions d'arrondi et absence de ventilation période par période dans les projections de capitalisation.",
+      "architecture": "Moteur de calcul financier déterministe en TypeScript + rendu tabulaire instantané sous React.",
+      "full": "Outil technique pour le calcul exact des taux équivalents, des versements périodiques et de l'évolution du capital avec détail tabulaire instantané."
+    },
+    "portfolio": {
+      "short": "Application web technique multilingue avec palette de commandes (Cmd+K) et zéro dépendance UI lourde.",
+      "problem": "Modèles de portfolio surchargés présentant une faible densité d'information technique et une accessibilité clavier limitée.",
+      "architecture": "React 19 + Vite SWC + Tailwind CSS v4 + i18next (4 langues) + Command Palette accessible au clavier + Vitest.",
+      "full": "Plateforme web conçue selon des standards d'ingénierie sobres : chargement rapide, navigation complète au clavier (⌘K), internationalisation en quatre langues et tests unitaires."
     }
   },
   "experience": {
-    "badge": "Parcours & Jalons",
-    "title": "Expérience & Formation",
-    "subtitle": "Un résumé de mon parcours académique en Systèmes d'Information et projets de développement logiciel.",
+    "badge": "JOURNAL TECHNIQUE",
+    "title": "Expérience & Formation Académique",
+    "subtitle": "Chronologie des projets d'ingénierie logicielle, d'architecture système et du diplôme en Systèmes d'Information.",
     "items": {
       "aether": {
-        "title": "Architecture & ERP Aether",
+        "title": "Ingénierie & Architecture — Aether ERP",
         "org": "Full Stack Developer • Système de Gestion d'Entreprise",
-        "desc": "Conception, architecture de base de données et développement complet du système Aether ERP, couvrant les modules POS, BI, Stocks, Finance et CRM.",
-        "highlights": "Construction d'un écosystème modulaire évolutif avec React, TypeScript et PostgreSQL."
+        "desc": "Modélisation relationnelle PostgreSQL, développement d'API Node.js et interface opérationnelle React/TypeScript couvrant POS, Stocks, Finance, Achats, CRM et BI.",
+        "highlights": "Transactions ACID cohérentes entre ventes et déduction des stocks avec rapports analytiques intégrés."
       },
       "tcc": {
         "title": "Projet de Fin d'Études (TCC)",
-        "org": "Développeur Full Stack & Auteur de Thèse",
-        "desc": "Développement d'une application mobile native et d'une API backend haute performance en Go (Golang) avec persistance local et distante.",
-        "highlights": "Conception d'une architecture REST performante et d'une expérience utilisateur mobile fluide."
+        "org": "Développeur Full Stack & Auteur",
+        "desc": "Architecture et implémentation d'une application mobile React Native avec SQLite local intégrée à une API RESTful en Go (Gin) et MySQL.",
+        "highlights": "Persistance mobile offline-first et synchronisation à faible latence avec un backend Go concurrent."
       },
       "academic": {
         "title": "Licence en Systèmes d'Information",
         "org": "UniAtenas • Paracatu, Brésil",
-        "desc": "Diplôme axé sur l'Ingénierie Logicielle, l'Informatique, l'Architecture Système, les Bases de Données et la Gestion de la Technologie.",
-        "highlights": "Obtention du diplôme avec le développement et la soutenance du projet pratique de thèse."
+        "desc": "Formation supérieure en Ingénierie Logicielle, Structures de Données, Architecture Système, Bases de Données Relationnelles et Réseaux.",
+        "highlights": "Diplôme obtenu avec mention lors de la soutenance pratique de l'architecture mobile + microservice Go."
       }
     }
   },
   "contact": {
-    "badge": "Communication Directe",
-    "title": "Contactez-moi",
-    "description": "Je suis disponible pour des collaborations techniques, des opportunités professionnelles et des discussions sur l'architecture logicielle et la technologie.",
-    "form_title": "Envoyer un Message",
-    "form_subtitle": "Remplissez les champs ci-dessous avec les informations de votre projet ou contact. Je vous répondrai dès que possible.",
-    "form_name": "Nom Complet",
+    "badge": "CANAL DIRECT",
+    "title": "Contact Technique & Commercial",
+    "description": "Disponible pour des postes d'ingénierie logicielle, des projets d'architecture Full Stack et du conseil technique.",
+    "form_title": "Envoyer un Message Direct",
+    "form_subtitle": "Renseignez les paramètres ci-dessous pour initier un échange technique ou une proposition de projet.",
+    "form_name": "Nom / Identification",
     "form_name_placeholder": "Ex: Jean Dupont",
-    "form_email": "Adresse E-mail",
+    "form_email": "E-mail de Réponse",
     "form_email_placeholder": "Ex: jean.dupont@entreprise.com",
-    "form_message": "Message",
-    "form_message_placeholder": "Décrivez votre projet ou la raison de votre prise de contact...",
-    "form_send_btn": "Envoyer le Message",
-    "form_sending_btn": "Envoi en cours...",
-    "form_success": "Message envoyé avec succès ! Je vous recontacterai sous peu.",
-    "form_error": "Impossible d'envoyer le message. Veuillez réessayer.",
+    "form_message": "Périmètre / Message",
+    "form_message_placeholder": "Décrivez le besoin technique, le poste ou l'architecture du projet...",
+    "form_send_btn": "Transmettre le Message",
+    "form_sending_btn": "Transmission...",
+    "form_success": "Message transmis avec succès. Réponse sous 24h.",
+    "form_error": "Échec de l'envoi. Veuillez réessayer ou utiliser l'adresse e-mail directe.",
     "errors": {
       "name_required": "Le nom est obligatoire.",
       "email_required": "L'adresse e-mail est obligatoire.",
@@ -140,6 +167,6 @@
   },
   "footer": {
     "rights": "Tous droits réservés.",
-    "built_with": "Développé avec React, TypeScript & Tailwind CSS"
+    "built_with": "React 19 • TypeScript • Tailwind CSS v4"
   }
 }

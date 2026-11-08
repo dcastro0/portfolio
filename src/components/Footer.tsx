@@ -9,42 +9,47 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-white/80 dark:bg-[#070b12] py-10 border-t border-slate-200/80 dark:border-slate-800/80 transition-colors">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
-        <div className="flex flex-col items-center md:items-start text-center md:text-left gap-1">
-          <p className="text-slate-600 dark:text-slate-400 text-sm font-medium">
-            © {new Date().getFullYear()}{" "}
-            <span className="gradient-text font-bold">Caio de Castro</span>. {t("footer.rights")}
+    <footer className="bg-[#0f0f0f] py-6 border-t border-[#ff6b00]/20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 text-center sm:text-left">
+          <p className="text-[#fffff4] text-xs font-mono">
+            © {new Date().getFullYear()} Caio de Castro <span className="text-[#ff6b00]">//</span>{" "}
+            <span className="text-[#fffff4]/70">{t("footer.rights")}</span>
           </p>
-          <span className="text-xs text-slate-400 font-mono">{t("footer.built_with")}</span>
+          <span className="hidden sm:inline text-[#ff6b00]">|</span>
+          <span className="text-[11px] text-[#fffff4]/70 font-mono">{t("footer.built_with")}</span>
         </div>
 
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-2">
           <a
             href="https://github.com/dcastro0"
             target="_blank"
             rel="noopener noreferrer"
             title="GitHub"
-            className="p-2.5 rounded-xl bg-slate-100 dark:bg-slate-800/80 text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all border border-slate-200/50 dark:border-slate-700/50"
+            className="px-2.5 py-1.5 rounded-md bg-[#161616] text-[#fffff4]/80 hover:text-[#ff6b00] hover:border-[#ff6b00] transition-colors duration-150 border border-[#ff6b00]/25 flex items-center gap-1.5 text-xs font-mono"
           >
-            <FiGithub size={18} />
+            <FiGithub size={14} className="text-[#ff6b00]" />
+            <span>GitHub</span>
           </a>
           <a
             href="https://linkedin.com/in/caio-de-castro-a74a81188/"
             target="_blank"
             rel="noopener noreferrer"
             title="LinkedIn"
-            className="p-2.5 rounded-xl bg-slate-100 dark:bg-slate-800/80 text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all border border-slate-200/50 dark:border-slate-700/50"
+            className="px-2.5 py-1.5 rounded-md bg-[#161616] text-[#fffff4]/80 hover:text-[#ff6b00] hover:border-[#ff6b00] transition-colors duration-150 border border-[#ff6b00]/25 flex items-center gap-1.5 text-xs font-mono"
           >
-            <FiLinkedin size={18} />
+            <FiLinkedin size={14} className="text-[#ff6b00]" />
+            <span>LinkedIn</span>
           </a>
 
           <button
+            type="button"
             onClick={scrollToTop}
             title="Voltar ao Topo"
-            className="p-2.5 rounded-xl bg-blue-600 text-white hover:bg-blue-700 transition-all shadow-md shadow-blue-500/20 hover:-translate-y-0.5 active:translate-y-0 ml-2"
+            aria-label="Voltar ao Topo"
+            className="p-2 rounded-md bg-[#161616] text-[#fffff4] border border-[#ff6b00]/40 hover:border-[#ff6b00] hover:bg-[#ff6b00] hover:text-[#0f0f0f] transition-all duration-150 ml-1 cursor-pointer"
           >
-            <FiArrowUp size={18} />
+            <FiArrowUp size={15} />
           </button>
         </div>
       </div>

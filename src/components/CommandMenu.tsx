@@ -1,5 +1,4 @@
 import { useState, useEffect, useRef } from "react";
-import { motion, AnimatePresence } from "motion/react";
 import {
   FiSearch,
   FiX,
@@ -12,6 +11,7 @@ import {
   FiCommand,
 } from "react-icons/fi";
 import { useTranslation } from "react-i18next";
+import { motion, AnimatePresence } from "motion/react";
 import { projects } from "../utils/projectsData";
 
 interface CommandMenuProps {
@@ -33,14 +33,13 @@ const CommandMenu = ({ isOpen, onClose }: CommandMenuProps) => {
     ? "Currículo - Caio Correa de Castro.pdf"
     : "Resume - Caio Correa de Castro.pdf";
 
-  // Build items list
   const sectionActions = [
     {
       id: "nav-home",
       type: "nav",
       title: t("navbar.home"),
-      subtitle: "Ir para a página inicial",
-      icon: <FiHome size={16} className="text-blue-500" />,
+      subtitle: "#home",
+      icon: <FiHome size={15} className="text-[#ff6b00]" />,
       action: () => {
         window.location.hash = "#home";
         onClose();
@@ -50,8 +49,8 @@ const CommandMenu = ({ isOpen, onClose }: CommandMenuProps) => {
       id: "nav-about",
       type: "nav",
       title: t("navbar.about"),
-      subtitle: "Conhecer minha trajetória e stack",
-      icon: <FiUser size={16} className="text-indigo-500" />,
+      subtitle: "#about",
+      icon: <FiUser size={15} className="text-[#ff6b00]" />,
       action: () => {
         window.location.hash = "#about";
         onClose();
@@ -61,8 +60,8 @@ const CommandMenu = ({ isOpen, onClose }: CommandMenuProps) => {
       id: "nav-experience",
       type: "nav",
       title: t("navbar.experience"),
-      subtitle: "Formação em Sistemas de Informação e projetos",
-      icon: <FiBriefcase size={16} className="text-cyan-500" />,
+      subtitle: "#experience",
+      icon: <FiBriefcase size={15} className="text-[#ff6b00]" />,
       action: () => {
         window.location.hash = "#experience";
         onClose();
@@ -72,8 +71,8 @@ const CommandMenu = ({ isOpen, onClose }: CommandMenuProps) => {
       id: "nav-projects",
       type: "nav",
       title: t("navbar.projects"),
-      subtitle: "Explorar o portfólio de código",
-      icon: <FiFolder size={16} className="text-emerald-500" />,
+      subtitle: "#projects",
+      icon: <FiFolder size={15} className="text-[#ff6b00]" />,
       action: () => {
         window.location.hash = "#projects";
         onClose();
@@ -83,8 +82,8 @@ const CommandMenu = ({ isOpen, onClose }: CommandMenuProps) => {
       id: "nav-contact",
       type: "nav",
       title: t("navbar.contact"),
-      subtitle: "Enviar mensagem ou proposta",
-      icon: <FiMail size={16} className="text-amber-500" />,
+      subtitle: "#contact",
+      icon: <FiMail size={15} className="text-[#ff6b00]" />,
       action: () => {
         window.location.hash = "#contact";
         onClose();
@@ -94,8 +93,8 @@ const CommandMenu = ({ isOpen, onClose }: CommandMenuProps) => {
       id: "action-cv",
       type: "action",
       title: t("hero.cta_cv"),
-      subtitle: "Baixar versão em PDF",
-      icon: <FiDownload size={16} className="text-rose-500" />,
+      subtitle: "PDF Document",
+      icon: <FiDownload size={15} className="text-[#ff6b00]" />,
       action: () => {
         const link = document.createElement("a");
         link.href = cvPath;
@@ -111,9 +110,9 @@ const CommandMenu = ({ isOpen, onClose }: CommandMenuProps) => {
   const projectActions = projects.map((p) => ({
     id: `project-${p.id}`,
     type: "project",
-    title: p.title,
-    subtitle: `${p.category} • ${p.technologies.slice(0, 3).join(", ")}`,
-    icon: <FiFolder size={16} className="text-blue-400" />,
+    title: `[${p.code}] ${p.title}`,
+    subtitle: `${p.category} // ${p.technologies.join(", ")}`,
+    icon: <FiFolder size={15} className="text-[#ff6b00]" />,
     action: () => {
       window.location.hash = "#projects";
       onClose();
@@ -136,7 +135,7 @@ const CommandMenu = ({ isOpen, onClose }: CommandMenuProps) => {
 
   useEffect(() => {
     if (isOpen) {
-      setTimeout(() => inputRef.current?.focus(), 50);
+      setTimeout(() => inputRef.current?.focus(), 30);
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "auto";
@@ -146,14 +145,6 @@ const CommandMenu = ({ isOpen, onClose }: CommandMenuProps) => {
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "k") {
-        e.preventDefault();
-        if (isOpen) onClose();
-        else {
-          // Trigger open handled by parent
-        }
-      }
-
       if (!isOpen) return;
 
       if (e.key === "Escape") {
@@ -174,105 +165,104 @@ const CommandMenu = ({ isOpen, onClose }: CommandMenuProps) => {
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [isOpen, filteredActions, selectedIndex, onClose]);
 
-  if (!isOpen) return null;
-
   return (
     <AnimatePresence>
-      <div className="fixed inset-0 z-50 flex items-start justify-center pt-16 sm:pt-24 px-4 bg-slate-950/70 backdrop-blur-md">
-        {/* Backdrop click */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          onClick={onClose}
-          className="absolute inset-0"
-        />
+      {isOpen && (
+        <div className="fixed inset-0 z-50 flex items-start justify-center pt-16 sm:pt-24 px-4">
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={onClose}
+            className="fixed inset-0 bg-black/80 backdrop-blur-xs cursor-pointer"
+          />
 
-        {/* Modal Window */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95, y: -10 }}
-          animate={{ opacity: 1, scale: 1, y: 0 }}
-          exit={{ opacity: 0, scale: 0.95, y: -10 }}
-          transition={{ duration: 0.2 }}
-          className="relative w-full max-w-xl glass-panel rounded-2xl shadow-2xl border border-slate-200/80 dark:border-slate-800 overflow-hidden z-10"
-        >
-          {/* Search Header */}
-          <div className="flex items-center gap-3 px-4 py-3.5 border-b border-slate-200/60 dark:border-slate-800/80">
-            <FiSearch size={18} className="text-blue-500 shrink-0" />
-            <input
-              ref={inputRef}
-              type="text"
-              value={query}
-              onChange={(e) => setQuery(e.target.value)}
-              placeholder="Buscar seções, projetos ou tecnologias... (Cmd + K)"
-              className="w-full bg-transparent text-sm text-slate-800 dark:text-slate-100 placeholder-slate-400 focus:outline-none font-medium"
-            />
-            {query && (
-              <button
-                onClick={() => setQuery("")}
-                className="p-1 rounded-md text-slate-400 hover:text-slate-600 dark:hover:text-slate-200"
-              >
-                <FiX size={14} />
-              </button>
-            )}
-            <kbd className="hidden sm:inline-flex items-center gap-0.5 px-2 py-1 text-[10px] font-mono font-semibold bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 rounded border border-slate-200/60 dark:border-slate-700/60">
-              <FiCommand size={10} /> K
-            </kbd>
-          </div>
-
-          {/* Results List */}
-          <div className="max-h-80 overflow-y-auto p-2 space-y-1">
-            {filteredActions.length === 0 ? (
-              <div className="py-8 text-center text-slate-500 dark:text-slate-400 text-sm">
-                Nenhum resultado encontrado para &quot;{query}&quot;
-              </div>
-            ) : (
-              filteredActions.map((item, index) => {
-                const isSelected = index === selectedIndex;
-
-                return (
-                  <button
-                    key={item.id}
-                    onClick={item.action}
-                    onMouseEnter={() => setSelectedIndex(index)}
-                    className={`w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl text-left transition-colors ${
-                      isSelected
-                        ? "bg-blue-600/10 dark:bg-blue-500/15 border border-blue-500/30 text-blue-600 dark:text-blue-400"
-                        : "text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800/60 border border-transparent"
-                    }`}
-                  >
-                    <div className="flex items-center gap-3 min-w-0">
-                      <div className="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 shrink-0">
-                        {item.icon}
-                      </div>
-                      <div className="min-w-0">
-                        <p className="text-sm font-semibold truncate">{item.title}</p>
-                        <p className="text-xs text-slate-500 dark:text-slate-400 truncate">
-                          {item.subtitle}
-                        </p>
-                      </div>
-                    </div>
-                    {isSelected && (
-                      <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-blue-500/20 text-blue-600 dark:text-blue-300 shrink-0">
-                        ↵ Enter
-                      </span>
-                    )}
-                  </button>
-                );
-              })
-            )}
-          </div>
-
-          {/* Footer controls hint */}
-          <div className="px-4 py-2.5 bg-slate-50/80 dark:bg-slate-900/60 border-t border-slate-200/60 dark:border-slate-800/80 flex items-center justify-between text-[11px] text-slate-500 dark:text-slate-400 font-mono">
-            <div className="flex items-center gap-3">
-              <span>↑↓ para navegar</span>
-              <span>↵ para selecionar</span>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95, y: -10 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.95, y: -10 }}
+            transition={{ duration: 0.2 }}
+            className="relative w-full max-w-xl bg-[#161616] rounded-lg border border-[#ff6b00]/50 overflow-hidden z-10 shadow-2xl"
+          >
+            <div className="flex items-center gap-3 px-4 py-3 border-b border-[#ff6b00]/20 bg-[#0f0f0f]">
+              <FiSearch size={16} className="text-[#ff6b00] shrink-0" />
+              <input
+                ref={inputRef}
+                type="text"
+                value={query}
+                onChange={(e) => setQuery(e.target.value)}
+                placeholder="Filtrar seções, sistemas ou stack... (Cmd + K)"
+                className="w-full bg-transparent text-xs font-mono text-[#fffff4] placeholder-[#fffff4]/40 focus:outline-none"
+              />
+              {query && (
+                <button
+                  type="button"
+                  onClick={() => setQuery("")}
+                  className="p-1 rounded-md text-[#fffff4]/70 hover:text-[#ff6b00] transition-colors duration-150 cursor-pointer"
+                >
+                  <FiX size={14} />
+                </button>
+              )}
+              <kbd className="hidden sm:inline-flex items-center gap-0.5 px-2 py-0.5 text-[10px] font-mono bg-[#161616] text-[#fffff4]/80 rounded-md border border-[#ff6b00]/40">
+                <FiCommand size={10} /> K
+              </kbd>
             </div>
-            <span>Esc para fechar</span>
-          </div>
-        </motion.div>
-      </div>
+
+            <div className="max-h-80 overflow-y-auto p-1.5 space-y-1">
+              {filteredActions.length === 0 ? (
+                <div className="py-6 text-center text-[#fffff4]/60 font-mono text-xs">
+                  0 resultados para &quot;{query}&quot;
+                </div>
+              ) : (
+                filteredActions.map((item, index) => {
+                  const isSelected = index === selectedIndex;
+
+                  return (
+                    <button
+                      key={item.id}
+                      type="button"
+                      onClick={item.action}
+                      onMouseEnter={() => setSelectedIndex(index)}
+                      className={`w-full flex items-center justify-between px-3 py-2 rounded-md text-left transition-colors duration-150 border cursor-pointer ${
+                        isSelected
+                          ? "bg-[#0f0f0f] border-[#ff6b00] text-[#fffff4]"
+                          : "text-[#fffff4]/80 hover:bg-[#1a1a1a] border-transparent"
+                      }`}
+                    >
+                      <div className="flex items-center gap-3 min-w-0">
+                        <div className="p-1.5 rounded-md bg-[#0f0f0f] border border-[#ff6b00]/30 shrink-0">
+                          {item.icon}
+                        </div>
+                        <div className="min-w-0">
+                          <p className="text-xs font-mono font-semibold text-[#fffff4] truncate">
+                            {item.title}
+                          </p>
+                          <p className="text-[11px] font-mono text-[#fffff4]/65 truncate">
+                            {item.subtitle}
+                          </p>
+                        </div>
+                      </div>
+                      {isSelected && (
+                        <span className="text-[10px] font-mono px-1.5 py-0.5 rounded-md bg-[#ff6b00] text-[#0f0f0f] font-bold shrink-0">
+                          ↵ ENTER
+                        </span>
+                      )}
+                    </button>
+                  );
+                })
+              )}
+            </div>
+
+            <div className="px-4 py-2 bg-[#0f0f0f] border-t border-[#ff6b00]/20 flex items-center justify-between text-[11px] text-[#fffff4]/70 font-mono">
+              <div className="flex items-center gap-3">
+                <span>[↑↓] navegar</span>
+                <span>[↵] abrir</span>
+              </div>
+              <span>[ESC] fechar</span>
+            </div>
+          </motion.div>
+        </div>
+      )}
     </AnimatePresence>
   );
 };

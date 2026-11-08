@@ -1,7 +1,7 @@
-import { motion } from "motion/react";
 import { useTranslation, Trans } from "react-i18next";
 import { FiArrowRight, FiMail, FiCode, FiLayers, FiCpu, FiDownload } from "react-icons/fi";
 import { SiReact, SiTypescript, SiGo } from "react-icons/si";
+import { motion } from "motion/react";
 import minhaFoto from "../assets/minhaFoto.jpg";
 
 const Hero = () => {
@@ -18,156 +18,134 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center pt-28 pb-16 relative overflow-hidden"
+      className="min-h-screen min-h-[100dvh] flex items-center justify-center pt-20 pb-12 sm:pt-24 sm:pb-16 border-b border-[#ff6b00]/20 relative overflow-hidden w-full"
     >
-      <div className="absolute top-1/4 -right-20 w-96 h-96 bg-blue-600/15 rounded-full blur-[120px] pointer-events-none -z-10" />
-      <div className="absolute bottom-10 -left-20 w-96 h-96 bg-indigo-600/15 rounded-full blur-[120px] pointer-events-none -z-10" />
+      {/* Ambient background glow */}
+      <div
+        aria-hidden="true"
+        className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] sm:w-[850px] h-[350px] sm:h-[450px] bg-[#ff6b00]/10 blur-[130px] rounded-full pointer-events-none -z-10"
+      />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-16 z-10 w-full">
-        <div className="flex-1 text-center lg:text-left">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full my-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
           <motion.div
-            initial={{ opacity: 0, y: 15 }}
+            className="lg:col-span-8 text-left"
+            initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 dark:bg-blue-950/50 border border-blue-200 dark:border-blue-800/80 text-blue-700 dark:text-blue-300 text-xs font-semibold tracking-wide mb-6"
+            transition={{ duration: 0.5, ease: "easeOut" }}
           >
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-            </span>
-            {t("hero.badge")}
-          </motion.div>
-
-          <motion.p
-            initial={{ opacity: 0, y: 15 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-slate-500 dark:text-slate-400 font-mono text-sm tracking-wider uppercase mb-2"
-          >
-            {t("hero.greeting")}
-          </motion.p>
-
-          <motion.h1
-            initial={{ opacity: 0, y: 15 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight mb-4"
-          >
-            Caio de Castro<span className="text-blue-600 dark:text-blue-500">.</span>
-          </motion.h1>
-
-          <motion.h2
-            initial={{ opacity: 0, y: 15 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-700 dark:text-slate-300 mb-6 leading-tight"
-          >
-            <span className="gradient-text">{t("hero.role")}</span>
-          </motion.h2>
-
-          <motion.p
-            initial={{ opacity: 0, y: 15 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-            className="text-base sm:text-lg text-slate-600 dark:text-slate-300 max-w-2xl mb-8 leading-relaxed mx-auto lg:mx-0"
-          >
-            <Trans i18nKey="hero.description">
-              Especializado na concepção e desenvolvimento de soluções tecnológicas completas,
-              integrando aplicações
-              <span className="text-blue-600 dark:text-blue-400 font-semibold"> Web </span>e
-              <span className="text-blue-600 dark:text-blue-400 font-semibold"> Mobile </span>
-              modernas a
-              <span className="text-blue-600 dark:text-blue-400 font-semibold"> APIs </span>
-              escaláveis e de alta performance.
-            </Trans>
-          </motion.p>
-
-          <motion.div
-            initial={{ opacity: 0, y: 15 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.5 }}
-            className="flex flex-wrap gap-4 justify-center lg:justify-start"
-          >
-            <a
-              href="#projects"
-              className="inline-flex items-center gap-2 px-7 py-3.5 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white rounded-xl font-semibold shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40 transition-all hover:-translate-y-0.5 active:translate-y-0 text-sm"
-            >
-              <span>{t("hero.cta_projects")}</span>
-              <FiArrowRight size={18} />
-            </a>
-
-            <a
-              href={cvPath}
-              download={cvFileName}
-              className="inline-flex items-center gap-2 px-7 py-3.5 bg-slate-900 dark:bg-white text-white dark:text-slate-900 rounded-xl font-semibold hover:bg-slate-800 dark:hover:bg-slate-100 transition-all hover:-translate-y-0.5 active:translate-y-0 text-sm shadow-md"
-            >
-              <FiDownload size={18} />
-              <span>{t("hero.cta_cv")}</span>
-            </a>
-
-            <a
-              href="#contact"
-              className="inline-flex items-center gap-2 px-7 py-3.5 bg-white dark:bg-slate-900 text-slate-800 dark:text-slate-200 border border-slate-200 dark:border-slate-800 rounded-xl font-semibold hover:border-blue-500 dark:hover:border-blue-500 hover:bg-slate-50 dark:hover:bg-slate-800/80 transition-all hover:-translate-y-0.5 active:translate-y-0 text-sm shadow-sm"
-            >
-              <FiMail size={18} className="text-blue-600 dark:text-blue-400" />
-              <span>{t("hero.cta_contact")}</span>
-            </a>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.6 }}
-            className="grid grid-cols-3 gap-4 pt-10 mt-10 border-t border-slate-200/80 dark:border-slate-800/80 max-w-lg mx-auto lg:mx-0 text-left"
-          >
-            <div className="flex flex-col">
-              <div className="flex items-center gap-1.5 text-blue-600 dark:text-blue-400 font-bold text-sm mb-1">
-                <FiCode size={16} />
-                <span>Full Stack</span>
-              </div>
-              <span className="text-xs text-slate-500 dark:text-slate-400">Web & Mobile</span>
+            <div className="inline-flex items-center gap-2.5 px-3 py-1 rounded-md bg-[#161616] border border-[#ff6b00]/40 text-[#fffff4] text-xs font-mono mb-5 shadow-sm">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#ff6b00] opacity-75" />
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-[#ff6b00]" />
+              </span>
+              <span>{t("hero.badge")}</span>
             </div>
 
-            <div className="flex flex-col">
-              <div className="flex items-center gap-1.5 text-indigo-600 dark:text-indigo-400 font-bold text-sm mb-1">
-                <FiLayers size={16} />
-                <span>REST APIs</span>
-              </div>
-              <span className="text-xs text-slate-500 dark:text-slate-400">Node.js & Go</span>
+            <p className="text-[#ff6b00] font-mono text-xs tracking-widest uppercase mb-2">
+              {t("hero.greeting")}
+            </p>
+
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#fffff4] mb-2">
+              Caio de Castro<span className="text-[#ff6b00]">.</span>
+            </h1>
+
+            <h2 className="text-xl sm:text-2xl font-mono font-semibold text-[#fffff4]/85 mb-5">
+              {t("hero.role")}
+            </h2>
+
+            <p className="text-sm sm:text-base text-[#fffff4]/80 max-w-2xl mb-7 leading-relaxed">
+              <Trans i18nKey="hero.description">
+                Desenvolvimento de sistemas distribuídos, aplicações
+                <span className="text-[#fffff4] font-mono font-semibold"> Web </span>e
+                <span className="text-[#fffff4] font-mono font-semibold"> Mobile </span>
+                tipadas ponta a ponta e
+                <span className="text-[#fffff4] font-mono font-semibold"> APIs </span>
+                RESTful de baixa latência em Node.js e Go.
+              </Trans>
+            </p>
+
+            <div className="flex flex-wrap gap-3">
+              <motion.a
+                href="#projects"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#ff6b00] hover:bg-[#ff6b00]/90 text-[#0f0f0f] rounded-md font-mono font-bold text-xs border border-[#ff6b00] shadow-[0_0_15px_rgba(255,107,0,0.25)] transition-colors duration-150"
+              >
+                <span>{t("hero.cta_projects")}</span>
+                <FiArrowRight size={15} />
+              </motion.a>
+
+              <motion.a
+                href={cvPath}
+                download={cvFileName}
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#161616] hover:bg-[#1f1f1f] text-[#fffff4] hover:text-[#ff6b00] border border-[#ff6b00]/30 hover:border-[#ff6b00] rounded-md font-mono font-medium text-xs transition-colors duration-150"
+              >
+                <FiDownload size={15} className="text-[#ff6b00]" />
+                <span>{t("hero.cta_cv")}</span>
+              </motion.a>
+
+              <motion.a
+                href="#contact"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#161616] hover:bg-[#1f1f1f] text-[#fffff4]/85 hover:text-[#ff6b00] border border-[#ff6b00]/30 hover:border-[#ff6b00] rounded-md font-mono font-medium text-xs transition-colors duration-150"
+              >
+                <FiMail size={15} className="text-[#ff6b00]" />
+                <span>{t("hero.cta_contact")}</span>
+              </motion.a>
             </div>
 
-            <div className="flex flex-col">
-              <div className="flex items-center gap-1.5 text-cyan-600 dark:text-cyan-400 font-bold text-sm mb-1">
-                <FiCpu size={16} />
-                <span>Arquitetura</span>
+            <motion.div
+              className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-7 mt-7 border-t border-[#ff6b00]/20 max-w-2xl"
+              initial={{ opacity: 0, y: 14 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+            >
+              <div className="p-3 rounded-md bg-[#161616] border border-[#ff6b00]/25 hover:border-[#ff6b00] transition-colors duration-150">
+                <div className="flex items-center gap-2 text-[#fffff4] font-mono font-semibold text-xs mb-1">
+                  <FiCode size={14} className="text-[#ff6b00]" />
+                  <span>Full Stack</span>
+                </div>
+                <span className="text-xs font-mono text-[#fffff4]/70">Web & Mobile</span>
               </div>
-              <span className="text-xs text-slate-500 dark:text-slate-400">Clean Code</span>
-            </div>
+
+              <div className="p-3 rounded-md bg-[#161616] border border-[#ff6b00]/25 hover:border-[#ff6b00] transition-colors duration-150">
+                <div className="flex items-center gap-2 text-[#fffff4] font-mono font-semibold text-xs mb-1">
+                  <FiLayers size={14} className="text-[#ff6b00]" />
+                  <span>REST APIs</span>
+                </div>
+                <span className="text-xs font-mono text-[#fffff4]/70">Node.js & Go</span>
+              </div>
+
+              <div className="p-3 rounded-md bg-[#161616] border border-[#ff6b00]/25 hover:border-[#ff6b00] transition-colors duration-150">
+                <div className="flex items-center gap-2 text-[#fffff4] font-mono font-semibold text-xs mb-1">
+                  <FiCpu size={14} className="text-[#ff6b00]" />
+                  <span>Arquitetura</span>
+                </div>
+                <span className="text-xs font-mono text-[#fffff4]/70">Clean Code</span>
+              </div>
+            </motion.div>
           </motion.div>
-        </div>
-
-        <div className="flex-1 flex justify-center items-center relative">
-          <motion.div
-            animate={{
-              scale: [1, 1.08, 1],
-              rotate: [0, 180, 360],
-            }}
-            transition={{
-              duration: 25,
-              repeat: Infinity,
-              ease: "linear",
-            }}
-            className="absolute w-[320px] h-[320px] sm:w-[420px] sm:h-[420px] bg-gradient-to-tr from-blue-500/20 via-indigo-500/20 to-cyan-500/20 rounded-full blur-3xl -z-10"
-          />
 
           <motion.div
-            initial={{ scale: 0.9, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="relative"
+            className="lg:col-span-4"
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: 0.15 }}
           >
-            <div className="w-64 h-64 sm:w-80 sm:h-80 rounded-2xl p-2.5 glass-panel shadow-2xl relative group">
-              <div className="w-full h-full rounded-xl overflow-hidden relative border border-slate-200/50 dark:border-slate-700/50">
+            <div className="tech-panel rounded-lg p-3">
+              <div className="flex items-center justify-between pb-2.5 mb-2.5 border-b border-[#ff6b00]/20 font-mono text-[11px] text-[#fffff4]/80">
+                <span>SYS_PROFILE // CAIO.CASTRO</span>
+                <span className="flex items-center gap-1.5 text-[#ff6b00]">
+                  <span className="inline-block h-1.5 w-1.5 rounded-full bg-[#ff6b00] animate-pulse" />
+                  ONLINE
+                </span>
+              </div>
+
+              <div className="aspect-square w-full rounded-md overflow-hidden border border-[#ff6b00]/30 bg-[#0f0f0f] mb-3">
                 <img
                   src={minhaFoto}
                   alt="Caio de Castro - Foto de Perfil"
@@ -175,42 +153,36 @@ const Hero = () => {
                   height={320}
                   fetchPriority="high"
                   loading="eager"
-                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 transform group-hover:scale-105 transition-all duration-700 ease-out"
+                  className="w-full h-full object-cover transition-all duration-200"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                  <span className="text-xs font-semibold text-white font-mono">
-                    Caio de Castro — Desenvolvedor Full Stack
+              </div>
+
+              <div className="space-y-1.5 font-mono text-xs">
+                <div className="flex items-center justify-between px-2.5 py-1.5 rounded-md bg-[#0f0f0f] border border-[#ff6b00]/20 text-[#fffff4]">
+                  <span className="flex items-center gap-2">
+                    <SiReact size={13} className="text-[#ff6b00]" />
+                    <span>React & React Native</span>
                   </span>
+                  <span className="text-[10px] text-[#ff6b00] font-semibold">UI/CLIENT</span>
+                </div>
+
+                <div className="flex items-center justify-between px-2.5 py-1.5 rounded-md bg-[#0f0f0f] border border-[#ff6b00]/20 text-[#fffff4]">
+                  <span className="flex items-center gap-2">
+                    <SiTypescript size={13} className="text-[#ff6b00]" />
+                    <span>TypeScript</span>
+                  </span>
+                  <span className="text-[10px] text-[#ff6b00] font-semibold">STRICT</span>
+                </div>
+
+                <div className="flex items-center justify-between px-2.5 py-1.5 rounded-md bg-[#0f0f0f] border border-[#ff6b00]/20 text-[#fffff4]">
+                  <span className="flex items-center gap-2">
+                    <SiGo size={14} className="text-[#ff6b00]" />
+                    <span>Go (Golang)</span>
+                  </span>
+                  <span className="text-[10px] text-[#ff6b00] font-semibold">BACKEND</span>
                 </div>
               </div>
             </div>
-
-            <motion.div
-              animate={{ y: [0, -8, 0] }}
-              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute -top-4 -left-6 px-3 py-2 rounded-xl glass-panel shadow-lg flex items-center gap-2 text-xs font-medium text-slate-800 dark:text-slate-200 border border-slate-200/80 dark:border-slate-700/80"
-            >
-              <SiReact size={18} className="text-[#61DAFB]" />
-              <span>React & React Native</span>
-            </motion.div>
-
-            <motion.div
-              animate={{ y: [0, 8, 0] }}
-              transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute -bottom-4 -right-6 px-3 py-2 rounded-xl glass-panel shadow-lg flex items-center gap-2 text-xs font-medium text-slate-800 dark:text-slate-200 border border-slate-200/80 dark:border-slate-700/80"
-            >
-              <SiTypescript size={16} className="text-[#3178C6]" />
-              <span>TypeScript</span>
-            </motion.div>
-
-            <motion.div
-              animate={{ y: [0, -6, 0] }}
-              transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-              className="absolute top-1/2 -right-8 px-3 py-2 rounded-xl glass-panel shadow-lg flex items-center gap-2 text-xs font-medium text-slate-800 dark:text-slate-200 border border-slate-200/80 dark:border-slate-700/80"
-            >
-              <SiGo size={18} className="text-[#00ADD8]" />
-              <span>Go (Golang)</span>
-            </motion.div>
           </motion.div>
         </div>
       </div>

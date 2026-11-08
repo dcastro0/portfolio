@@ -1,5 +1,4 @@
 import { useState, useRef, useEffect } from "react";
-import { motion, AnimatePresence } from "motion/react";
 import { useTranslation } from "react-i18next";
 import { FiGlobe, FiChevronDown, FiCheck } from "react-icons/fi";
 import { LANGUAGES } from "../utils/constants";
@@ -40,62 +39,51 @@ const LanguageSelector = () => {
 
   return (
     <div className="relative inline-block text-left" ref={dropdownRef}>
-      <motion.button
+      <button
         type="button"
         onClick={() => setIsOpen(!isOpen)}
-        whileHover={{ scale: 1.03 }}
-        whileTap={{ scale: 0.97 }}
-        className="flex items-center gap-2 text-xs font-semibold px-3 py-2 bg-slate-100 dark:bg-slate-800/80 text-slate-700 dark:text-slate-200 border border-slate-200/60 dark:border-slate-700/60 rounded-full hover:border-blue-500/70 dark:hover:border-blue-500/70 shadow-sm transition-all focus:outline-none"
+        className="flex items-center gap-1.5 text-xs font-mono font-medium px-2.5 py-1.5 bg-[#161616] text-[#fffff4] border border-[#ff6b00]/25 rounded-md hover:border-[#ff6b00] hover:bg-[#1f1f1f] focus-visible:border-[#ff6b00] transition-all duration-150 outline-none cursor-pointer"
         aria-expanded={isOpen}
         aria-label="Selecionar idioma"
       >
-        <FiGlobe size={14} className="text-blue-600 dark:text-blue-400" />
-        <span className="flex items-center gap-1">
-          <span>{currentLang.flag}</span>
-          <span className="uppercase tracking-wider font-bold">{currentLang.code}</span>
-        </span>
-        <motion.div animate={{ rotate: isOpen ? 180 : 0 }} transition={{ duration: 0.2 }}>
-          <FiChevronDown size={14} className="text-slate-400" />
-        </motion.div>
-      </motion.button>
+        <FiGlobe size={13} className="text-[#ff6b00]" />
+        <span className="uppercase tracking-wider">{currentLang.code}</span>
+        <FiChevronDown
+          size={13}
+          className={`text-[#fffff4]/70 transition-transform duration-150 ${isOpen ? "rotate-180" : ""}`}
+        />
+      </button>
 
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: 8, scale: 0.95 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: 8, scale: 0.95 }}
-            transition={{ duration: 0.15, ease: "easeOut" }}
-            className="absolute right-0 mt-2 w-44 rounded-2xl bg-white/90 dark:bg-slate-900/90 backdrop-blur-xl border border-slate-200/80 dark:border-slate-800/80 shadow-xl shadow-slate-900/10 dark:shadow-black/40 p-1.5 z-50 overflow-hidden"
-          >
-            <div className="px-2.5 py-1.5 text-[10px] font-mono font-semibold uppercase tracking-wider text-slate-400 dark:text-slate-500 border-b border-slate-100 dark:border-slate-800/60 mb-1">
-              Idioma / Language
-            </div>
-            <div className="space-y-0.5">
-              {LANGUAGES.map((lang) => {
-                const isActive = lang.code === currentLang.code;
-                return (
-                  <button
-                    key={lang.code}
-                    onClick={() => handleSelectLanguage(lang.code)}
-                    className={`w-full flex items-center justify-between px-3 py-2 text-xs font-medium rounded-xl transition-all ${
-                      isActive
-                        ? "bg-blue-50 dark:bg-blue-950/60 text-blue-700 dark:text-blue-300 font-semibold"
-                        : "text-slate-700 dark:text-slate-300 hover:bg-slate-100/80 dark:hover:bg-slate-800/60"
-                    }`}
-                  >
-                    <div className="flex items-center gap-2.5">
-                      <span className="text-sm">{lang.flag}</span>
-                      <span>{lang.name}</span>
-                    </div>
-                    {isActive && <FiCheck size={14} className="text-blue-600 dark:text-blue-400" />}
-                  </button>
-                );
-              })}
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+      {isOpen && (
+        <div className="absolute right-0 mt-1.5 w-40 rounded-md bg-[#161616] border border-[#ff6b00]/40 p-1 z-50 shadow-xl">
+          <div className="px-2.5 py-1 text-[10px] font-mono uppercase tracking-wider text-[#ff6b00] border-b border-[#ff6b00]/20 mb-1">
+            LOCALE
+          </div>
+          <div className="space-y-0.5">
+            {LANGUAGES.map((lang) => {
+              const isActive = lang.code === currentLang.code;
+              return (
+                <button
+                  key={lang.code}
+                  type="button"
+                  onClick={() => handleSelectLanguage(lang.code)}
+                  className={`w-full flex items-center justify-between px-2.5 py-1.5 text-xs font-mono rounded-md transition-colors duration-150 cursor-pointer ${
+                    isActive
+                      ? "bg-[#0f0f0f] text-[#ff6b00] border border-[#ff6b00]/50 font-semibold"
+                      : "text-[#fffff4]/80 hover:text-[#fffff4] hover:bg-[#1f1f1f] border border-transparent"
+                  }`}
+                >
+                  <div className="flex items-center gap-2">
+                    <span className="uppercase text-[11px] text-[#ff6b00]">{lang.code}</span>
+                    <span>{lang.name}</span>
+                  </div>
+                  {isActive && <FiCheck size={13} className="text-[#ff6b00]" />}
+                </button>
+              );
+            })}
+          </div>
+        </div>
+      )}
     </div>
   );
 };

@@ -1,4 +1,3 @@
-import { motion, AnimatePresence } from "motion/react";
 import {
   FiMail,
   FiUser,
@@ -11,6 +10,7 @@ import {
   FiClock,
 } from "react-icons/fi";
 import { useTranslation } from "react-i18next";
+import { motion } from "motion/react";
 import { useContactForm } from "../hooks/useContactForm";
 
 const Contact = () => {
@@ -18,138 +18,130 @@ const Contact = () => {
   const { register, handleSubmit, isSending, submitStatus, errors } = useContactForm();
 
   return (
-    <section
-      id="contact"
-      className="py-24 flex items-center justify-center relative overflow-hidden bg-slate-100/50 dark:bg-slate-900/30"
-    >
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-blue-500/10 rounded-full blur-[140px] pointer-events-none -z-10" />
+    <section id="contact" className="py-12 relative">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between pb-5 mb-8 border-b border-[#ff6b00]/25 gap-2">
+          <div>
+            <span className="text-xs font-mono uppercase tracking-widest text-[#ff6b00] block mb-1">
+              05 // {t("contact.badge")}
+            </span>
+            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-[#fffff4]">
+              {t("contact.title")}
+            </h2>
+          </div>
+          <p className="text-xs font-mono text-[#fffff4]/70 max-w-md">{t("contact.description")}</p>
+        </div>
 
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="text-center mb-16"
-        >
-          <span className="text-xs font-semibold uppercase tracking-widest text-blue-600 dark:text-blue-400 font-mono mb-2 block">
-            {t("contact.badge")}
-          </span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight mb-4">
-            {t("contact.title")}
-          </h2>
-          <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto mb-6">
-            {t("contact.description")}
-          </p>
-          <div className="w-16 h-1 bg-gradient-to-r from-blue-600 to-indigo-600 mx-auto rounded-full"></div>
-        </motion.div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            className="lg:col-span-5 space-y-5"
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-            className="lg:col-span-5 space-y-8"
+            transition={{ duration: 0.5 }}
           >
             <div>
-              <h3 className="text-2xl font-bold mb-3">{t("contact.form_title")}</h3>
-              <p className="text-slate-600 dark:text-slate-300 leading-relaxed text-sm sm:text-base">
+              <h3 className="text-lg font-bold text-[#fffff4] mb-1.5">{t("contact.form_title")}</h3>
+              <p className="text-[#fffff4]/80 leading-relaxed text-sm">
                 {t("contact.form_subtitle")}
               </p>
             </div>
 
-            <div className="space-y-4">
-              <div className="flex items-center gap-4 p-4 rounded-xl glass-panel border border-slate-200/80 dark:border-slate-800/80">
-                <div className="p-3 rounded-lg bg-blue-500/10 text-blue-600 dark:text-blue-400 shrink-0">
-                  <FiMail size={22} />
+            <div className="space-y-3">
+              <div className="flex items-center gap-3.5 p-3.5 rounded-md tech-panel-interactive">
+                <div className="p-2.5 rounded-md bg-[#0f0f0f] border border-[#ff6b00]/40 text-[#ff6b00] shrink-0">
+                  <FiMail size={18} />
                 </div>
                 <div>
-                  <span className="text-xs font-mono text-slate-400 block">
-                    E-mail Profissional
+                  <span className="text-[11px] font-mono text-[#ff6b00] uppercase block">
+                    ENDPOINT // EMAIL
                   </span>
                   <a
                     href="mailto:caio.dcastrodev@gmail.com"
-                    className="text-sm font-semibold text-slate-800 dark:text-slate-200 hover:text-blue-600 transition-colors"
+                    className="text-xs sm:text-sm font-mono font-semibold text-[#fffff4] hover:text-[#ff6b00] transition-colors duration-150"
                   >
                     caio.dcastrodev@gmail.com
                   </a>
                 </div>
               </div>
 
-              <div className="flex items-center gap-4 p-4 rounded-xl glass-panel border border-slate-200/80 dark:border-slate-800/80">
-                <div className="p-3 rounded-lg bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 shrink-0">
-                  <FiClock size={22} />
+              <div className="flex items-center gap-3.5 p-3.5 rounded-md tech-panel">
+                <div className="p-2.5 rounded-md bg-[#0f0f0f] border border-[#ff6b00]/40 text-[#ff6b00] shrink-0">
+                  <FiClock size={18} />
                 </div>
                 <div>
-                  <span className="text-xs font-mono text-slate-400 block">Tempo de Resposta</span>
-                  <span className="text-sm font-semibold text-slate-800 dark:text-slate-200">
-                    Geralmente em até 24h
+                  <span className="text-[11px] font-mono text-[#ff6b00] uppercase block">
+                    SLA // TEMPO DE RESPOSTA
+                  </span>
+                  <span className="text-xs sm:text-sm font-mono font-semibold text-[#fffff4]">
+                    &lt; 24h (Dias Úteis)
                   </span>
                 </div>
               </div>
             </div>
 
-            <div>
-              <span className="text-xs font-bold text-slate-400 uppercase tracking-widest font-mono mb-4 block">
-                Redes & Perfil Técnico
+            <div className="pt-2">
+              <span className="text-xs font-mono text-[#ff6b00] uppercase tracking-widest mb-3 block">
+                REPOSITÓRIOS & REDE PROFISSIONAL
               </span>
-              <div className="flex gap-4">
-                <a
+              <div className="flex flex-wrap gap-3">
+                <motion.a
                   href="https://github.com/dcastro0"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-4 py-3 rounded-xl glass-panel border border-slate-200/80 dark:border-slate-800/80 text-slate-700 dark:text-slate-200 hover:border-blue-500 dark:hover:border-blue-500 transition-all hover:-translate-y-0.5 text-sm font-semibold"
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  className="inline-flex items-center gap-2 px-4 py-2.5 rounded-md bg-[#161616] hover:bg-[#1f1f1f] border border-[#ff6b00]/30 hover:border-[#ff6b00] text-[#fffff4] hover:text-[#ff6b00] transition-colors duration-150 text-xs font-mono"
                 >
-                  <FiGithub size={20} />
-                  <span>GitHub</span>
-                </a>
-                <a
+                  <FiGithub size={16} className="text-[#ff6b00]" />
+                  <span>github.com/dcastro0</span>
+                </motion.a>
+                <motion.a
                   href="https://linkedin.com/in/caio-de-castro-a74a81188/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-4 py-3 rounded-xl glass-panel border border-slate-200/80 dark:border-slate-800/80 text-slate-700 dark:text-slate-200 hover:border-blue-500 dark:hover:border-blue-500 transition-all hover:-translate-y-0.5 text-sm font-semibold"
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  className="inline-flex items-center gap-2 px-4 py-2.5 rounded-md bg-[#161616] hover:bg-[#1f1f1f] border border-[#ff6b00]/30 hover:border-[#ff6b00] text-[#fffff4] hover:text-[#ff6b00] transition-colors duration-150 text-xs font-mono"
                 >
-                  <FiLinkedin size={20} className="text-[#0A66C2]" />
+                  <FiLinkedin size={16} className="text-[#ff6b00]" />
                   <span>LinkedIn</span>
-                </a>
+                </motion.a>
               </div>
             </div>
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            className="lg:col-span-7 tech-panel p-5 sm:p-6 rounded-lg"
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.3 }}
-            className="lg:col-span-7 glass-panel p-6 sm:p-8 rounded-2xl border border-slate-200/80 dark:border-slate-800/80 shadow-xl"
+            transition={{ duration: 0.5, delay: 0.15 }}
           >
-            <form onSubmit={handleSubmit} className="space-y-5" noValidate>
+            <form onSubmit={handleSubmit} className="space-y-4" noValidate>
               <div>
                 <label
                   htmlFor="user_name"
-                  className="block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300 mb-2 font-mono"
+                  className="block text-xs font-mono uppercase tracking-wider text-[#fffff4]/80 mb-1.5"
                 >
                   {t("contact.form_name")}
                 </label>
                 <div className="relative">
-                  <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
-                    <FiUser size={18} />
+                  <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-[#ff6b00]">
+                    <FiUser size={15} />
                   </div>
                   <input
                     type="text"
                     id="user_name"
                     {...register("user_name")}
-                    className={`w-full pl-10 pr-4 py-3 bg-white/80 dark:bg-slate-800/80 border ${
-                      errors.user_name
-                        ? "border-rose-500"
-                        : "border-slate-200 dark:border-slate-700"
-                    } rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all outline-none text-slate-900 dark:text-slate-100 text-sm`}
+                    className={`w-full pl-9 pr-3.5 py-2.5 bg-[#0f0f0f] border ${
+                      errors.user_name ? "border-rose-400" : "border-[#ff6b00]/25"
+                    } rounded-md focus:border-[#ff6b00] focus:ring-1 focus:ring-[#ff6b00] transition-colors duration-150 outline-none text-[#fffff4] placeholder-[#fffff4]/30 text-sm font-mono`}
                     placeholder={t("contact.form_name_placeholder")}
                   />
                 </div>
                 {errors.user_name && (
-                  <span className="text-xs text-rose-500 font-medium mt-1.5 block">
+                  <span className="text-xs font-mono text-rose-400 mt-1 block">
                     {t(errors.user_name.message as string)}
                   </span>
                 )}
@@ -158,28 +150,26 @@ const Contact = () => {
               <div>
                 <label
                   htmlFor="user_email"
-                  className="block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300 mb-2 font-mono"
+                  className="block text-xs font-mono uppercase tracking-wider text-[#fffff4]/80 mb-1.5"
                 >
                   {t("contact.form_email")}
                 </label>
                 <div className="relative">
-                  <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
-                    <FiMail size={18} />
+                  <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-[#ff6b00]">
+                    <FiMail size={15} />
                   </div>
                   <input
                     type="email"
                     id="user_email"
                     {...register("user_email")}
-                    className={`w-full pl-10 pr-4 py-3 bg-white/80 dark:bg-slate-800/80 border ${
-                      errors.user_email
-                        ? "border-rose-500"
-                        : "border-slate-200 dark:border-slate-700"
-                    } rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all outline-none text-slate-900 dark:text-slate-100 text-sm`}
+                    className={`w-full pl-9 pr-3.5 py-2.5 bg-[#0f0f0f] border ${
+                      errors.user_email ? "border-rose-400" : "border-[#ff6b00]/25"
+                    } rounded-md focus:border-[#ff6b00] focus:ring-1 focus:ring-[#ff6b00] transition-colors duration-150 outline-none text-[#fffff4] placeholder-[#fffff4]/30 text-sm font-mono`}
                     placeholder={t("contact.form_email_placeholder")}
                   />
                 </div>
                 {errors.user_email && (
-                  <span className="text-xs text-rose-500 font-medium mt-1.5 block">
+                  <span className="text-xs font-mono text-rose-400 mt-1 block">
                     {t(errors.user_email.message as string)}
                   </span>
                 )}
@@ -188,74 +178,64 @@ const Contact = () => {
               <div>
                 <label
                   htmlFor="message"
-                  className="block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300 mb-2 font-mono"
+                  className="block text-xs font-mono uppercase tracking-wider text-[#fffff4]/80 mb-1.5"
                 >
                   {t("contact.form_message")}
                 </label>
                 <div className="relative">
-                  <div className="absolute top-3.5 left-3.5 pointer-events-none text-slate-400">
-                    <FiMessageSquare size={18} />
+                  <div className="absolute top-3 left-3 pointer-events-none text-[#ff6b00]">
+                    <FiMessageSquare size={15} />
                   </div>
                   <textarea
                     id="message"
                     rows={4}
                     {...register("message")}
-                    className={`w-full pl-10 pr-4 py-3 bg-white/80 dark:bg-slate-800/80 border ${
-                      errors.message ? "border-rose-500" : "border-slate-200 dark:border-slate-700"
-                    } rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all outline-none resize-none text-slate-900 dark:text-slate-100 text-sm`}
+                    className={`w-full pl-9 pr-3.5 py-2.5 bg-[#0f0f0f] border ${
+                      errors.message ? "border-rose-400" : "border-[#ff6b00]/25"
+                    } rounded-md focus:border-[#ff6b00] focus:ring-1 focus:ring-[#ff6b00] transition-colors duration-150 outline-none resize-none text-[#fffff4] placeholder-[#fffff4]/30 text-sm font-mono`}
                     placeholder={t("contact.form_message_placeholder")}
                   />
                 </div>
                 {errors.message && (
-                  <span className="text-xs text-rose-500 font-medium mt-1.5 block">
+                  <span className="text-xs font-mono text-rose-400 mt-1 block">
                     {t(errors.message.message as string)}
                   </span>
                 )}
               </div>
 
-              <button
+              <motion.button
                 type="submit"
                 disabled={isSending}
-                className={`w-full flex items-center justify-center gap-2 py-3.5 px-6 rounded-xl font-semibold text-white transition-all text-sm shadow-lg ${
+                whileHover={{ scale: isSending ? 1 : 1.01 }}
+                whileTap={{ scale: isSending ? 1 : 0.99 }}
+                className={`w-full flex items-center justify-center gap-2 py-2.5 px-5 rounded-md font-mono font-bold text-xs transition-colors duration-150 border cursor-pointer ${
                   isSending
-                    ? "bg-slate-400 cursor-not-allowed"
-                    : "bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 shadow-blue-500/20 hover:shadow-blue-500/35 hover:-translate-y-0.5 active:translate-y-0"
+                    ? "bg-[#1f1f1f] text-[#fffff4]/50 border-[#ff6b00]/20 cursor-not-allowed"
+                    : "bg-[#ff6b00] hover:bg-[#ff6b00]/90 text-[#0f0f0f] border-[#ff6b00] shadow-[0_0_15px_rgba(255,107,0,0.25)]"
                 }`}
               >
                 {isSending ? (
                   <span>{t("contact.form_sending_btn")}</span>
                 ) : (
                   <>
-                    <FiSend size={16} />
+                    <FiSend size={14} />
                     <span>{t("contact.form_send_btn")}</span>
                   </>
                 )}
-              </button>
+              </motion.button>
 
-              <AnimatePresence>
-                {submitStatus === "success" && (
-                  <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0 }}
-                    className="flex items-center gap-3 text-emerald-700 dark:text-emerald-300 bg-emerald-50 dark:bg-emerald-950/50 border border-emerald-200 dark:border-emerald-800 p-4 rounded-xl text-xs font-medium"
-                  >
-                    <FiCheckCircle size={18} className="shrink-0 text-emerald-500" />
-                    <span>{t("contact.form_success")}</span>
-                  </motion.div>
-                )}
-                {submitStatus === "error" && (
-                  <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0 }}
-                    className="flex items-center gap-3 text-rose-700 dark:text-rose-300 bg-rose-50 dark:bg-rose-950/50 border border-rose-200 dark:border-rose-800 p-4 rounded-xl text-xs font-medium"
-                  >
-                    <FiAlertCircle size={18} className="shrink-0 text-rose-500" />
-                    <span>{t("contact.form_error")}</span>
-                  </motion.div>
-                )}
-              </AnimatePresence>
+              {submitStatus === "success" && (
+                <div className="flex items-center gap-2.5 text-[#fffff4] bg-[#0f0f0f] border border-[#ff6b00] p-3 rounded-md text-xs font-mono">
+                  <FiCheckCircle size={16} className="shrink-0 text-[#ff6b00]" />
+                  <span>{t("contact.form_success")}</span>
+                </div>
+              )}
+              {submitStatus === "error" && (
+                <div className="flex items-center gap-2.5 text-[#fffff4] bg-[#0f0f0f] border border-rose-400 p-3 rounded-md text-xs font-mono">
+                  <FiAlertCircle size={16} className="shrink-0 text-rose-400" />
+                  <span>{t("contact.form_error")}</span>
+                </div>
+              )}
             </form>
           </motion.div>
         </div>
