@@ -10,7 +10,7 @@ import {
   FiClock,
 } from "react-icons/fi";
 import { useTranslation } from "react-i18next";
-import { motion } from "motion/react";
+import { motion, AnimatePresence } from "motion/react";
 import { useContactForm } from "../hooks/useContactForm";
 
 const Contact = () => {
@@ -54,7 +54,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <span className="text-[11px] font-mono text-[#ff6b00] uppercase block">
-                    ENDPOINT // EMAIL
+                    {t("contact.email_label")}
                   </span>
                   <a
                     href="mailto:caio.dcastrodev@gmail.com"
@@ -71,10 +71,10 @@ const Contact = () => {
                 </div>
                 <div>
                   <span className="text-[11px] font-mono text-[#ff6b00] uppercase block">
-                    SLA // TEMPO DE RESPOSTA
+                    {t("contact.response_label")}
                   </span>
                   <span className="text-xs sm:text-sm font-mono font-semibold text-[#fffff4]">
-                    &lt; 24h (Dias Úteis)
+                    {t("contact.response_value")}
                   </span>
                 </div>
               </div>
@@ -82,7 +82,7 @@ const Contact = () => {
 
             <div className="pt-2">
               <span className="text-xs font-mono text-[#ff6b00] uppercase tracking-widest mb-3 block">
-                REPOSITÓRIOS & REDE PROFISSIONAL
+                {t("contact.social_label")}
               </span>
               <div className="flex flex-wrap gap-3">
                 <motion.a
@@ -134,6 +134,8 @@ const Contact = () => {
                     type="text"
                     id="user_name"
                     {...register("user_name")}
+                    aria-invalid={Boolean(errors.user_name)}
+                    aria-describedby={errors.user_name ? "user_name_error" : undefined}
                     className={`w-full pl-9 pr-3.5 py-2.5 bg-[#0f0f0f] border ${
                       errors.user_name ? "border-rose-400" : "border-[#ff6b00]/25"
                     } rounded-md focus:border-[#ff6b00] focus:ring-1 focus:ring-[#ff6b00] transition-colors duration-150 outline-none text-[#fffff4] placeholder-[#fffff4]/30 text-sm font-mono`}
@@ -141,7 +143,11 @@ const Contact = () => {
                   />
                 </div>
                 {errors.user_name && (
-                  <span className="text-xs font-mono text-rose-400 mt-1 block">
+                  <span
+                    id="user_name_error"
+                    role="alert"
+                    className="text-xs font-mono text-rose-400 mt-1 block"
+                  >
                     {t(errors.user_name.message as string)}
                   </span>
                 )}
@@ -162,6 +168,8 @@ const Contact = () => {
                     type="email"
                     id="user_email"
                     {...register("user_email")}
+                    aria-invalid={Boolean(errors.user_email)}
+                    aria-describedby={errors.user_email ? "user_email_error" : undefined}
                     className={`w-full pl-9 pr-3.5 py-2.5 bg-[#0f0f0f] border ${
                       errors.user_email ? "border-rose-400" : "border-[#ff6b00]/25"
                     } rounded-md focus:border-[#ff6b00] focus:ring-1 focus:ring-[#ff6b00] transition-colors duration-150 outline-none text-[#fffff4] placeholder-[#fffff4]/30 text-sm font-mono`}
@@ -169,7 +177,11 @@ const Contact = () => {
                   />
                 </div>
                 {errors.user_email && (
-                  <span className="text-xs font-mono text-rose-400 mt-1 block">
+                  <span
+                    id="user_email_error"
+                    role="alert"
+                    className="text-xs font-mono text-rose-400 mt-1 block"
+                  >
                     {t(errors.user_email.message as string)}
                   </span>
                 )}
@@ -190,6 +202,8 @@ const Contact = () => {
                     id="message"
                     rows={4}
                     {...register("message")}
+                    aria-invalid={Boolean(errors.message)}
+                    aria-describedby={errors.message ? "message_error" : undefined}
                     className={`w-full pl-9 pr-3.5 py-2.5 bg-[#0f0f0f] border ${
                       errors.message ? "border-rose-400" : "border-[#ff6b00]/25"
                     } rounded-md focus:border-[#ff6b00] focus:ring-1 focus:ring-[#ff6b00] transition-colors duration-150 outline-none resize-none text-[#fffff4] placeholder-[#fffff4]/30 text-sm font-mono`}
@@ -197,7 +211,11 @@ const Contact = () => {
                   />
                 </div>
                 {errors.message && (
-                  <span className="text-xs font-mono text-rose-400 mt-1 block">
+                  <span
+                    id="message_error"
+                    role="alert"
+                    className="text-xs font-mono text-rose-400 mt-1 block"
+                  >
                     {t(errors.message.message as string)}
                   </span>
                 )}
@@ -224,18 +242,34 @@ const Contact = () => {
                 )}
               </motion.button>
 
-              {submitStatus === "success" && (
-                <div className="flex items-center gap-2.5 text-[#fffff4] bg-[#0f0f0f] border border-[#ff6b00] p-3 rounded-md text-xs font-mono">
-                  <FiCheckCircle size={16} className="shrink-0 text-[#ff6b00]" />
-                  <span>{t("contact.form_success")}</span>
-                </div>
-              )}
-              {submitStatus === "error" && (
-                <div className="flex items-center gap-2.5 text-[#fffff4] bg-[#0f0f0f] border border-rose-400 p-3 rounded-md text-xs font-mono">
-                  <FiAlertCircle size={16} className="shrink-0 text-rose-400" />
-                  <span>{t("contact.form_error")}</span>
-                </div>
-              )}
+              <AnimatePresence>
+                {submitStatus === "success" && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0 }}
+                    role="status"
+                    aria-live="polite"
+                    className="flex items-center gap-2.5 text-[#fffff4] bg-[#0f0f0f] border border-[#ff6b00] p-3 rounded-md text-xs font-mono"
+                  >
+                    <FiCheckCircle size={16} className="shrink-0 text-[#ff6b00]" />
+                    <span>{t("contact.form_success")}</span>
+                  </motion.div>
+                )}
+                {submitStatus === "error" && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0 }}
+                    role="alert"
+                    aria-live="assertive"
+                    className="flex items-center gap-2.5 text-[#fffff4] bg-[#0f0f0f] border border-rose-400 p-3 rounded-md text-xs font-mono"
+                  >
+                    <FiAlertCircle size={16} className="shrink-0 text-rose-400" />
+                    <span>{t("contact.form_error")}</span>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </form>
           </motion.div>
         </div>

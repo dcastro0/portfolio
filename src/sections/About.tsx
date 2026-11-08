@@ -56,12 +56,12 @@ const About = () => {
             <div className="space-y-3 text-sm sm:text-base text-[#fffff4]/80 leading-relaxed">
               <p className="font-medium text-[#fffff4]">{t("about.p1")}</p>
               <p>
-                <Trans i18nKey="about.p2">
-                  Atuando em todo o ciclo{" "}
-                  <strong className="text-[#fffff4] font-mono font-semibold">Full Stack</strong>,
-                  estruturo desde clientes reativos e persistência offline-first até serviços
-                  concorrentes em Go e Node.js sob contratos de dados estritos.
-                </Trans>
+                <Trans
+                  i18nKey="about.p2"
+                  components={{
+                    strong: <strong className="text-[#fffff4] font-mono font-semibold" />,
+                  }}
+                />
               </p>
               <p>{t("about.p3")}</p>
             </div>

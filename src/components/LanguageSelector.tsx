@@ -8,7 +8,11 @@ const LanguageSelector = () => {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
-  const currentLang = LANGUAGES.find((lang) => lang.code === i18n.language) || LANGUAGES[0];
+  const currentLanguage = i18n.resolvedLanguage || i18n.language;
+  const currentLang =
+    LANGUAGES.find((lang) => lang.code === currentLanguage) ||
+    LANGUAGES.find((lang) => currentLanguage.startsWith(lang.code)) ||
+    LANGUAGES[0];
 
   const handleSelectLanguage = (code: string) => {
     i18n.changeLanguage(code);
@@ -55,11 +59,11 @@ const LanguageSelector = () => {
       </button>
 
       {isOpen && (
-        <div className="absolute right-0 mt-1.5 w-40 rounded-md bg-[#161616] border border-[#ff6b00]/40 p-1 z-50 shadow-xl">
+        <div className="absolute right-0 mt-1.5 w-44 rounded-md bg-[#161616] border border-[#ff6b00]/40 p-1 z-50 shadow-xl">
           <div className="px-2.5 py-1 text-[10px] font-mono uppercase tracking-wider text-[#ff6b00] border-b border-[#ff6b00]/20 mb-1">
             LOCALE
           </div>
-          <div className="space-y-0.5">
+          <div className="max-h-72 space-y-0.5 overflow-y-auto">
             {LANGUAGES.map((lang) => {
               const isActive = lang.code === currentLang.code;
               return (

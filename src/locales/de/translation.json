@@ -1,0 +1,152 @@
+{
+  "navbar": {
+    "home": "Start",
+    "about": "Über mich",
+    "experience": "Werdegang",
+    "projects": "Projekte",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "badge": "Verfügbar für neue Projekte und berufliche Möglichkeiten",
+    "greeting": "Hallo, mein Name ist",
+    "role": "Full-Stack-Entwickler",
+    "description": "Spezialisiert auf die Konzeption und Entwicklung vollständiger Technologielösungen, die moderne <1>Web</1>- und <3>Mobile</3>-Anwendungen mit skalierbaren, leistungsstarken <5>APIs</5> verbinden.",
+    "cta_projects": "Projekte entdecken",
+    "cta_contact": "Kontakt aufnehmen",
+    "cta_cv": "Lebenslauf herunterladen (PDF)",
+    "stats": {
+      "experience": "Jahre des Lernens und der Praxis",
+      "projects": "Entwickelte Projekte",
+      "stack": "Moderner Technologie-Stack"
+    }
+  },
+  "about": {
+    "badge": "Entwicklung & Lösungen",
+    "title": "Über mich",
+    "p1": "Ich bin Full-Stack-Entwickler mit Schwerpunkt auf effizienten und skalierbaren Systemen. Mein Werdegang im Bereich Informationssysteme ist geprägt von sauberem Code, soliden Architekturen und benutzerfreundlichen Oberflächen.",
+    "p2": "Als <strong>Full-Stack</strong>-Entwickler arbeite ich im gesamten Entwicklungszyklus – von der Gestaltung von Benutzeroberflächen bis zur Implementierung von APIs und Datenbanken.",
+    "p3": "Ich vertiefe kontinuierlich meine Kenntnisse in bewährten Methoden der Softwareentwicklung, Continuous Integration und modernen Architekturmustern.",
+    "skills_title": "Technologien & Werkzeuge",
+    "highlights": {
+      "frontend": "Entwicklung reaktiver, responsiver und barrierefreier Benutzeroberflächen mit React und TypeScript.",
+      "backend": "Entwicklung robuster RESTful APIs und leistungsstarker Microservices mit Node.js und Go (Golang).",
+      "database": "Modellierung und Verwaltung fortgeschrittener relationaler Datenbanken mit PostgreSQL und MySQL."
+    }
+  },
+  "projects": {
+    "badge": "Code-Portfolio",
+    "title": "Ausgewählte Projekte",
+    "subtitle": "Eine Auswahl von Anwendungen und Systemen mit Fokus auf Qualität, Architektur und Benutzerfreundlichkeit.",
+    "filters": {
+      "all": "Alle Projekte",
+      "web": "Webanwendungen",
+      "mobile": "Mobile Apps",
+      "backend": "Backend & APIs",
+      "fullstack": "Full Stack",
+      "financial": "Finanzwerkzeuge"
+    },
+    "modal": {
+      "technologies": "Verwendete Technologien",
+      "code_btn": "Repository ansehen",
+      "live_btn": "Anwendung öffnen",
+      "screenshots_title": "Galerie der Benutzeroberflächen und Systemansichten",
+      "click_to_enlarge": "Klicken Sie auf ein Bild, um es im Vollbild anzuzeigen",
+      "demo_btn": "Anwendung öffnen",
+      "private_repo": "Privater Quellcode",
+      "open_details": "Details öffnen"
+    },
+    "tcc": {
+      "short": "Mobile Plattform zur Erfassung von Blutzuckerwerten, Gewohnheiten und Erfolgen.",
+      "full": "Weiterentwicklung des ursprünglich mit Flask erstellten Abschlussprojekts, jetzt als Monorepo mit einer React-Native- und Expo-App, einer Go-API mit Chi, PostgreSQL und lokaler SQLite-Persistenz."
+    },
+    "tcc_api": {
+      "short": "RESTful Backend-API in Go zur Unterstützung der Abschlussprojekt-App.",
+      "full": "Backend-Dienst mit Go (Golang) und MySQL für zentrale Datenverwaltung, Authentifizierung und Geschäftslogik des Abschlussprojekt-Ökosystems."
+    },
+    "vendas": {
+      "short": "System für kaufmännische Verwaltung und operative Kontrolle.",
+      "full": "Anwendung zur Optimierung kaufmännischer Abläufe mit Verkaufssteuerung, Datensatzverwaltung und analytischer Oberfläche für fundierte Entscheidungen."
+    },
+    "dile": {
+      "short": "Full-Stack-Plattform zur Integration von Frontend- und Backend-Diensten.",
+      "full": "Integrierte Architektur über alle Ebenen einer modernen Anwendung mit durchgängigem Datenfluss, Validierungen und hoher Interoperabilität zwischen Diensten."
+    },
+    "juros": {
+      "short": "Werkzeug zur Analyse und Simulation von Finanzberechnungen.",
+      "full": "Anwendung mit Fokus auf finanzielle Genauigkeit für Zinssimulationen, Ertragsprognosen und dynamische Berichte über eine intuitive Oberfläche."
+    },
+    "portfolio": {
+      "short": "Mehrsprachiges professionelles Portfolio mit Fokus auf Projekte und technische Erfahrung.",
+      "full": "Anwendung mit React 19, TypeScript und Tailwind CSS sowie Internationalisierung, Themes, Projektfiltern, Galerie und Kontaktformular."
+    },
+    "aether": {
+      "short": "Modernes ERP-System für die Unternehmensverwaltung.",
+      "full": "Enterprise-Resource-Planning-Plattform zur Zentralisierung von Arbeitsabläufen, Finanzverwaltung, Lagerkontrolle und strategischen Berichten mit hoher Leistung."
+    },
+    "goshortner": {
+      "short": "Full-Stack-Plattform zum Kürzen, Verwalten und Analysieren von Links.",
+      "full": "Anwendung mit einem Go- und Echo-Backend, PostgreSQL-Persistenz und React-Oberfläche. Enthält Authentifizierung, Analysen, QR-Codes und Bio-Link-Seiten."
+    },
+    "netpulse": {
+      "short": "Werkzeug zur Echtzeitüberwachung von Netzwerkmetriken und -status.",
+      "full": "Mit Node.js und React entwickelte Lösung zur Netzwerkbeobachtung, die Verfügbarkeit, Latenz und Infrastrukturdiagnosen in Echtzeit verfolgt."
+    }
+  },
+  "experience": {
+    "badge": "Werdegang & Meilensteine",
+    "title": "Technischer Werdegang & Ausbildung",
+    "subtitle": "Projekte, die meine technische Entwicklung und meine Ausbildung in Informationssystemen darstellen.",
+    "items": {
+      "aether": {
+        "title": "Architektur & Aether ERP",
+        "org": "Full-Stack-Entwickler • Unternehmensverwaltungssystem",
+        "desc": "Konzeption, Datenbankarchitektur und vollständige Entwicklung des Aether ERP mit Modulen für Kassensystem, Business Intelligence, Lager, Finanzen und CRM.",
+        "highlights": "Aufbau eines skalierbaren modularen Ökosystems mit React, TypeScript und PostgreSQL."
+      },
+      "tcc": {
+        "title": "Diabetes Care",
+        "org": "Akademisches Projekt, weiterentwickelt zur Full-Stack-Plattform",
+        "desc": "Weiterentwicklung der im Abschlussprojekt erstellten Anwendung mit einer React-Native-App auf Expo-Basis und einer Go-API mit PostgreSQL.",
+        "highlights": "Migration von einer Flask-API zu einem Go-Monorepo mit lokaler und entfernter Persistenz sowie Gamification-Funktionen."
+      },
+      "academic": {
+        "title": "Bachelor in Informationssystemen",
+        "org": "UniAtenas • Paracatu, Minas Gerais, Brasilien",
+        "desc": "Studium mit Schwerpunkt auf Software Engineering, Informatik, Systemarchitektur, Datenbanken und Technologiemanagement.",
+        "highlights": "Abschluss des Studiums mit Entwicklung und erfolgreicher Bewertung eines praktischen Abschlussprojekts."
+      }
+    }
+  },
+  "contact": {
+    "badge": "Direkter Kontakt",
+    "title": "Kontakt aufnehmen",
+    "description": "Ich bin offen für Projektkooperationen, berufliche Möglichkeiten und Gespräche über Softwarearchitektur und Technologie.",
+    "form_title": "Nachricht senden",
+    "form_subtitle": "Füllen Sie die Felder mit den Informationen zu Ihrem Projekt oder Anliegen aus. Ich antworte so bald wie möglich.",
+    "form_name": "Vollständiger Name",
+    "form_name_placeholder": "Beispiel: Max Mustermann",
+    "form_email": "E-Mail-Adresse",
+    "form_email_placeholder": "Beispiel: max.mustermann@unternehmen.de",
+    "form_message": "Nachricht",
+    "form_message_placeholder": "Beschreiben Sie Ihr Projekt oder den Grund Ihrer Kontaktaufnahme...",
+    "form_send_btn": "Nachricht senden",
+    "form_sending_btn": "Wird gesendet...",
+    "form_success": "Nachricht erfolgreich gesendet! Ich melde mich in Kürze.",
+    "form_error": "Die Nachricht konnte nicht gesendet werden. Bitte versuchen Sie es erneut.",
+    "errors": {
+      "name_required": "Der Name ist erforderlich.",
+      "email_required": "Die E-Mail-Adresse ist erforderlich.",
+      "email_invalid": "Geben Sie eine gültige E-Mail-Adresse ein.",
+      "message_required": "Die Nachricht ist erforderlich.",
+      "message_min": "Die Nachricht muss mindestens 10 Zeichen enthalten."
+    },
+    "email_label": "Berufliche E-Mail",
+    "response_label": "Antwortzeit",
+    "response_value": "In der Regel innerhalb von 24 Stunden",
+    "social_label": "Netzwerke & technisches Profil"
+  },
+  "footer": {
+    "rights": "Alle Rechte vorbehalten.",
+    "built_with": "Entwickelt mit React, TypeScript & Tailwind CSS"
+  }
+}

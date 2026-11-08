@@ -1,73 +1,59 @@
-# React + TypeScript + Vite
+# Caio de Castro — Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Portfolio profissional de Caio Corrêa de Castro, desenvolvedor Full Stack formado em Sistemas de Informação.
 
-Currently, two official plugins are available:
+## Aplicação
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+O projeto apresenta experiência técnica, formação, tecnologias e uma seleção dos trabalhos mais representativos:
 
-## React Compiler
+- Diabetes Care: aplicativo React Native e Expo com API em Go, Chi e PostgreSQL
+- Aether ERP: sistema de gestão empresarial com módulos de vendas, estoque, financeiro e relatórios
+- GoShortener: plataforma de gestão e análise de links com Go, Echo, PostgreSQL e React
+- Developer Portfolio: aplicação multilíngue construída com React, TypeScript e Tailwind CSS
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+## Tecnologias
 
-## Expanding the ESLint configuration
+- React 19
+- TypeScript
+- Tailwind CSS
+- i18next
+- Motion
+- React Hook Form
+- Zod
+- EmailJS
+- Vitest
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Execução local
 
-```js
-export default defineConfig([
-  globalIgnores(["dist"]),
-  {
-    files: ["**/*.{ts,tsx}"],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
+```bash
+pnpm install
+pnpm dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+A aplicação estará disponível no endereço exibido pelo Vite.
 
-```js
-// eslint.config.js
-import reactX from "eslint-plugin-react-x";
-import reactDom from "eslint-plugin-react-dom";
+## Qualidade
 
-export default defineConfig([
-  globalIgnores(["dist"]),
-  {
-    files: ["**/*.{ts,tsx}"],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs["recommended-typescript"],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
+```bash
+pnpm lint
+pnpm test
+pnpm build
 ```
+
+O pipeline de integração contínua executa as três verificações em pushes para a branch principal e em pull requests.
+
+## Formulário de contato
+
+Crie um arquivo `.env` local com base nas variáveis abaixo:
+
+```env
+VITE_EMAILJS_SERVICE_ID=
+VITE_EMAILJS_TEMPLATE_ID=
+VITE_EMAILJS_PUBLIC_KEY=
+```
+
+## Links
+
+- Aplicação: https://portfolio-five-ruddy-71.vercel.app/
+- GitHub: https://github.com/dcastro0
+- LinkedIn: https://www.linkedin.com/in/caio-de-castro-a74a81188/

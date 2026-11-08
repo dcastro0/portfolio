@@ -26,13 +26,13 @@ const timelineData: TimelineItem[] = [
   },
   {
     id: "tcc",
-    year: "2025",
-    type: "work",
+    year: "2025 - 2026",
+    type: "project",
     titleKey: "experience.items.tcc.title",
     organizationKey: "experience.items.tcc.org",
     descriptionKey: "experience.items.tcc.desc",
     highlightsKey: "experience.items.tcc.highlights",
-    technologies: ["React Native", "Expo", "Go (Golang)", "SQLite", "MySQL"],
+    technologies: ["React Native", "Expo", "Go", "Chi", "PostgreSQL", "SQLite"],
   },
   {
     id: "academic",
